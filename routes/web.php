@@ -50,7 +50,10 @@ Route::get('/prueba', function () {
     return view('formulario/hv');
 });
 
+//Route::get('/', function () {
+//return view('inicio');
 
+Route::get('/','PrincipalController@index');
 
 Route::get('/encuesta', function () {
     return view('/encuestaeto');
@@ -62,18 +65,6 @@ Route::get('/eto', function () {
 
 Route::get('/admin', function () {
     return view('admin.usuarios.crear-usuario');
-});
-/*pagina de informacion*/
-Route::get('/','PrincipalController@index');
-Route::get('quienesomos','PrincipalController@quienes');
-Route::get('grupo','PrincipalController@grupo');
-Route::get('proyectos','PrincipalController@proyectos');
-Route::get('servicio','PrincipalController@servicio');
-Route::get('contacto','PrincipalController@contacto');
-
-
-Route::group([],function(){
-    Route::resource('log','LogController');
 });
 
 Route::group([],function(){
