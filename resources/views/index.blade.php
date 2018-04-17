@@ -21,26 +21,25 @@
 		
 		<!-- CSS
 		================================================== -->
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-		
-		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
 
+		<link href="{{asset("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700")}}" rel="stylesheet" type="text/css">
+
+		<!-- Fontawesome Icon font -->
+		<link rel="stylesheet" href="{{asset("../../css/font-awesome.min.css")}}" >
+		<!-- bootstrap.min -->
+		<link rel="stylesheet" href="{{asset("../../css/jquery.fancybox.css")}}" >
+		<!-- bootstrap.min -->
+		<link rel="stylesheet" href="{{asset("../../css/bootstrap.min.css")}}" >
+		<!-- bootstrap.min -->
+		<link rel="stylesheet" href="{{asset("../../css/owl.carousel.css")}}" >
+		<!-- bootstrap.min -->
+		<link rel="stylesheet" href="{{asset("../../css/slit-slider.css")}}" >
+		<!-- bootstrap.min -->
+		<link rel="stylesheet" href="{{asset("../../css/animate.css")}}" >
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" href="{{asset("../../css/main.css")}}" >
 		<!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
+		<script src="{{asset("../../js/modernizr-2.6.2.min.js")}}"></script>
 
     </head>
 	
@@ -71,14 +70,14 @@
 					
 					<!-- logo -->
 					<h1 class="navbar-brand">
-						<a href="#body">FunMaV</a>
+						<a href="{{url('/')}}">FunMaV</a>
 					</h1>
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
+				<!-- main nav-->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li><a href="#body">Home</a></li>
                         <li><a href="#about">Quienes somos</a></li>
                         <li><a href="#service">Servicios</a></li>
@@ -86,8 +85,7 @@
                         <li><a href="#testimonials">Testimonios</a></li>
                         <li><a href="#price">Grupo</a></li>
                         <li><a href="#contact">Contactenos</a></li>
-                        <li><a href="#">Login</a></li>
-
+                        <li><a href="{{url('/login')}}">Login</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -187,28 +185,41 @@
 					<div class="row">
 						<div class="col-md-4 wow animated fadeInLeft">
 							<div class="recent-works">
-								<h3>Recent Works</h3>
 								<div id="works">
 									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+										<h3>Mision</h3>
+										<p align="justify">La misión es la resocialización de individuos que se hayan marginados o impedidos por causa de la problemática de la drogadicción alcoholismo etc., a través de un proceso de restauración en donde va a encontrar un hogar, amor, comprensión, ayuda y se va reeducar por medio de las terapias ocupacionales, charlas, y otros.</p>
 									</div>
 									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-									</div>
-									<div class="work-item">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+										<h3>Vision</h3>
+										<p  align="justify">La rehabilitación y reinserción de Hombres, Mujeres y niños que circunstancialmente se encuentran impedidos por consumo de droga y/o marginamiento social por abandono con consecuencias de compromiso delictivo, en alguno de los casos en los que se presente acuerdo interinstitucional.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-7 col-md-offset-1 wow animated fadeInRight">
 							<div class="welcome-block">
-								<h3>Welcome To Our Site</h3>								
-						     	 <div class="message-body">
-									<img src="img/member-1.jpg" class="pull-left" alt="member">
-						       		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								<h3>Historia De Nuestra Fundacion Manantial De Vida</h3>
+								<div id="works">
+									<div class="work-item">
+										<img src="{{asset("fundacion.jpg")}}" class="pull-left" alt="member">
+										<p align="justify"> En enero del año 1999 llego a girardot el pastor pablo ramírez y dos compañeros más enviados
+											con el propósito único de ayudar a personas con problemas de marginamiento social por causa de la farmacodependencia,
+											y cuando llegaron no tenían donde dormir y pidieron ayuda en el colegio americano quienes inmediatamente les dieron
+											el alojamiento por una noche, al  otro día fueron en busca de la señora amparo en la plazo de mercado quien tiene un restaurante,
+											y esta señora permitió que ellos durmieran en su casa unos días mientras realizaban la venta de las bolsas que habían traído para
+											poder pagar el primer arriendo, consiguieron la primera casa en la carrera 8 con 17 y comenzaron a tocar las puertas del comercio y recoger
+											personas que estaban en las calles, encontramos que la asociación de comerciantes de Girardot apoyo en gran manera la obra, especialmente don
+											Ignacio reyes quien pago el arriendo y llevaba mercados durante los primeros 6 meses y después hasta la fecha no ha parado de ayudar a esta noble causa.</p>
+									</div>
+									<div class="work-item">
+										<img src="{{asset("fundacion.jpg")}}" class="pull-left" alt="member">
+										<p align="justify"> A medida que pasaba el tiempo ha crecido la obra en esta ciudad, el hermano pablo conoció en Girardot a su esposa y se casaron en el año 1999 en esta ciudad,
+											en la iglesia centro bíblico de Girardot, luego encontraron una casa en el barrio san Antonio en la cual se pagó arriendo por 11 años, y desde
+											hace 3 años se adquirió la casa en la calle 21 b no: 3-36. se ha tenido el respaldo de toda la gente de Girardot y de las siguientes administraciones.
+											dándole oportunidad a la fundación para realizar trabajos en beneficio de la comunidad, apoyando para favorecer esta problemática y noble causa.</p>
+									</div>
 						     	 </div>
-						       	<a href="#" class="btn btn-border btn-effect pull-right">Read More</a>
 						    </div>
 						</div>
 					</div>
@@ -560,25 +571,25 @@
 		<!-- Essential jQuery Plugins
 		================================================== -->
 		<!-- Main jQuery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
+		<script src="{{asset("../../js/jquery-1.11.1.min.js")}}"></script>
 		<!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+		<script src="{{asset("../../js/bootstrap.min.js")}}"></script>
 		<!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="{{asset("../../js/jquery.singlePageNav.min.js")}}"></script>
 		<!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
+		<script src="{{asset("../../js/jquery.fancybox.pack.js")}}"></script>
 		<!-- Google Map API -->
-		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script src="{{asset("http://maps.google.com/maps/api/js?sensor=false")}}"></script>
 		<!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+		<script src="{{asset("../../js/owl.carousel.min.js")}}"></script>
         <!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
+		<script src="{{asset("../../js/jquery.easing.min.js")}}"></script>
         <!-- Fullscreen slider -->
-        <script src="js/jquery.slitslider.js"></script>
-        <script src="js/jquery.ba-cond.min.js"></script>
+		<script src="{{asset("../../js/jquery.slitslider.js")}}"></script>
+		<script src="{{asset("../../js/jquery.ba-cond.min.js")}}"></script>
 		<!-- onscroll animation -->
-        <script src="js/wow.min.js"></script>
+		<script src="{{asset("../../js/wow.min.js")}}"></script>
 		<!-- Custom Functions -->
-        <script src="js/main.js"></script>
+		<script src="{{asset("../../js/main.js")}}"></script>
     </body>
 </html>

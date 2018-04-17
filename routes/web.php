@@ -50,11 +50,6 @@ Route::get('/prueba', function () {
     return view('formulario/hv');
 });
 
-//Route::get('/', function () {
-//return view('inicio');
-
-Route::get('/','PrincipalController@index');
-
 Route::get('/encuesta', function () {
     return view('/encuestaeto');
 });
@@ -84,6 +79,7 @@ Route::group([],function(){
     Route::resource('acudiente','AcudienteController');
 });
 
+Route::get('/','PrincipalController@index');
 
 //Login
 
