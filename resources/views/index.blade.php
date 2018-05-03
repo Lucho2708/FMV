@@ -81,7 +81,7 @@
                         <li><a href="#body">Home</a></li>
                         <li><a href="#about">Quienes somos</a></li>
                         <li><a href="#service">Servicios</a></li>
-                        <li><a href="#portfolio">proyectos</a></li>
+                        <li><a href="#portfolio">Actividades</a></li>
                         <li><a href="#testimonials">Testimonios</a></li>
                         <li><a href="#price">Grupo</a></li>
                         <li><a href="#contact">Contactenos</a></li>
@@ -108,43 +108,30 @@
 				<div class="sl-slider">
 				
 					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-
 						<div class="bg-img bg-img-1"></div>
-
 						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2 class="animated fadeInDown">BLUE Onepage HTML5 Template</h2>
-                                <span class="animated fadeInDown">Clean and Professional one page Template</span>
-                                <a href="#" class="btn btn-blue btn-effect">Join US</a>
-                            </div>
-                        </div>
-						
+							<div class="caption-content">
+								<h2 class="animated fadeInDown">FUNDACION MANANTIAL DE VIDA</h2>
+							</div>
+						</div>
 					</div>
 					
 					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-					
 						<div class="bg-img bg-img-2"></div>
 						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>BLUE Onepage HTML5 Template</h2>
-                                <span>Clean and Professional one page Template</span>
-                                <a href="#" class="btn btn-blue btn-effect">Join US</a>
-                            </div>
-                        </div>
-						
+							<div class="caption-content">
+								<h2 class="animated fadeInDown">FUNDACION MANANTIAL DE VIDA</h2>
+							</div>
+						</div>
 					</div>
 					
 					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-						
 						<div class="bg-img bg-img-3"></div>
 						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>BLUE Onepage HTML5 Template</h2>
-                                <span>Clean and Professional one page Template</span>
-                                <a href="#" class="btn btn-blue btn-effect">Join US</a>
-                            </div>
-                        </div>
-
+							<div class="caption-content">
+								<h2 class="animated fadeInDown">FUNDACION MANANTIAL DE VIDA</h2>
+							</div>
+						</div>
 					</div>
 
 				</div><!-- /sl-slider -->
@@ -164,14 +151,12 @@
                         <i class="fa fa-angle-right fa-3x"></i>
                     </a>
                 </nav>
-                
 
 				<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
 					<span class="nav-dot-current"></span>
 					<span></span>
 					<span></span>
 				</nav>
-
 			</div><!-- /slider-wrapper -->
 		</section>
 		
@@ -290,83 +275,350 @@
 					<div class="row">
 					
 						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>FEATURED PROJECTS</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h2>NUESTRAS ACTIVIDADES</h2>
+							<p>En la fundación cada día buscamos formas para así mismo ayudar a las personas a dejar sus problemas de consumo y alcoholismo.</p>
 						</div>
 						
 
 						<ul class="project-wrapper wow animated fadeInUp">
 							<li class="portfolio-item">
-								<img src="img/portfolio/item.jpg" class="img-responsive" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
+								<img src="{{asset("img/portfolio/Celebracionmadre/1.jpg")}}" class="img-responsive" alt="Celebracion dia de la Madre">
 								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+									<h3>Dia de las Madres</h3>
+									<p></p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="img/portfolio/item.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
+									<li>
+										<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/1.jpg")}}">
+                                            <i class="fa fa-search"></i>
+                                            <a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/2.jpg")}}">
+                                                <a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/3.jpg")}}">
+                                                    <a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/4.jpg")}}">
+                                                        <a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/5.jpg")}}">
+															<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/6.jpg")}}">
+																<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/7.jpg")}}">
+																	<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/8.jpg")}}">
+																		<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/9.jpg")}}">
+																			<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/10.jpg")}}">
+																				<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/11.jpg")}}">
+																					<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/12.png")}}">
+																						<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/13.png")}}">
+																							<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/14.jpg")}}">
+																								<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/15.jpg")}}">
+																									<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/16.jpg")}}">
+																										<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/17.jpg")}}">
+																											<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/18.jpg")}}">
+																												<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/19.jpg")}}">
+																													<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/20.jpg")}}">
+																														<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/21.jpg")}}">
+																															<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/22.jpg")}}">
+																																<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/23.jpg")}}">
+																																	<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/24.jpg")}}">
+																																		<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/25.jpg")}}">
+																																			<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/26.jpg")}}">
+																																				<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/27.jpg")}}">
+																																					<a class="fancybox" title="Celebracion"  data-fancybox-group="works" href="{{asset("img/portfolio/Celebracionmadre/28.jpg")}}">
+                                                        </a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+									</li>
 								</ul>
 							</li>
-							
+
 							<li class="portfolio-item">
-								<img src="img/portfolio/item2.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="{{asset("img/portfolio/grados/1.jpg")}}" class="img-responsive" alt="Grados de Completementacion Escolar">
 								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+									<h3>Graduacion de Bachilleres </h3>
+									<p></p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street" href="img/slider/banner.jpg" data-fancybox-group="works" ><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
+									<li>
+										<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/1.jpg")}}">
+											<i class="fa fa-search"></i>
+											<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/2.jpg")}}">
+												<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/3.jpg")}}">
+													<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/4.jpg")}}">
+														<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/5.jpg")}}">
+															<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/6.jpg")}}">
+																<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/7.jpg")}}">
+																	<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/8.jpg")}}">
+																		<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/9.jpg")}}">
+																			<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/10.jpg")}}">
+																				<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/11.jpg")}}">
+																					<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/12.jpg")}}">
+																						<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/13.jpg")}}">
+																							<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/14.jpg")}}">
+																								<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/15.jpg")}}">
+																									<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/16.jpg")}}">
+																										<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/17.jpg")}}">
+																											<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/18.jpg")}}">
+																												<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/19.jpg")}}">
+																													<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/20.jpg")}}">
+																														<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/21.jpg")}}">
+																															<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/22.jpg")}}">
+																																<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/23.jpg")}}">
+																																	<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/24.jpg")}}">
+																																		<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/25.jpg")}}">
+																																			<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/30.jpg")}}">
+																																				<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/31.jpg")}}">
+																																					<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/32.jpg")}}">
+																																						<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/33.jpg")}}">
+																																							<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/34.jpg")}}">
+																																								<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/35.jpg")}}">
+																																									<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/36.jpg")}}">
+																																										<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/37.jpg")}}">
+																																											<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/38.jpg")}}">
+																																												<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/39.jpg")}}">
+																																													<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/40.jpg")}}">
+																																														<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/41.jpg")}}">
+																																															<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/42.jpg")}}">
+																																																<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/43.jpg")}}">
+																																																	<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/44.jpg")}}">
+																																																		<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/45.jpg")}}">
+																																																			<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/46.jpg")}}">
+																																																				<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/47.jpg")}}">
+																																																					<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/48.jpg")}}">
+																																																						<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/49.jpg")}}">
+																																																							<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/50.jpg")}}">
+																																																								<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/51.jpg")}}">
+																																																									<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/52.jpg")}}">
+																																																										<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/53.jpg")}}">
+																																																											<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/54.jpg")}}">
+																																																												<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/55.jpg")}}">
+																																																													<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/56.jpg")}}">
+																																																														<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/57.jpg")}}">
+																																																															<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/58.jpg")}}">
+																																																																<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/59.jpg")}}">
+																																																																	<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/60.jpg")}}">
+																																																																		<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/61.jpg")}}">
+																																																																			<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/62.jpg")}}">
+																																																																				<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/63.jpg")}}">
+																																																																					<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/64.jpg")}}">
+																																																																						<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/65.jpg")}}">
+																																																																							<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/66.jpg")}}">
+																																																																								<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/67.jpg")}}">
+																																																																									<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/68.jpg")}}">
+																																																																										<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/69.jpg")}}">
+																																																																											<a class="fancybox" title="Grados"  data-fancybox-group="works" href="{{asset("img/portfolio/grados/70.jpg")}}">
+
+																																					</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+									</li>
 								</ul>
 							</li>
-							
+
+
 							<li class="portfolio-item">
-								<img src="img/portfolio/item3.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="{{asset("img/portfolio/Recreacion/1.jpg")}}" class="img-responsive" alt="Hogar de Mujeres">
 								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+									<h3>Salida a Piscina</h3>
+									<p></p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="img/portfolio/item3.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
+									<li>
+										<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/1.jpg")}}">
+											<i class="fa fa-search"></i>
+											<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/2.jpg")}}">
+												<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/3.jpg")}}">
+													<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/4.jpg")}}">
+														<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/5.jpg")}}">
+															<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/6.jpg")}}">
+																<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/7.jpg")}}">
+																	<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/8.jpg")}}">
+																		<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/9.jpg")}}">
+																			<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/10.jpg")}}">
+																				<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/11.jpg")}}">
+																					<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/12.jpg")}}">
+																						<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/13.jpg")}}">
+																							<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/14.jpg")}}">
+																								<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/15.jpg")}}">
+																									<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/16.jpg")}}">
+																										<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/17.jpg")}}">
+																											<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/18.jpg")}}">
+																												<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/19.jpg")}}">
+																													<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/20.jpg")}}">
+																														<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/21.jpg")}}">
+																															<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/22.jpg")}}">
+																																<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/23.jpg")}}">
+																																	<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/24.jpg")}}">
+																																		<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/25.jpg")}}">
+																																			<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/30.jpg")}}">
+																																				<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/31.jpg")}}">
+																																					<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/32.jpg")}}">
+																																						<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/33.jpg")}}">
+																																							<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/34.jpg")}}">
+																																								<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/35.jpg")}}">
+																																									<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/36.jpg")}}">
+																																										<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/37.jpg")}}">
+																																											<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/38.jpg")}}">
+																																												<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/39.jpg")}}">
+																																													<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/40.jpg")}}">
+																																														<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/41.jpg")}}">
+																																															<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/42.jpg")}}">
+																																																<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/43.jpg")}}">
+																																																	<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/44.jpg")}}">
+																																																		<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/45.jpg")}}">
+																																																			<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/46.jpg")}}">
+																																																				<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/47.jpg")}}">
+																																																					<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/48.jpg")}}">
+																																																						<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/49.jpg")}}">
+																																																							<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/50.jpg")}}">
+																																																								<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/51.jpg")}}">
+																																																									<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/52.jpg")}}">
+																																																										<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/53.jpg")}}">
+																																																											<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/54.jpg")}}">
+																																																												<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/55.jpg")}}">
+																																																													<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/56.jpg")}}">
+																																																														<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/57.jpg")}}">
+																																																															<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/58.jpg")}}">
+																																																																<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/59.jpg")}}">
+																																																																	<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/60.jpg")}}">
+																																																																		<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/61.jpg")}}">
+																																																																			<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/62.jpg")}}">
+																																																																				<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/63.jpg")}}">
+																																																																					<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/64.jpg")}}">
+																																																																						<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/65.jpg")}}">
+																																																																							<a class="fancybox" title="Recreacion"  data-fancybox-group="works" href="{{asset("img/portfolio/Recreacion/66.jpg")}}">
+																																																																							</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+									</li>
 								</ul>
 							</li>
-							
+
+                            <li class="portfolio-item">
+                                <img src="{{asset("img/portfolio/bautismos/1.jpg")}}" class="img-responsive" alt="Ceremonia de Bautismo">
+                                <figcaption class="mask">
+                                    <h3>Bautismo</h3>
+                                    <p></p>
+                                </figcaption>
+                                <ul class="external">
+                                    <li>
+                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/1.jpg")}}">
+                                            <i class="fa fa-search"></i>
+                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/2.jpg")}}">
+                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/3.jpg")}}">
+                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/4.jpg")}}">
+                                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/5.jpg")}}">
+                                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/6.jpg")}}">
+                                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/7.jpg")}}">
+                                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/8.jpg")}}">
+                                                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/9.jpg")}}">
+                                                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/10.jpg")}}">
+                                                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/11.jpg")}}">
+                                                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/12.jpg")}}">
+                                                                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/13.jpg")}}">
+                                                                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/14.jpg")}}">
+                                                                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/15.jpg")}}">
+                                                                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/16.jpg")}}">
+                                                                                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/17.jpg")}}">
+                                                                                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/18.jpg")}}">
+                                                                                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/19.jpg")}}">
+                                                                                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/20.jpg")}}">
+                                                                                                                        <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/21.jpg")}}">
+                                                                                                                            <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/22.jpg")}}">
+                                                                                                                                <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/23.jpg")}}">
+                                                                                                                                    <a class="fancybox" title="Bautismo"  data-fancybox-group="works" href="{{asset("img/portfolio/Bautismos/24.jpg")}}">
+
+                                                                                                                                    </a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
 							<li class="portfolio-item">
-								<img src="img/portfolio/item4.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
+								<img src="{{asset("img/portfolio/uniminuto/1.jpg")}}" class="img-responsive" alt="Practica Uniminuto">
 								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+									<h3>Charla UniMinuto</h3>
+									<p></p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="img/portfolio/item4.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
+									<li>
+										<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/1.jpg")}}">
+											<i class="fa fa-search"></i>
+											<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/2.jpg")}}">
+												<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/3.jpg")}}">
+													<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/4.jpg")}}">
+														<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/5.jpg")}}">
+															<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/6.jpg")}}">
+																<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/7.jpg")}}">
+																	<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/8.jpg")}}">
+																		<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/9.jpg")}}">
+																			<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/10.jpg")}}">
+																				<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/11.jpg")}}">
+																					<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/12.jpg")}}">
+																						<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/13.jpg")}}">
+																							<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/14.jpg")}}">
+																								<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/15.jpg")}}">
+																									<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/16.jpg")}}">
+																										<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/17.jpg")}}">
+																											<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/18.jpg")}}">
+																												<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/19.jpg")}}">
+																													<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/20.jpg")}}">
+																														<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/21.jpg")}}">
+																															<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/22.jpg")}}">
+																																<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/23.jpg")}}">
+																																	<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/24.jpg")}}">
+																																		<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/25.jpg")}}">
+																																			<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/26.jpg")}}">
+																																				<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/27.jpg")}}">
+																																					<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/28.jpg")}}">
+																																						<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/29.jpg")}}">
+																																							<a class="fancybox" title="Uniminuto"  data-fancybox-group="works" href="{{asset("img/portfolio/Uniminuto/30.jpg")}}">
+
+
+																																	</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+									</li>
 								</ul>
 							</li>
-							
+
 							<li class="portfolio-item">
-								<img src="img/portfolio/item5.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+								<img src="{{asset("img/portfolio/tolemaida/1.jpg")}}" class="img-responsive" alt="Chrla en Toleimada">
 								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+									<h3>charla al ejercito</h3>
+									<p></p>
 								</figcaption>
 								<ul class="external">
-									<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="img/portfolio/item5.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
+									<li>
+										<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/1.jpg")}}">
+											<i class="fa fa-search"></i>
+											<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/2.jpg")}}">
+												<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/3.jpg")}}">
+													<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/4.jpg")}}">
+														<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/5.jpg")}}">
+															<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/6.jpg")}}">
+																<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/7.jpg")}}">
+																	<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/8.jpg")}}">
+																		<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/9.jpg")}}">
+																			<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/10.jpg")}}">
+																				<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/11.jpg")}}">
+																					<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/12.jpg")}}">
+																						<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/13.jpg")}}">
+																							<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/14.jpg")}}">
+																								<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/15.jpg")}}">
+																									<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/16.jpg")}}">
+																										<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/17.jpg")}}">
+																											<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/18.jpg")}}">
+																												<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/19.jpg")}}">
+																													<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/20.jpg")}}">
+																														<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/21.jpg")}}">
+																															<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/22.jpg")}}">
+																																<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/23.jpg")}}">
+																																	<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/24.jpg")}}">
+																																		<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/25.jpg")}}">
+																																			<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/30.jpg")}}">
+																																				<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/31.jpg")}}">
+																																					<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/32.jpg")}}">
+																																						<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/33.jpg")}}">
+																																							<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/34.jpg")}}">
+																																								<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/35.jpg")}}">
+																																									<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/36.jpg")}}">
+																																										<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/37.jpg")}}">
+																																											<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/38.jpg")}}">
+																																												<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/39.jpg")}}">
+																																													<a class="fancybox" title="Tolemaida"  data-fancybox-group="works" href="{{asset("img/portfolio/tolemaida/40.jpg")}}">
+
+
+																																													</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+									</li>
 								</ul>
 							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item6.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="img/portfolio/item6.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
+
 						</ul>
 						
 					</div>
