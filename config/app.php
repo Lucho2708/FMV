@@ -183,6 +183,10 @@ return [
         *Sweet Alert
         */
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        /*
+        *Intervention Image
+        */
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -243,6 +247,10 @@ return [
         *Sweet Alert
         */
         'Alert'=> UxWeb\SweetAlert\SweetAlert::class,
+        /*
+        *Intervention Image
+        */
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

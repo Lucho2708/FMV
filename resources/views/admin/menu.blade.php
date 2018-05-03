@@ -1,5 +1,4 @@
-{{ $menun1=0 }}
-{{ $menun2=0 }}
+
 <div class="menu">
     <ul class="list">
         <li class="header">MAIN NAVIGATION</li>
