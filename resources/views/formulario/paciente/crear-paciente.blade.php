@@ -23,7 +23,6 @@
                     <div class="body">
                         {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                 <div>
                                     <div class="row clearfix">
                                         <div class="col-md-3">
                                             <div class="input-group">
@@ -177,6 +176,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             <br>
                             {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
                         {!! Form::close() !!}

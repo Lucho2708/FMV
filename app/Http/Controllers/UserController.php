@@ -118,12 +118,19 @@ class UserController extends Controller
             $avatar=$request->file('avatar');
             $filename=time().'.'.$avatar->getClientOriginalExtension();
             Image::make($avatar)->resize(300,300)->save(public_path('images/'.$filename));
-
             $user= Auth::user();
+            $user->fill($request->all());
             $user ->avatar=$filename;
             $user ->save();   
-        }
+        }else{
+            $user= Auth::user();
+            $user->fill($request->all());
+            $user->save();
 
+        }
+        
+        alert()->success('Su perfil fue actualizado exitosamente')->autoclose(2000);
+        
         return view('admin.perfil.perfil',array ('user'=>Auth::user()));
 
     }
