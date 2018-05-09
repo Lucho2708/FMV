@@ -13,7 +13,7 @@
 <div class="container-fluid">
         <div class="block-header">
             <h1>
-                Actualizar imagen de perfil
+                Actualizar perfil
             </h1>
         </div>
 

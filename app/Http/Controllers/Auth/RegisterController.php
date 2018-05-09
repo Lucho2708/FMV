@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/usuario';
 
     /**
      * Create a new controller instance.
@@ -36,9 +36,10 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
+    
     /**
      * Get a validator for an incoming registration request.
      *
@@ -61,6 +62,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //dd ($data);
+
+        alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(3000);
         return User::create([
             'nombres' => $data['nombres'],
             'apellidos'=>$data['apellidos'],
@@ -73,6 +76,9 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'perfil'=>$data['perfil'],
         ]);
+
     }
+    
+
 
 }

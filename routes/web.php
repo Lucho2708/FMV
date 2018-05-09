@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/admin', function () {
+Route::get('/dashboard', function () {
     return view('admin.inicio');
 })->middleware('auth');
 Route::get('/hv', function () {
@@ -84,12 +84,10 @@ Route::get('/login', function(){
 });
 
 Route::post('login','Auth\LoginController@login')->name('login');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
 Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
 Route::post('perfil', 'UserController@update_avatar')->name('perfil')->middleware('auth');
-

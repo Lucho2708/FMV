@@ -18,4 +18,4 @@ class Seguimiento_proceso extends Model
         'compromiso'
     ];
 }
-}
+

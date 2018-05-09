@@ -85,7 +85,14 @@
                         <li><a href="#testimonials">Testimonios</a></li>
                         <li><a href="#price">Grupo</a></li>
                         <li><a href="#contact">Contactenos</a></li>
+                        
+
+                        @if (Auth::check())
+                        <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
+                        @else
                         <li><a href="{{url('/login')}}">Login</a></li>
+                        @endif
+
                     </ul>
                 </nav>
 				<!-- /main nav -->
