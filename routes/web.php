@@ -77,17 +77,33 @@ Route::group([],function(){
 
 Route::get('/','PrincipalController@index');
 
-//Login
-
-Route::get('/login', function(){
-    return view('auth.login');
-});
-
 Route::post('login','Auth\LoginController@login')->name('login');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
+
 Route::post('perfil', 'UserController@update_avatar')->name('perfil')->middleware('auth');
+
+// Authentication Routes...
+Route::get('login', [
+  'as' => 'login',
+  'uses' => 'Auth\LoginController@showLoginForm'
+]);
+Route::post('login', [
+  'as' => '',
+  'uses' => 'Auth\LoginController@login'
+]);
+Route::post('logout', [
+  'as' => 'logout',
+  'uses' => 'Auth\LoginController@logout'
+]);
+// Registration Routes...
+Route::get('register', [
+  'as' => 'register',
+  'uses' => 'Auth\RegisterController@showRegistrationForm'
+]);
+Route::post('register', [
+  'as' => '',
+  'uses' => 'Auth\RegisterController@register'
+]);
