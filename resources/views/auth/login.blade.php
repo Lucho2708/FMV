@@ -40,26 +40,22 @@
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
-                        <div class="form-line">
-                            <input id="email" type="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email') }}" required autofocus>
+                        <div @if ($errors->has('email')) class="form-line error" @endif class="form-line">
+                            <input id="email" type="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email') }}" required autofocus >
                         </div>
                         @if ($errors->has('email'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
+                            <label class="error">{{ $errors->first('email') }}</label> 
                         @endif
                     </div>
                     <div class="input-group" {{ $errors->has('password') ? ' has-error' : '' }}>
                         <span class="input-group-addon">
                             <i class="material-icons">lock</i>
                         </span>
-                        <div class="form-line">
+                        <div @if ($errors->has('password')) class="form-line error" @endif class="form-line">
                             <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
                         @if ($errors->has('password'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
+                            <label class="error">{{ $errors->first('password') }}</label> 
                         @endif
                     </div>
                     <div class="row">
@@ -92,9 +88,6 @@
 
     <!-- Waves Effect Plugin Js -->
     <script src="../../plugins/node-waves/waves.js"></script>
-
-    <!-- Validation Plugin Js -->
-    <script src="../../plugins/jquery-validation/jquery.validate.js"></script>
 
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
