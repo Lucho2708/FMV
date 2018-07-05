@@ -51,14 +51,14 @@
                                             <option name="RC">RC</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="input-group">
                                             <div class="form-line">
                                                 <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <div class="input-group">
                                             <div class="form-line">
                                                 <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion">

@@ -226,8 +226,8 @@
 					<div class="row">
 					
 						<div class="sec-title text-center">
-							<h2 class="wow animated bounceInLeft">Service</h2>
-							<p class="wow animated bounceInRight">The Key Features of our Job</p>
+							<h2 class="wow animated bounceInLeft">Pilares De La Fundacion.</h2>
+							<p class="wow animated bounceInRight">Todos Los Caminos Nos Conducen a Dios </p>
 						</div>
 						
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
@@ -235,8 +235,8 @@
 								<div class="service-icon">
 									<i class="fa fa-home fa-3x"></i>
 								</div>
-								<h3>Support</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h3>HOGAR</h3>
+								<p align="justify"> Sera tu segundo Hogar, donde progras compartir, vivir, aprender. </p>
 							</div>
 						</div>
 					
@@ -245,8 +245,8 @@
 								<div class="service-icon">
 									<i class="fa fa-tasks fa-3x"></i>
 								</div>
-								<h3>Well Documented</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h3>EDUCACION</h3>
+								<p align="justify">Tenemos convenios con el sena y otras institucion de educacion media para ampliar el conocmiento como pilar de una mejor vida. </p>
 							</div>
 						</div>
 					
@@ -255,8 +255,8 @@
 								<div class="service-icon">
 									<i class="fa fa-clock-o fa-3x"></i>
 								</div>
-								<h3>Design UI/UX</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h3>ACTIVIDADES</h3>
+								<p align="justify">Cada dia intentamos fortalecer lazos entre compañeros, con actividades socioculturales, cumpleaños, deporte, musica. </p>
 							</div>
 						</div>
 					
@@ -266,8 +266,8 @@
 									<i class="fa fa-heart fa-3x"></i>
 								</div>
 								
-								<h3>Web Security</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
+								<h3>AMOR A DIOS</h3>
+								<p align="justify">.</p>
 							</div>
 						</div>
 						
@@ -640,29 +640,28 @@
 						<div class="row">
 						
 							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2>What people say</h2>
+								<h2>Testimonios.</h2>
 							</div>
 							
 							<div id="testimonial" class=" wow animated fadeInUp">
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/6ApQVt0rI5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									</div>
 								</div>
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/TLH6TR4N-mA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									</div>
 								</div>
 								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
 									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/d-upLWWGkog" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>
+								</div>
+								<div class="testimonial-item text-center">
+									<div class="clearfix">
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/jy7_ccWRZbk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									</div>
 								</div>
 							</div>
@@ -679,60 +678,48 @@
 					<div class="row">
 					
 						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>Price</h2>
-							<p>Our price for your company</p>
+							<h2>Grupo De Trabajo</h2>
+							<h3>Conocenos</h3>
 						</div>
 						
 						<div class="col-md-4 wow animated fadeInUp">
 							<div class="price-table text-center">
-								<span>Silver</span>
+								<span>Psicologia</span>
 								<div class="value">
-									<span>$</span>
-									<span>24,35</span><br>
-									<span>month</span>
+									<span>foto</span><br>
+									<span>Nombre</span><br>
 								</div>
 								<ul>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li>No Bonus Points</li>
-									<li><a href="#">sign up</a></li>
+									<li>Titulos</li>
+									<li>Titulos</li>
 								</ul>
 							</div>
 						</div>
-						
-						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
-							<div class="price-table featured text-center">
-								<span>Gold</span>
-								<div class="value">
-									<span>$</span>
-									<span>50,00</span><br>
-									<span>month</span>
-								</div>
-								<ul>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li>Free Trial</li>
-									<li><a href="#">sign up</a></li>
-								</ul>
-							</div>
-						</div>
-						
-						<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
+
+						<div class="col-md-4 wow animated fadeInUp">
 							<div class="price-table text-center">
-								<span>Diamond</span>
+								<span>Pastores</span>
 								<div class="value">
-									<span>$</span>
-									<span>123,12</span><br>
-									<span>month</span>
+									<span>foto</span><br>
+									<span>Nombre</span><br>
 								</div>
 								<ul>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li>All Bonus Points</li>
-									<li><a href="#">sign up</a></li>
+									<li>Titulos</li>
+									<li>Titulos</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 wow animated fadeInUp">
+							<div class="price-table text-center">
+								<span>Trabajador social</span>
+								<div class="value">
+									<span>foto</span><br>
+									<span>Nombre</span><br>
+								</div>
+								<ul>
+									<li>Titulos</li>
+									<li>Titulos</li>
 								</ul>
 							</div>
 						</div>
@@ -821,7 +808,7 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="footer-content">	
-						<p>Copyright &copy; 2014-2015 Design and Developed By<a href="http://www.themefisher.com">Themefisher</a> </p>
+						<p>Copyright &copy; 2018 Design and Developed By<a href="http://www.themefisher.com">Themefisher to Funmav</a> </p>
 					</div>
 				</div>
 			</div>
