@@ -151,8 +151,7 @@
                                     NOTA. La colchoneta, las sabanas, las camisetas del uniforme y el dinero no
                                     tienen devolución.
                                 </p>
-                        {!! Form::submit('Guardar', ['class' =>'btn btn-primary']) !!}
-                                {!! Form::reset('cancelar', ['class' =>'btn btn-danger']) !!}
+                        {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
 
 
                     {!! Form::close() !!}

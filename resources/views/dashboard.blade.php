@@ -61,29 +61,6 @@
             margin: 1px 1px
         }
 
-        #up{
-            a:hover;
-
-        }
-
-        #estilo-foto{
-            width:150px;
-            padding: 20px;
-            margin: 50px;
-            position: relative;
-            font-size: 30px;
-        }
-
-        #files{
-            left: 0;
-            top:0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0;
-        }
     </style>
 
 </head>
