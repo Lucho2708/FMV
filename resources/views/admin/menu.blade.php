@@ -53,25 +53,22 @@
 
             </ul>
         </li>
-        <li>
+        <li @if ($menun1==4) class="active" @endif>
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="material-icons">assignment</i>
                 <span>Forms</span>
             </a>
             <ul class="ml-menu">
-                <li>
+                <li @if ($menun2==7) class="active" @endif>
                     <a href="{!!URL::to('/hv')!!}">Hoja de Vida</a>
                 </li>
-                <li>
-                    <a href="{!!URL::to('/acudiente')!!}">Datos Acudiente</a>
-                </li>
-                <li>
+                <li @if ($menun2==8) class="active" @endif>
                     <a href="{!!URL::to('/diario')!!}">Diario terapeutico</a>
                 </li>
-                <li>
+                <li @if ($menun2==9) class="active" @endif>
                     <a href="{!!URL::to('/hc')!!}">Historia clinica</a>
                 </li>
-                <li>
+                <li @if ($menun2==10) class="active" @endif>
                     <a href="{!!URL::to('/sproceso')!!}">Seguimiento de proceso</a>
                 </li>
                 <li>

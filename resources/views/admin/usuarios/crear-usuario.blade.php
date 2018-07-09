@@ -134,8 +134,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <button class="btn btn-primary waves-effect" type="submit">CREAR</button>
+                        <button class="btn btn-primary waves-effect" type="submit">Crear</button>
+                        <button class="btn btn-danger" type="reset">Cancelar</button>
                     </form>
                 </div>
             </div>

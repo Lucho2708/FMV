@@ -24,17 +24,16 @@
                         {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row clearfix">
-                                        <div class="col-md-3">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-4">
                                             <div class="input-group">
-                                                <div class="form">
-                                                    <input type="file" class="form-control" name="foto" id="files" width="100" height="100">
+                                                <div class="estilo-foto" class="glyphicon glyphicon-upload">
+                                                    <input type="file" class="form-control" name="foto" id="files">
+                                                    <output id="list"></output>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <output id="list"></output>
-                                        </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
@@ -43,7 +42,7 @@
                                         </div>
                                         <div class="col-md-5">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
@@ -175,10 +174,11 @@
                                             </select>
                                         </div>
                                     </div>
+                                     {!! Form::submit('Guardar', ['class' =>'btn btn-primary']) !!}
+                                    {!! Form::reset('cancelar', ['class' =>'btn btn-danger']) !!}
                                 </div>
-                                
                             <br>
-                            {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
+
                         {!! Form::close() !!}
                     </div>
                 </div>
