@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AcudienteUpdateRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests\AcudienteStoreRequest;
 use App\Acudiente;
@@ -74,7 +75,7 @@ class AcudienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AcudienteUpdateRequest $request, $id)
     {
         //
     }

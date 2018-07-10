@@ -48,7 +48,7 @@ FMV | Ver Paciente
                             <div class="row clearfix">
                                 <div class="col-md-4">
                                     <select class="form-control" name="tipo_documento" required>
-                                        <option>-- Seleccione Tipo De Documento --</option>
+                                        <option>-- Tipo De Documento --</option>
                                         <option name="CC">CC</option>
                                         <option name="TI">TI</option>
                                         <option name="CE">CE</option>
@@ -156,7 +156,7 @@ FMV | Ver Paciente
                                 tienen devolución.
                             </p>
                     {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
-
+                            {!! Form::submit('Cancelar', ['class' =>'btn btn-danger']) !!}
 
                 {!! Form::close() !!}
             </div>

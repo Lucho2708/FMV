@@ -58,7 +58,7 @@ FMV | Crear Usuario
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <div class="input-group{{ $errors->has('documento') ? ' has-error' : '' }}">
+                            <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
                                     <input name="documento" type="text" class="form-control" placeholder="Numero de documento" required value="{{ old('documento') }}"/>
                                 </div>
@@ -147,8 +147,8 @@ FMV | Crear Usuario
                             </div>
                         </div>
                     </div>
-
-                    <button class="btn btn-primary waves-effect" type="submit">CREAR</button>
+                    <button class="btn btn-primary waves-effect" type="submit">Crear</button>
+                    <button class="btn btn-danger waves-effect" type="submit">Cancelar</button>
                 </form>
             </div>
         </div>

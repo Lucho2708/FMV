@@ -179,10 +179,9 @@ FMV | Crear Paciente
                                             </select>
                                         </div>
                                     </div>
+                                  {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
+                                     {!! Form::submit('Cancelar', ['class' =>'btn btn-danger']) !!}
                                 </div>
-                                
-                            <br>
-                            {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
                         {!! Form::close() !!}
                     </div>
                 </div>

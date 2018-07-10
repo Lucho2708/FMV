@@ -24,7 +24,18 @@ class AcudienteUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nombres'       => 'required|string',
+            'apellidos'     => 'required|string',
+            'tipo_documento'=> 'required',
+            'documento'     => 'required|numeric|max:10',
+            'dirrecion'     => 'required|string',
+            'ciudad'        => 'required|string',
+            'telefono'      => 'required|numeric|size:11',
+            'profesion'     => 'required|string',
+            'empresa_labora'=> 'required|string',
+            'parentesco'    => 'required',
+            'nombre'        => 'required',
+            'aporte'        => 'required|string',
         ];
     }
 }
