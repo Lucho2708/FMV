@@ -88,7 +88,7 @@
                         
 
                         @if (Auth::check())
-                        <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
+                        <li><a href="{{url('/inicio')}}">Dashboard</a></li>
                         @else
                         <li><a href="{{url('/login')}}">Login</a></li>
                         @endif

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UsuarioStoreRequest;
+use App\Http\Requests\UsuarioUpdateRequest;
+
 use App\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -21,7 +24,7 @@ class UserController extends Controller
     {
         $menu = 1;
         $usuario =User::all();
-        return view('admin.usuarios.listar-usuario',compact('usuario'));
+        return view('usuarios.listar-usuario',compact('usuario'));
     }
 
     /**
@@ -31,7 +34,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.usuarios.crear-usuario');
+        return view('usuarios.crear-usuario');
     }
 
     /**
@@ -40,11 +43,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsuarioStoreRequest $request)
     {
-        
-        $usuario = new User($request->all());
 
+        $usuario = new User($request->all());
         $usuario -> password=bcrypt($request->password);
         $usuario -> perfil=($request->perfil);
         $usuario -> save();
@@ -74,7 +76,7 @@ class UserController extends Controller
     {
         $usuario=User::find($id);
 
-        return view('admin.usuarios.editar-usuario',compact('usuario'));
+        return view('usuarios.editar-usuario',compact('usuario'));
     }
 
     /**
@@ -84,7 +86,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UsuarioUpdateRequest $request, $id)
     {
         $usuario=User::find($id);
         //dd($usuario);
@@ -107,7 +109,7 @@ class UserController extends Controller
 
     public function perfil()
     {
-        return view('admin.perfil.perfil', array('user'=>Auth::user()));
+        return view('perfil.perfil', array('user'=>Auth::user()));
 
     }
 
@@ -131,7 +133,7 @@ class UserController extends Controller
         
         alert()->success('Su perfil fue actualizado exitosamente')->autoclose(2000);
         
-        return view('admin.perfil.perfil',array ('user'=>Auth::user()));
+        return view('perfil.perfil',array ('user'=>Auth::user()));
 
     }
 }

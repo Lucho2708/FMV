@@ -1,14 +1,18 @@
-@extends('dashboard')
+@extends('layouts.app')
 
-@section('topbar')
-    @include('admin.topbar',compact($menun1 = 0,$menun2=0))
+@section('title')
+FMV | Editar Acudiente
+@endsection
+
+@section('css')
+    <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
 @endsection
 
 @section('menu')
-    @include('admin.menu')
+    @include('menu')
 @endsection
 
-@section('contenido')
+@section('content')
 
 <div class="container-fluid">
     <div class="block-header">

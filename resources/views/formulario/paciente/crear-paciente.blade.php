@@ -1,14 +1,18 @@
-@extends('dashboard')
+@extends('layouts.app')
 
-@section('topbar')
-    @include('admin.topbar',compact($menun1 = 3,$menun2=6))
+@section('title')
+FMV | Crear Paciente
+@endsection
+
+@section('css')
+    <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
 @endsection
 
 @section('menu')
-    @include('admin.menu')
+    @include('menu')
 @endsection
 
-@section('contenido')
+@section('content')
     <div class="container-fluid">
         <div class="block-header">
             <h1>

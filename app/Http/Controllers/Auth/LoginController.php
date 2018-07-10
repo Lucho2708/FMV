@@ -32,7 +32,7 @@ class LoginController extends Controller
      */
     public function redirectPath()
     {
-        return '/dashboard';
+        return '/inicio';
     }
 
     /**

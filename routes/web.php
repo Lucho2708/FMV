@@ -11,9 +11,19 @@
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('admin.inicio');
-})->middleware('auth');
+/*
+Pagina Web Principal
+*/
+Route::get('/','PrincipalController@index');
+/*
+Pagina de Dashboard
+*/
+Route::get('/inicio', function(){
+  return view('inicio');
+})->name('inicio');
+/*
+Datos pendientes
+*/
 Route::get('/hv', function () {
     return view('formularios/hv');
 })->middleware('auth');
@@ -58,34 +68,60 @@ Route::get('/eto', function () {
     return view('/tocupacional');
 })->middleware('auth');
 
+
+/*
+Star | Resource Usuario 
+*/
+
 Route::group([],function(){
     Route::resource('usuario','UserController')->middleware('auth');
 });
+/*
+End | Resource Usuario 
+*/
 
+/*
+Star | Resource Paciente 
+*/
 Route::group([],function(){
     Route::resource('paciente','PacienteController')->middleware('auth');
 });
-
-
+/*
+End | Resource Paciente 
+*/
+/*
+Star | Resource Hoja de Vida 
+*/
 Route::group([],function(){
     Route::resource('hoja-vida','HvController')->middleware('auth');
 });
+/*
+End | Resource Hoja de Vida 
+*/
 
+/*
+Star | Resource Acudiente 
+*/
 Route::group([],function(){
     Route::resource('acudiente','AcudienteController')->middleware('auth');
 });
+/*
+End | Resource Acudiente 
+*/
 
-Route::get('/','PrincipalController@index');
-
-Route::post('login','Auth\LoginController@login')->name('login');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+/*
+Star | Update Profile
+*/
 Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
 
 Route::post('perfil', 'UserController@update_avatar')->name('perfil')->middleware('auth');
+/*
+End | Update Profile
+*/
 
-// Authentication Routes...
+/*
+Star | Authentication Routes...
+*/
 Route::get('login', [
   'as' => 'login',
   'uses' => 'Auth\LoginController@showLoginForm'
@@ -102,12 +138,6 @@ Route::post('logout', [
   'as' => 'logout',
   'uses' => 'Auth\LoginController@logout'
 ]);
-// Registration Routes...
-Route::get('register', [
-  'as' => 'register',
-  'uses' => 'Auth\RegisterController@showRegistrationForm'
-]);
-Route::post('register', [
-  'as' => '',
-  'uses' => 'Auth\RegisterController@register'
-]);
+/*
+End | Authentication Routes...
+*/

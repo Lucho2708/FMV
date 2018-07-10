@@ -1,15 +1,21 @@
+@extends('layouts.app')
 
-@extends('dashboard')
+@section('title')
+FMV | Ver Usuarios
+@endsection
 
-@section('topbar')
-    @include('admin.topbar',compact($menun1 =1,$menun2=1))
+@section('css')
+    <!-- Select Css -->
+    <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+    <!-- JQuery DataTable Css -->
+    <link href="{{ asset('plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
 @endsection
 
 @section('menu')
-    @include('admin.menu')
+    @include('menu')
 @endsection
 
-@section('contenido')
+@section('content')
     <div class="container-fluid">
         <!-- Basic Examples -->
         <div class="row clearfix">
@@ -20,17 +26,15 @@
                             VER USUARIOS
                         </h2>
                     </div>
-
+                    <a href="" class="showHide"></a>
                     <div class="body">
-                        @if(Session::has('message'))
-                            <div class="alert bg-green alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                {{Session::get('message')}}
-                            </div>
-                        @endif
-
+                        <div class="toggle-vis" data-column="0">
+                            <input  class="toggle-vis" data-column="0" type="checkbox" id="basic_checkbox_1" name="Nombres" checked="checked" />
+                            <label class="toggle-vis" data-column="0" for="basic_checkbox_1" >Nombres</label>
+                        </div>
+                        <a class="toggle-vis" data-column="0">Nombres</a>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <table id="MyTable" class="table table-bordered table-striped table-hover dataTable">
                                 <thead>
                                 <tr>
                                     <th>Nombres</th>
@@ -78,6 +82,17 @@
 
                                     </tr>
                                 @endforeach
+                                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                                <script>$("input:checkbox:not(:checked)").each(function() {
+                                    var column = "table ." + $(this).attr("name");
+                                        $(column).hide();
+                                    });
+                                    $("input:checkbox").click(function(){
+                                        var column = "table ." + $(this).attr("name");
+                                    $(column).toggle();
+                                    });
+                                    //# sourceURL=pen.js
+                                </script>
                                 </tbody>
                             </table>
                         </div>
@@ -89,4 +104,33 @@
 
 
     </div>
+@endsection
+
+@section('js')
+<!-- Jquery DataTable Plugin Js -->
+    <script src="{{ asset('plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/buttons.flash.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/jszip.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-datatable/extensions/export/buttons.print.min.js') }}"></script>
+    <script type="text/javascript" class="init">
+        $(document).ready(function() {
+            var table = $('#MyTable').DataTable( {
+            } );
+         
+            $('a.toggle-vis').on( 'click', function (e) {
+                e.preventDefault();
+         
+                // Get the column API object
+                var column = table.column( $(this).attr('data-column') );
+         
+                // Toggle the visibility
+                column.visible( ! column.visible() );
+            } );
+        } );
+    </script>
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\AcudienteStoreRequest;
 use App\Acudiente;
 use Session;
 
@@ -35,8 +36,9 @@ class AcudienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AcudienteStoreRequest $request)
     {
+        //Datos
         Acudiente::create($request->all());
         alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
         return redirect('acudiente');
