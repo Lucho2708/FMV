@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-FMV | Ver Usuarios
+FMV | Ver Acudiente
 @endsection
 
 @section('css')

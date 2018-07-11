@@ -77,7 +77,11 @@ class AcudienteController extends Controller
      */
     public function update(AcudienteUpdateRequest $request, $id)
     {
-        //
+        $acudiente=Acudiente::find($id);
+        $acudiente->fill($request->all());
+        $acudiente->save();
+        Session::flash('message','El acudiente: '.$acudiente->nombres .' '.$acudiente->apellidos.' fue actualizado exitosamente');
+        return redirect('acudiente');
     }
 
     /**
