@@ -1,5 +1,5 @@
 <ul class="list">
-    <li class="{{ Request::is('inicio') ? 'active' : null}}">
+    <li class="{{ Request::is('inicio') ? 'active' : null || Request::is('perfil')? 'active' : null }}">
         <a href="{{ route('inicio') }}">
             <i class="material-icons">home</i>
             <span>Inicio</span>

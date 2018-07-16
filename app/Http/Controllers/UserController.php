@@ -110,7 +110,6 @@ class UserController extends Controller
     public function perfil()
     {
         return view('perfil.perfil', array('user'=>Auth::user()));
-
     }
 
     public function update_avatar(Request $request){

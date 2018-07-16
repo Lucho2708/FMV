@@ -26,15 +26,57 @@ FMV | Ver Usuarios
                             VER USUARIOS
                         </h2>
                     </div>
-                    <a href="" class="showHide"></a>
                     <div class="body">
-                        <div class="toggle-vis" data-column="0">
-                            <input  class="toggle-vis" data-column="0" type="checkbox" id="basic_checkbox_1" name="Nombres" checked="checked" />
-                            <label class="toggle-vis" data-column="0" for="basic_checkbox_1" >Nombres</label>
+
+
+                        <div >
+                            
                         </div>
-                        <a class="toggle-vis" data-column="0">Nombres</a>
+                        <div >
+                            
+                        </div>
+                        <button class="btn bg-cyan waves-effect m-b-15" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                <i class="material-icons">settings</i>
+                            </button>
+                            <div class="collapse" id="collapseExample">
+                                <div class="well">
+                                    <div class="demo-checkbox" >
+                                        <input type="checkbox" checked id="Nombres" data-column="0" class="toggle-vis" disabled />
+                                        <label for="Nombres" >Nombres</label>
+
+                                        <input type="checkbox" checked id="Apellidos" data-column="1" class="toggle-vis"/>
+                                        <label for="Apellidos" >Apellidos</label>
+
+                                        <input type="checkbox" checked id="T.D." data-column="2" class="toggle-vis"/>
+                                        <label for="T.D." >T.D.</label>
+
+                                        <input type="checkbox" checked id="Documento" data-column="3" class="toggle-vis"/>
+                                        <label for="Documento" >Documento</label>
+
+                                        <input type="checkbox" checked id="Direccion" data-column="4" class="toggle-vis"/>
+                                        <label for="Direccion" >Direccion</label>
+
+                                        <input type="checkbox" checked id="Telefono" data-column="5" class="toggle-vis"/>
+                                        <label for="Telefono" >Telefono</label>
+
+                                        <input type="checkbox" checked id="Correo" data-column="6" class="toggle-vis"/>
+                                        <label for="Correo" >Correo</label>
+
+                                        <input type="checkbox" checked id="Usuario" data-column="7" class="toggle-vis"/>
+                                        <label for="Usuario" >Usuario</label>
+
+                                        <input type="checkbox" checked id="Perfil" data-column="8" class="toggle-vis"/>
+                                        <label for="Perfil" >Perfil</label>
+
+                                        <input type="checkbox" checked id="Accion" data-column="9" class="toggle-vis"/>
+                                        <label for="Accion" >Accion</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
                         <div class="table-responsive">
-                            <table id="MyTable" class="table table-bordered table-striped table-hover dataTable">
+                            <table id="MyTable" class="table table-bordered table-striped table-hover dataTable display">
                                 <thead>
                                 <tr>
                                     <th>Nombres</th>
@@ -49,21 +91,6 @@ FMV | Ver Usuarios
                                     <th>Accion</th>
                                 </tr>
                                 </thead>
-                                <tfoot>
-                                <tr>
-                                    <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>T.D.</th>
-                                    <th>Documento</th>
-                                    <th>Direccion</th>
-                                    <th>Telefono</th>
-                                    <th>Correo</th>
-                                    <th>Usuario</th>
-                                    <th>Perfil</th>
-                                    <th>Accion</th>
-
-                                </tr>
-                                </tfoot>
                                 <tbody>
                                 @foreach($usuario as $usuario)
                                     <tr>
@@ -82,22 +109,11 @@ FMV | Ver Usuarios
 
                                     </tr>
                                 @endforeach
-                                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-                                <script>$("input:checkbox:not(:checked)").each(function() {
-                                    var column = "table ." + $(this).attr("name");
-                                        $(column).hide();
-                                    });
-                                    $("input:checkbox").click(function(){
-                                        var column = "table ." + $(this).attr("name");
-                                    $(column).toggle();
-                                    });
-                                    //# sourceURL=pen.js
-                                </script>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                </div>
+                </div>              
             </div>
         </div>
         <!-- #END# Basic Examples -->
@@ -120,17 +136,19 @@ FMV | Ver Usuarios
     <script type="text/javascript" class="init">
         $(document).ready(function() {
             var table = $('#MyTable').DataTable( {
+                autoFill: true
+
             } );
          
-            $('a.toggle-vis').on( 'click', function (e) {
-                e.preventDefault();
-         
+            $('input.toggle-vis').on( 'click', function (e) {
+                
                 // Get the column API object
                 var column = table.column( $(this).attr('data-column') );
          
                 // Toggle the visibility
                 column.visible( ! column.visible() );
             } );
+            
         } );
     </script>
 @endsection
