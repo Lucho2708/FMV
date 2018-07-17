@@ -6,6 +6,59 @@ FMV | Crear Paciente
 
 @section('css')
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+    <style>
+        .thumb {
+            height: 125px;
+            margin: 1px 1px
+        }
+
+        #estilo-foto{
+            width: 150px;
+            padding: 20px;
+            margin: 50px;
+            position: relative;
+            font-size: 30px;
+        }
+
+        #files{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+@endsection
+
+@section('js')
+    <script type="text/javascript">
+        function archivo(evt) {
+            var files = evt.target.files; // FileList object
+
+            // Obtenemos la imagen del campo "file".
+            for (var i = 0, f; f = files[i]; i++) {
+                //Solo admitimos imágenes.
+                if (!f.type.match('image.*')) {
+                    continue;
+                }
+
+                var reader = new FileReader();
+
+                reader.onload = (function(theFile) {
+                    return function(e) {
+                        // Insertamos la imagen
+                        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                    };
+                })(f);
+
+                reader.readAsDataURL(f);
+            }
+        }
+        document.getElementById('files').addEventListener('change', archivo, false);
+    </script>
 @endsection
 
 @section('menu')
@@ -28,26 +81,22 @@ FMV | Crear Paciente
                         {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row clearfix">
-                                        <div class="col-md-3">
-                                            <div class="input-group">
+                                        <div class="col-md-1" id="list"></div>
+                                        <div class="col-md-4">
+                                            <div  id="estilo-foto">
                                                 <div class="form">
-                                                    <input type="file" class="form-control" name="foto" id="files" width="100" height="100">
+                                                    <input type="file" class="form-control" name="foto" id="files">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <output id="list"></output>
-                                        </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                        </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
