@@ -188,7 +188,7 @@ FMV | Crear Acudiente
                         </p>
                     </div>
                     {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
-                    {!! Form::submit('Cancelar', ['class' =>'btn btn-danger']) !!}
+                    {!! Form::reset('Cancelar', ['class' =>'btn btn-danger']) !!}
                 {!! Form::close() !!}
             </div>
         </div>

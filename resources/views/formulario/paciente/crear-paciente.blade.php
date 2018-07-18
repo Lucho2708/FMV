@@ -8,8 +8,12 @@ FMV | Crear Paciente
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
     <style>
         .thumb {
-            height: 125px;
-            margin: 1px 1px
+            margin: 1px 1px;
+            width: 150px;
+            height: 150px;
+            float:left;
+            border-radius: 50%;
+            margin-right:25px
         }
 
         #estilo-foto{
@@ -81,9 +85,11 @@ FMV | Crear Paciente
                         {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row clearfix">
-                                        <div class="col-md-1" id="list"></div>
-                                        <div class="col-md-4">
-                                            <div  id="estilo-foto">
+                                        <div class="col-md-2" id="list">
+                                            <img  src="/images/perfil-d.jpeg"  style="width: 150px; height: 150px; float:left; border-radius: 50%; margin-right:25px ">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div  id="estilo-foto" class="glyphicon glyphicon-download-alt ">
                                                 <div class="form">
                                                     <input type="file" class="form-control" name="foto" id="files">
                                                 </div>
@@ -229,7 +235,7 @@ FMV | Crear Paciente
                                         </div>
                                     </div>
                                   {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
-                                     {!! Form::submit('Cancelar', ['class' =>'btn btn-danger']) !!}
+                                  {!! Form::reset('Cancelar', ['class' =>'btn btn-danger']) !!}
                                 </div>
                         {!! Form::close() !!}
                     </div>

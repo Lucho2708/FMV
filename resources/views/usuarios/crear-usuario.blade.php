@@ -148,7 +148,7 @@ FMV | Crear Usuario
                         </div>
                     </div>
                     <button class="btn btn-primary waves-effect" type="submit">Crear</button>
-                    <button class="btn btn-danger waves-effect" type="submit">Cancelar</button>
+                    <button class="btn btn-danger waves-effect" type="reset">Cancelar</button>
                 </form>
             </div>
         </div>
