@@ -125,6 +125,7 @@
     @yield('js')
     <!-- Custom Js -->
     <script src="{{ asset('js/admin.js') }}"></script>
-    <script src="{{ asset('js/pages/tables/jquery-datatable.js') }}"></script>
+
+    
 </body>
 </html>
