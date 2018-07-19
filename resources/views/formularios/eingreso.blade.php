@@ -262,7 +262,7 @@
                                             <input type="text" name="talla" class="form-control date"  placeholder="TALLA." >
                                         </th>
                                         <th>
-                                            <input type="text" name="sato" class="form-control date"  placeholder="SATO2">
+                                            <input type="text" name="sato" class="form-control date"  placeholder="SATO">
                                         </th>
                                     </tr>
                                     </tbody>

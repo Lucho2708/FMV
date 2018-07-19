@@ -15,6 +15,25 @@ class Antecedente extends Model
         'quirurjicos',
         'toxicos',
         'farmacologicos',
-        'inmunisacion'
+        'inmunisacion',
+        'transfusion',
+        'ginecobstetricios',
+        'menarquias',
+        'ciclos',
+        'regular',
+        'planificacion_ets',
+        'patologia_embarazo_actual',
+        'patologia_embarazo_anterior',
+        'otros',
+        'familiares',
+        't_a',
+        'f_c',
+        'f_r',
+        'temp',
+        'peso',
+        'glasglow',
+        'talla',
+        'sato'
+
     ];
 }

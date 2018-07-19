@@ -11,8 +11,12 @@ class Cierre_proceso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
+        'no_hc',
         'fecha',
-        'motivo',
+        'no_sesion',
+        'cumplimiento',
+        'cierre_semestral',
+        'otros',
         'e_p_c',
         'e_p_p'
     ];

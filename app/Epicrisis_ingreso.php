@@ -12,7 +12,11 @@ class Epicrisis_ingreso extends Model
 
     protected  $fillable = [
         'fecha',
+        'linea_pago',
+        'servicio',
         'motivo_consulta',
-        'emfermedad_actual'
+        'emfermedad_actual',
+        'Conducta',
+	    'evolucion'
     ];
 }

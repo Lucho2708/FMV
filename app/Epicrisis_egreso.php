@@ -16,6 +16,8 @@ class Epicrisis_egreso extends Model
         'plan_mejora',
         'medicamentos',
         'estado_salud',
+        'linea_pago',
+        'servicio',
         'observaciones'
     ];
 }
