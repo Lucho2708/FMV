@@ -27,8 +27,8 @@ FMV | Editar Usuario
 
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="row clearfix">
-                        <div class="col-md-6 {{ $errors->has('nombres') ? ' has-error' : '' }}">
-                            <div class="input-group">
+                        <div class="col-md-6">
+                            <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                     <input type="text" class="form-control" name="nombres" value="{{$usuario->nombres}}" placeholder="Nombres" required>
                                 </div>

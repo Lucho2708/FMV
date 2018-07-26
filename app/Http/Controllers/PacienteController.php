@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PacienteStoreRequest;
+use App\Http\Requests\PacienteUpdateRequest;
 use App\Paciente;
 use App\Eps;
 use App\Ubicacion;
@@ -38,7 +40,7 @@ class PacienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PacienteStoreRequest $request)
     {
         //dd($request->toArray());
 
@@ -84,7 +86,7 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PacienteUpdateRequest $request, $id)
     {
         //
     }

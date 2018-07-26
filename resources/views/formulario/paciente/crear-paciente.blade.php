@@ -6,6 +6,7 @@ FMV | Crear Paciente
 
 @section('css')
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+
     <style>
         .thumb {
             margin: 1px 1px;
@@ -70,177 +71,219 @@ FMV | Crear Paciente
 @endsection
 
 @section('content')
-    <div class="container-fluid">
-        <div class="block-header">
-            <h1>
-                HOJA DE VIDA
-            </h1>
-        </div>
-        <!-- Basic Validation -->
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <br>
-                    <div class="body">
-                        {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <div class="row clearfix">
-                                        <div class="col-md-2" id="list">
-                                            <img  src="/images/perfil-d.jpeg"  style="width: 150px; height: 150px; float:left; border-radius: 50%; margin-right:25px ">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div  id="estilo-foto" class="glyphicon glyphicon-download-alt ">
-                                                <div class="form">
-                                                    <input type="file" class="form-control" name="foto" id="files">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="datepicker form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="edad" placeholder="Edad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="tipo_documento" required>
-                                                <option>-- Seleccione tipo de documento --</option>
-                                                <option name="CC">CC</option>
-                                                <option name="TI">TI</option>
-                                                <option name="CE">CE</option>
-                                                <option name="RC">RC</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="genero">
-                                                <option>-- Seleccione Sexo --</option>
-                                                <option name="Masculino">Masculino</option>
-                                                <option name="Femenino">Femenino</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="ubicacion_id" data-live-search="true" required>
-                                                <option>-- Selecciona ubicacion --</option>
-                                                @foreach($ubicacion as $ubicacion)
-                                                    <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date"  name="procedencia" placeholder="Grupo Etnico">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="eps_id"  data-live-search="true" required>
-                                                <option>-- Selecciona Eps --</option>
-                                                @foreach($eps as $eps)
-                                                    <option value={{ $eps->id }}>{{$eps->nombre}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="estado_civil">
-                                                <option>-- Seleccione Estado Civil --</option>
-                                                <option name="soltero(a)">Soltero(a)</option>
-                                                <option name="casado(a)">Casado(a)</option>
-                                                <option name="viudo(a)">Viudo(a)</option>
-                                                <option name="union libre">union libre</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="hijos" placeholder="No. Hijos">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="alias" placeholder="Alias">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="rh" placeholder="RH">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="Estudio">
-                                                <option>-- Seleccione Nivel Educativo --</option>
-                                                <option name="primaria">Primaria</option>
-                                                <option name="secundaria">Secundaria</option>
-                                                <option name="universitaria">Universitaria</option>
-                                                <option name="ninguno">Ninguno</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                  {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
-                                  {!! Form::reset('Cancelar', ['class' =>'btn btn-danger']) !!}
+<div class="block-header">
+    <h1>
+        HOJA DE VIDA
+    </h1>
+</div>
+<!-- Basic Validation -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <br>
+            <div class="body">
+                {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <div class="row clearfix">
+                                <div class="col-md-2" id="list">
+                                    <img  src="/images/perfil-d.jpeg"  style="width: 150px; height: 150px; float:left; border-radius: 50%; margin-right:25px ">
                                 </div>
-                        {!! Form::close() !!}
-                    </div>
-                </div>
+                                <div class="col-md-3">
+                                    <div  id="estilo-foto" class="glyphicon glyphicon-download-alt ">
+                                        <div class="form">
+                                            <input type="file" class="form-control" name="foto" id="files">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="nombres"  placeholder="Nombres" value="{{ old('nombres') }}"/>
+                                        </div>
+                                        @if ($errors->has('nombres'))
+                                            <label class="error">{{ $errors->first('nombres') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
+                                        </div>
+                                        @if ($errors->has('apellidos'))
+                                            <label class="error">{{ $errors->first('apellidos') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="datepicker form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" value="{{ old('fecha_nacimiento') }}"/>
+                                        </div>
+                                        @if ($errors->has('fecha_nacimiento'))
+                                            <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('edad') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="edad" placeholder="Edad" value="{{ old('edad') }}"/>
+                                        </div>
+                                        @if ($errors->has('edad'))
+                                            <label class="error">{{ $errors->first('edad') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="tipo_documento" required>
+                                        <option>-- tipo de documento --</option>
+                                        <option name="CC" @if (old('tipo_documento'))=='CC' selected @endif>CC</option>
+                                        <option name="TI" @if (old('tipo_documento'))=='TI' selected @endif>TI</option>
+                                        <option name="CE" @if (old('tipo_documento'))=='CE' selected @endif>CE</option>
+                                        <option name="RC" @if (old('tipo_documento'))=='RC' selected @endif>RC</option>
+                                    </select>
+                                    @if ($errors->has('tipo_documento'))
+                                        <label class="error">{{ $errors->first('tipo_documento') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad" value="{{ old('documento') }}"/>
+                                        </div>
+                                        @if ($errors->has('documento'))
+                                            <label class="error">{{ $errors->first('documento') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="genero">
+                                        <option>-- Seleccione Sexo --</option>
+                                        <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
+                                        <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
+                                    </select>
+                                    @if ($errors->has('genero'))
+                                        <label class="error">{{ $errors->first('genero') }}</label>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="ubicacion_id" data-live-search="true" required>
+                                        <option>-- Selecciona ubicacion --</option>
+                                        @foreach($ubicacion as $ubicacion)
+                                            <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('procedencia') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date"  name="procedencia" placeholder="Grupo Etnico" value="{{ old('procedencia') }}"/>
+                                        </div>
+                                        @if ($errors->has('procedencia'))
+                                            <label class="error">{{ $errors->first('procedencia') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="eps_id"  data-live-search="true" required>
+                                        <option>-- Selecciona Eps --</option>
+                                        @foreach($eps as $eps)
+                                            <option value={{ $eps->id }}>{{$eps->nombre}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('fecha_ingreso') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso" value="{{ old('fecha_ingreso') }}"/>
+                                        </div>
+                                        @if ($errors->has('fecha_ingreso'))
+                                            <label class="error">{{ $errors->first('fecha_ingreso') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <select class="form-control" name="estado_civil" required>
+                                        <option>-- Estado Civil --</option>
+                                        <option name="soltero(a)" @if (old('estado_civil'))=='soltero(a)' selected @endif>Soltero(a)</option>
+                                        <option name="casado(a)" @if (old('estado_civil'))=='casado(a)' selected @endif>Casado(a)</option>
+                                        <option name="viudo(a)" @if (old('estado_civil'))=='viudo(a)' selected @endif>Viudo(a)</option>
+                                        <option name="union libre" @if (old('estado_civil'))=='union libre' selected @endif>Union Libre</option>
+                                    </select>
+                                    @if ($errors->has('estado_civil'))
+                                        <label class="error">{{ $errors->first('estado_civil') }}</label>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group {{ $errors->has('hijos') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('hijos')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="hijos" placeholder="No. Hijos" value="{{ old('hijos') }}"/>
+                                        </div>
+                                        @if ($errors->has('hijos'))
+                                            <label class="error">{{ $errors->first('hijos') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group{{ $errors->has('alias') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('alias')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="alias" placeholder="Alias" value="{{ old('alias') }}"/>
+                                        </div>
+                                        @if ($errors->has('alias'))
+                                            <label class="error">{{ $errors->first('alias') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="input-group{{ $errors->has('senales') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('senales')) class="form-line error" @endif class="form-line">
+                                            <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales" value="{{ old('senales') }}"/></textarea>
+                                        </div>
+                                        @if ($errors->has('senales'))
+                                            <label class="error">{{ $errors->first('senales') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group{{ $errors->has('rh') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('rh')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="rh" placeholder="RH" value="{{ old('rh') }}"/>
+                                        </div>
+                                        @if ($errors->has('rh'))
+                                            <label class="error">{{ $errors->first('rh') }}</label>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="estudios">
+                                        <option>-- Nivel Educativo --</option>
+                                        <option name="primaria" @if (old('estudios'))=='primaria' selected @endif>Primaria</option>
+                                        <option name="secundaria" @if (old('estudios'))=='secundaria' selected @endif>Secundaria</option>
+                                        <option name="universitaria" @if (old('estudios'))=='universitaria' selected @endif>Universitaria</option>
+                                        <option name="ninguno" @if (old('estudios'))=='ninguno' selected @endif>Ninguno</option>
+                                    </select>
+                                    @if ($errors->has('estudios'))
+                                        <label class="error">{{ $errors->first('estudios') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
+                            {!! Form::reset('Cancelar', ['class' =>'btn btn-danger']) !!}
+                        </div>
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
+</div>
 @endsection

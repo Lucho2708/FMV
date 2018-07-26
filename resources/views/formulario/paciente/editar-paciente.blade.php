@@ -27,255 +27,190 @@ FMV | Editar Paciente
                     <div class="body">
                         {!! Form::open(['route' =>  ['paciente.update',$paciente],'method' => 'PUT']) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <div>
-
-                                <section>
-                                    <div class="row clearfix">
-                                        <div class="col-md-5">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <b>Fecha de Nacimiento</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">date_range</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <input type="date" class="form-control date" name="fecha_nacimiento" placeholder="dd/mm/aaaa">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="edad" placeholder="Edad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <b>Fecha de Ingreso</b>
-                                            <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">date_range</i>
-                                                    </span>
-                                                <div class="form-line">
-                                                    <input type="date" class="form-control date" name="fecha_ingreso" placeholder="dd/mm/aaaa">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="tipo_documento" required>
-                                                <option>-- Seleccione tipo de documento --</option>
-                                                <option name="CC">CC</option>
-                                                <option name="TI">TI</option>
-                                                <option name="CE">CE</option>
-                                                <option name="RC">RC</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date"  name="procedencia" placeholder="De Donde">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h2 class="card-inside-title">Sexo</h2>
-                                    <div class="form-group">
-                                        <input type="radio" name="genero" id="male" class="with-gap">
-                                        <label for="male">Masculino</label>
-
-                                        <input type="radio" name="genero" id="female" class="with-gap">
-                                        <label for="female" class="m-l-20">Femenino</label>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="estado_civil">
-                                                <option>-- Seleccione Estado Civil --</option>
-                                                <option name="soltero(a)">Soltero(a)</option>
-                                                <option name="casado(a)">Casado(a)</option>
-                                                <option name="viudo(a)">Viudo(a)</option>
-                                                <option name="union libre">union libre</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="hijos" placeholder="No. Hijos">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="alias" placeholder="Alias">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h2 class="card-inside-title">Estudios</h2>
-                                    <div class="demo-checkbox">
-                                        <input type="checkbox" id="md_checkbox_1" name="estudios" class="chk-col-yellow"/>
-                                        <label for="md_checkbox_1">Primaria</label>
-                                        <input type="checkbox" id="md_checkbox_2" name="estudios" class="chk-col-blue"/>
-                                        <label for="md_checkbox_2">Secundaria</label>
-                                        <input type="checkbox" id="md_checkbox_3" name="estudios" class="chk-col-red"/>
-                                        <label for="md_checkbox_3">Universidad</label>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <div class="container-fluid">
-                                        <div class="row clearfix">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="header">
-                                                    <h2>
-                                                        Droga Consumida
-                                                    </h2>
-                                                </div>
-                                                <div class="body">
-                                                    <select id="optgroup" class="ms" name="motivo_droga" multiple="multiple">
-                                                        <optgroup label="">
-                                                            <option value="Bazuco">Bazuco</option>
-                                                            <option value="Pastillas">Pastillas</option>
-                                                            <option value="Cocaina">Cocaina</option>
-                                                            <option value="Marihuana">Marihuana</option>
-                                                            <option value="Licor">Licor</option>
-                                                            <option value="Calillo">Calillo</option>
-                                                            <option value="Inyeccion">Inyeccion</option>
-                                                            <option value="Gasolina">Gasolina</option>
-                                                            <option value="Poopers">Poopers</option>
-                                                            <option value="Crack">Crack</option>
-                                                            <option value="Chamber">Chamber</option>
-                                                            <option value="Heroina">Heroina</option>
-                                                            <option value="Creepink">Creepink</option>
-                                                            <option value="Extasis">Extasis</option>
-                                                            <option value="Acidos">Acidos</option>
-                                                            <option value="Hongos">Hongos</option>
-                                                            <option value="Cocaina Rosada">Cocaina Rosada</option>
-                                                            <option value="Krokodil">Krokodil</option>
-                                                            <option value="Otros">Otros</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- #END# Multi Select -->
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h2 align="center" class="card-inside-title">En que centros de Rehabilitacion ha estado</h2>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" placeholder="1.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" placeholder="2.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" placeholder="3.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" placeholder="4.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" placeholder="Recaidas">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <b>Fecha de Retiro</b>
-                                            <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">date_range</i>
-                                                    </span>
-                                                <div class="form-line">
-                                                    <input type="date" class="form-control date" name="fecha_retiro" placeholder="dd/mm/aaaa">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date" name="razones" placeholder="Razones">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h2 class="card-inside-title">Observaciones</h2>
-                                    <div class="row clearfix">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <textarea rows="4" class="form-control no-resize" name="observacion" placeholder="Introduzca Observaciones Paciente ......"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                        <div class="row clearfix">
+                            <div class="col-md-2" id="list">
+                                <img  src="/images/perfil-d.jpeg"  style="width: 150px; height: 150px; float:left; border-radius: 50%; margin-right:25px ">
                             </div>
-                        {!! Form::submit('Actualizar', ['class' =>'btn btn-primary']) !!}
+                            <div class="col-md-3">
+                                <div  id="estilo-foto" class="glyphicon glyphicon-download-alt ">
+                                    <div class="form">
+                                        <input type="file" class="form-control" name="foto" id="files">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="nombres"  placeholder="Nombres" value="{{$paciente->nombres}}" required>
+                                    </div>
+                                    @if ($errors->has('nombres'))
+                                        <label class="error">{{ $errors->first('nombres') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{$paciente->apellidos}}" required>
+                                    </div>
+                                    @if ($errors->has('apellidos'))
+                                        <label class="error">{{ $errors->first('apellidos') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
 
-
+                        <div class="row clearfix">
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="datepicker form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" value="{{$paciente->fecha_nacimiento}}" required>
+                                    </div>
+                                    @if ($errors->has('fecha_nacimiento'))
+                                        <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('edad') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="edad" placeholder="Edad" value="{{$paciente->edad}}" required>
+                                    </div>
+                                    @if ($errors->has('edad'))
+                                        <label class="error">{{ $errors->first('edad') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="tipo_documento" required>
+                                    <option>-- tipo de documento --</option>
+                                    <option name="CC "@if($paciente->tipo_documento == 'CC')  selected @endif>CC</option>
+                                    <option name="TI" @if($paciente->tipo_documento == 'TI') selected @endif>TI</option>
+                                    <option name="CE" @if($paciente->tipo_documento == 'CE') selected @endif>CE</option>
+                                    <option name="RC" @if($paciente->tipo_documento == 'RC') selected @endif>RC</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad" value="{{$paciente->documento}}" required>
+                                    </div>
+                                    @if ($errors->has('documento'))
+                                        <label class="error">{{ $errors->first('documento') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="genero">
+                                    <option>-- Seleccione Sexo --</option>
+                                    <option name="Masculino" @if($paciente->genero == 'Masculino')  selected @endif>Masculino</option>
+                                    <option name="Femenino" @if($paciente->genero == 'Femenino')  selected @endif>Femenino</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="ubicacion_id" data-live-search="true" required>
+                                    <option>-- Selecciona ubicacion --</option>
+                                    @foreach($ubicacion as $ubicacion)
+                                        <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('procedencia') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date"  name="procedencia" placeholder="Grupo Etnico" value="{{$paciente->procedencia}}" required>
+                                    </div>
+                                    @if ($errors->has('procedencia'))
+                                        <label class="error">{{ $errors->first('procedencia') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="eps_id"  data-live-search="true" required>
+                                    <option>-- Selecciona Eps --</option>
+                                    @foreach($eps as $eps)
+                                        <option value={{ $eps->id }}>{{$eps->nombre}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('fecha_ingreso') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso" value="{{$paciente->fecha_ingreso}}" required>
+                                    </div>
+                                    @if ($errors->has('fecha_ingreso'))
+                                        <label class="error">{{ $errors->first('fecha_ingreso') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-4">
+                                <select class="form-control" name="estado_civil">
+                                    <option>-- Estado Civil --</option>
+                                    <option name="soltero(a)" @if($paciente->estado_civil == 'soltero(a)') selected @endif>Soltero(a)</option>
+                                    <option name="casado(a)" @if($paciente->estado_civil == 'casado(a)') selected @endif>Casado(a)</option>
+                                    <option name="viudo(a)" @if($paciente->estado_civil == 'viudo(a)') selected @endif>Viudo(a)</option>
+                                    <option name="union libre" @if($paciente->estado_civil == 'union libre') selected @endif>Union Libre</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group {{ $errors->has('hijos') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('hijos')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="hijos" placeholder="No. Hijos" value="{{$paciente->hijos}}" required>
+                                    </div>
+                                    @if ($errors->has('hijos'))
+                                        <label class="error">{{ $errors->first('hijos') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group{{ $errors->has('alias') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('alias')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="alias" placeholder="Alias" value="{{$paciente->alias}}" required>
+                                    </div>
+                                    @if ($errors->has('alias'))
+                                        <label class="error">{{ $errors->first('alias') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-4">
+                                <div class="input-group{{ $errors->has('senales') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('senales')) class="form-line error" @endif class="form-line">
+                                        <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales" value="{{$paciente->senales}}" required></textarea>
+                                    </div>
+                                    @if ($errors->has('senales'))
+                                        <label class="error">{{ $errors->first('senales') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group{{ $errors->has('rh') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('rh')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="rh" placeholder="RH" value="{{$paciente->rh}}" required>
+                                    </div>
+                                    @if ($errors->has('rh'))
+                                        <label class="error">{{ $errors->first('rh') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="estudios">
+                                    <option>-- Nivel Educativo --</option>
+                                    <option name="primaria" @if($paciente->estudios == 'primaria') selected @endif>Primaria</option>
+                                    <option name="secundaria" @if($paciente->estudios == 'secundaria') selected @endif>Secundaria</option>
+                                    <option name="universitaria" @if($paciente->estudios == 'universitaria') selected @endif>Universitaria</option>
+                                    <option name="ninguno" @if($paciente->estudios == 'ninguno') selected @endif>Ninguno</option>
+                                </select>
+                            </div>
+                        </div>
+                            {!! Form::submit('Actualizar', ['class' =>'btn btn-primary']) !!}
                         {!! Form::close() !!}
                     </div>
                 </div>
