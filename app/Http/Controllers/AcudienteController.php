@@ -65,7 +65,7 @@ class AcudienteController extends Controller
     public function edit($id)
     {
         $acudiente=Acudiente::find($id);
-        return view('formulario.acudiente.editar-acudiente',compact('usuario'));
+        return view('formulario.acudiente.editar-acudiente',compact('acudiente'));
     }
 
     /**

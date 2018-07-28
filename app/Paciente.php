@@ -18,6 +18,7 @@ class Paciente extends Model
         'tipo_documento',
         'procedencia',
         'fecha_nacimiento',
+        'fecha_ingreso',
         'edad',
         'estado_civil',
         'hijos',

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cierre_proceso;
 
 class CprocesoController extends Controller
 {
@@ -34,7 +35,11 @@ class CprocesoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cproceso= new Cierre_proceso($request->all());
+        $cproceso->save();
+
+        alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
+        return redirect('cproceso',compact('cproceso'));
     }
 
     /**

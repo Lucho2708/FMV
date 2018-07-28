@@ -18,8 +18,8 @@ class PacienteController extends Controller
      */
     public function index()
     {
-
-        return view('formulario.paciente.listar-paciente');
+        $paciente= Paciente::all();
+        return view('formulario.paciente.listar-paciente',compact('paciente'));
     }
 
     /**
@@ -76,7 +76,9 @@ class PacienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $paciente=Paciente::find($id);
+
+        return view('formulario.paciente.editar-paciente',compact('paciente'));
     }
 
     /**

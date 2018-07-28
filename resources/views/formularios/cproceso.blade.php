@@ -30,31 +30,40 @@
                             <div class="row clearfix">
                                 <br>
                                 <div class="col-md-2">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="numero_hc" placeholder="No. Historia Clinica">
+                                    <div class="input-group {{ $errors->has('no_hc') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('no_hc')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="numero_hc" placeholder="No. Historia Clinica" value="{{ old('no_hc') }}"/>
                                         </div>
+                                        @if ($errors->has('no_hc'))
+                                            <label class="error">{{ $errors->first('no_hc') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="input-group">
+                                    <div class="input-group {{ $errors->has('fecha') ? ' has-error' : '' }}" >
                                         <span class="input-group-addon">
                                             <i class="material-icons">date_range</i>
                                         </span>
-                                        <div class="form-line">
-                                            <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
+                                        <div  @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
+                                            <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa" value="{{ old('fecha') }}"/>
                                         </div>
+                                        @if ($errors->has('fecha'))
+                                            <label class="error">{{ $errors->first('fecha') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                 </div>
                                 <div class="col-md-2">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" name="sesion" class="form-control date" placeholder="No. Sesion">
+                                    <div class="input-group {{ $errors->has('sesion') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('sesion')) class="form-line error" @endif class="form-line">
+                                            <input type="text" name="sesion" class="form-control date" placeholder="No. Sesion" value="{{ old('sesion') }}"/>
                                         </div>
+                                        @if ($errors->has('sesion'))
+                                            <label class="error">{{ $errors->first('sesion') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -64,10 +73,13 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-10">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="cumplimiento" placeholder="1. Cumplimiento de Objectivos:">
+                                    <div class="input-group {{ $errors->has('cumplimiento') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('cumplimiento')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="cumplimiento" placeholder="1. Cumplimiento de Objectivos:" value="{{ old('cumplimiento') }}"/>
                                         </div>
+                                        @if ($errors->has('cumplimiento'))
+                                            <label class="error">{{ $errors->first('cumplimiento') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -75,10 +87,13 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-10">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date"  name="cierre_semestral" placeholder="2. Cierre Semestral:">
+                                    <div class="input-group {{ $errors->has('cierre_semestral') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('cierre_semestral')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date"  name="cierre_semestral" placeholder="2. Cierre Semestral:" value="{{ old('cierre_semestral') }}"/>
                                         </div>
+                                        @if ($errors->has('cierre_semestral'))
+                                            <label class="error">{{ $errors->first('cierre_semestral') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -86,32 +101,38 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-10">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="otros" placeholder="3. Otros:">
+                                    <div class="input-group {{ $errors->has('otros') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('otros')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="otros" placeholder="3. Otros:" value="{{ old('otros') }}"/>
                                         </div>
+                                        @if ($errors->has('otros'))
+                                            <label class="error">{{ $errors->first('otros') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                             <br>
-                            <h2 class="card-inside-title">Evaluacion del Proceso Consultante.</h2>
                             <div class="row clearfix">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <textarea rows="5" class="form-control no-resize" name="e_p_c" placeholder=""></textarea>
+                                <div class="col-sm-6">
+                                    <h2 class="card-inside-title">Evaluacion del Proceso Consultante.</h2>
+                                    <div class="form-group {{ $errors->has('e_p_c') ? ' has-error' : '' }}">
+                                        <div  @if ($errors->has('e_p_c')) class="form-line error" @endif class="form-line">
+                                                <textarea rows="5" class="form-control no-resize" name="e_p_c" placeholder="" value="{{ old('e_p_c') }}"/></textarea>
                                         </div>
+                                        @if ($errors->has('e_p_c'))
+                                            <label class="error">{{ $errors->first('e_p_c') }}</label>
+                                        @endif
                                     </div>
                                 </div>
-                            </div>
-                            <br>
-                            <h2 class="card-inside-title">Evaluacion del Proceso Psicologico.</h2>
-                            <div class="row clearfix">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <textarea rows="5" class="form-control no-resize" name="e_p_p" placeholder=""></textarea>
+                                <div class="col-sm-6">
+                                    <h2 class="card-inside-title">Evaluacion del Proceso Psicologico.</h2>
+                                    <div class="form-group {{ $errors->has('e_p_p') ? ' has-error' : '' }}">
+                                        <div  @if ($errors->has('e_p_p')) class="form-line error" @endif class="form-line">
+                                            <textarea rows="5" class="form-control no-resize" name="e_p_p" placeholder=" "value="{{ old('e_p_p') }}"/></textarea>
                                         </div>
+                                        @if ($errors->has('e_p_p'))
+                                            <label class="error">{{ $errors->first('e_p_p') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
