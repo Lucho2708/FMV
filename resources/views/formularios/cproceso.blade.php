@@ -47,7 +47,7 @@
                                             <i class="material-icons">date_range</i>
                                         </span>
                                         <div  @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
-                                            <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa" value="{{ old('fecha') }}"/>
+                                            <input type="text" class="datepicker form-control" name="fecha" placeholder="fecha" value="{{ old('fecha') }}"/>
                                         </div>
                                         @if ($errors->has('fecha'))
                                             <label class="error">{{ $errors->first('fecha') }}</label>
@@ -117,7 +117,7 @@
                                     <h2 class="card-inside-title">Evaluacion del Proceso Consultante.</h2>
                                     <div class="form-group {{ $errors->has('e_p_c') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('e_p_c')) class="form-line error" @endif class="form-line">
-                                                <textarea rows="5" class="form-control no-resize" name="e_p_c" placeholder="" value="{{ old('e_p_c') }}"/></textarea>
+                                                <textarea rows="5" class="form-control no-resize" name="e_p_c" placeholder="" value="{{ old('e_p_c') }}"></textarea>
                                         </div>
                                         @if ($errors->has('e_p_c'))
                                             <label class="error">{{ $errors->first('e_p_c') }}</label>
@@ -128,7 +128,7 @@
                                     <h2 class="card-inside-title">Evaluacion del Proceso Psicologico.</h2>
                                     <div class="form-group {{ $errors->has('e_p_p') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('e_p_p')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="5" class="form-control no-resize" name="e_p_p" placeholder=" "value="{{ old('e_p_p') }}"/></textarea>
+                                            <textarea rows="5" class="form-control no-resize" name="e_p_p" placeholder=" "value="{{ old('e_p_p') }}"></textarea>
                                         </div>
                                         @if ($errors->has('e_p_p'))
                                             <label class="error">{{ $errors->first('e_p_p') }}</label>

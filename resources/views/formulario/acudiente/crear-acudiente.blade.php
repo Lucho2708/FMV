@@ -100,28 +100,13 @@ FMV | Crear Acudiente
                                         <i class="material-icons">phone_iphone</i>
                                     </span>
                                     <div @if ($errors->has('telefono')) class="form-line error" @endif class="form-line" >
-                                        <input type="text" class="form-control mobile-phone-number" placeholder="Telefono Celular" name="telefono" required value="{{ old('telefono') }}">
+                                        <input type="text" class="form-control mobile-phone-number" placeholder="Telefono Celular" name="telefono o celular" required value="{{ old('telefono') }}">
                                     </div>
                                     @if ($errors->has('telefono'))
                                         <label class="error">{{ $errors->first('telefono') }}</label>
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-group {{ $errors->has('telefono') ? ' has-error' : '' }}">
-                            <span class="input-group-addon">
-                                <i class="material-icons">phone_iphone</i>
-                            </span>
-                                    <div @if ($errors->has('telefono')) class="form-line error" @endif class="form-line" >
-                                        <input type="text" class="form-control mobile-phone-number" placeholder="Telefono (Adicional)" name="telefono" required value="{{ old('telefono') }}">
-                                    </div>
-                                    @if ($errors->has('telefono'))
-                                        <label class="error">{{ $errors->first('telefono') }}</label>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row clearfix">
                             <div class="col-md-4">
                                 <div class="input-group {{ $errors->has('profesion') ? ' has-error' : '' }}">
                                     <div @if ($errors->has('profesion')) class="form-line error" @endif class="form-line" >
@@ -132,6 +117,8 @@ FMV | Crear Acudiente
                                     @endif
                                 </div>
                             </div>
+                        </div>
+                        <div class="row clearfix">
                             <div class="col-md-4">
                                 <div class="input-group {{ $errors->has('empresa_labora') ? ' has-error' : '' }}">
                                     <div @if ($errors->has('empresa_labora')) class="form-line error" @endif class="form-line" >
@@ -152,16 +139,19 @@ FMV | Crear Acudiente
                                     <option name="primo(a)" @if (old('parentesco'))=='primo(a)' selected @endif>Primo(a)</option>
                                     <option name="amigo(a)" @if (old('parentesco'))=='amigo(a)' selected @endif>Amigo(a)</option>
                                 </select>
+                                @if ($errors->has('parentesco'))
+                                    <label class="error">{{ $errors->first('parentesco') }}</label>
+                                @endif
                             </div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <select class="form-control show-tick" name="nombre" required>
                                     <option>-- Selecciona Eps-Sisben-Ars --</option>
                                     <option name=""  @if (old('nombre'))=='' selected @endif></option>
                                 </select>
                             </div>
-                            <div class="col-md-6">
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-4">
                                 <div class="input-group {{ $errors->has('aporte') ? ' has-error' : '' }}">
                                 <span class="input-group-addon">
                                     <i class="material-icons">attach_money</i>

@@ -49,7 +49,7 @@
                                         <th>Nombres</th>
                                         <th {{ $errors->has('nombres') ? ' has-error' : '' }}>
                                             <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
-                                                <input type="text" name="nombres" class="form-control" name="names" required value="{{ old('nombres') }}"/>
+                                                <input type="text" name="nombres" class="form-control" name="nombres" required value="{{ old('nombres') }}"/>
                                             </div>
                                             @if ($errors->has('nombres'))
                                                 <label class="error">{{ $errors->first('fecha') }}</label>
@@ -60,7 +60,7 @@
                                         <th>Apellidos</th>
                                         <th {{ $errors->has('apellidos') ? ' has-error' : '' }}>
                                             <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
-                                                <input type="text" name="apellidos" class="form-control" name="names" required value="{{ old('apellidos') }}"/>
+                                                <input type="text" name="apellidos" class="form-control" name="apellidos" required value="{{ old('apellidos') }}"/>
                                             </div>
                                             @if ($errors->has('apellidos'))
                                                 <label class="error">{{ $errors->first('apellidos') }}</label>

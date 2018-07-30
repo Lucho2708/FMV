@@ -34,75 +34,126 @@
                                 <table  class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>FECHA DE CONSULTA</th>
-                                        <th>
-                                            <input align="right" type="date" class="form-control date" name="fecha_consulta" placeholder="dd/mm/aaaa">
+                                        <th>Fecha Consulta</th>
+                                        <th {{ $errors->has('fecha_consulta') ? ' has-error' : '' }} >
+                                            <div  @if ($errors->has('fecha_consulta')) class="form-line error" @endif class="form-line">
+                                                <input align="right" type="text" class="datepicker form-control" name="fecha_consulta" required value="{{ old('fecha_consulta') }}" />
+                                            </div>
+                                            @if ($errors->has('fecha_consulta'))
+                                                <label class="error">{{ $errors->first('fecha_consulta') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th>NOMBRES</th>
-                                        <th>
-                                            <input type="text" name="nombres" class="form-control date">
+                                        <th>Nombres</th>
+                                        <th {{ $errors->has('nombres') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="nombres" class="form-control" name="names" required value="{{ old('nombres') }}"/>
+                                            </div>
+                                            @if ($errors->has('nombres'))
+                                                <label class="error">{{ $errors->first('fecha') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>APELLIDOS</th>
-                                        <th>
-                                            <input type="text" name="apellidos" class="form-control date">
+                                        <th>Apellidos</th>
+                                        <th {{ $errors->has('apellidos') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="apellidos" class="form-control" name="names" required value="{{ old('apellidos') }}"/>
+                                            </div>
+                                            @if ($errors->has('apellidos'))
+                                                <label class="error">{{ $errors->first('apellidos') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>IDENTIFICACION</th>
-                                        <th>
-                                            <input type="text" name="documento" class="form-control date">
+                                        <th>Documento</th>
+                                        <th {{ $errors->has('documento') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="documento" class="form-control" value="{{ old('documento') }}"/>
+                                            </div>
+                                            @if ($errors->has('documento'))
+                                                <label class="error">{{ $errors->first('documento') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>FECHA DE NACIMIENTO</th>
-                                        <th>
-                                            <input align="right" type="date" name="fecha_nacimiento" class="form-control date" placeholder="dd/mm/aaaa">
+                                        <th>Fecha De Nacimiento</th>
+                                        <th {{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
+                                                 <input align="right" type="text" name="fecha_nacimiento" class="datepicker form-control" required value="{{ old('fecha_nacimiento') }}" />
+                                            </div>
+                                            @if ($errors->has('fecha_nacimiento'))
+                                                <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>EDAD</th>
-                                        <th>
-                                            <input type="text" class="form-control date" name="edad">
+                                        <th>Edad</th>
+                                        <th {{ $errors->has('edad') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="edad" class="form-control" required value="{{ old('edad') }}"/>
+                                            </div>
+                                            @if ($errors->has('edad'))
+                                                <label class="error">{{ $errors->first('edad') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>EMPRESA PRESTADORA DE SALUD</th>
-                                        <th>
-                                            <input type="text" class="form-control date" name="nombre">
+                                        <th>Empresa Prestadora Salud</th>
+                                        <th {{ $errors->has('nombre') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('nombre')) class="form-line error" @endif class="form-line">
+                                                 <input type="text" class="form-control date" name="nombre" required value="{{ old('nombre') }}"/>
+                                            </div>
+                                            @if ($errors->has('nombre'))
+                                                <label class="error">{{ $errors->first('nombre') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>DIRECCION</th>
-                                        <th>
-                                            <input type="text" class="form-control date" name="dirrecion">
+                                        <th>Direccion</th>
+                                        <th {{ $errors->has('dirrecion') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('dirrecion')) class="form-line error" @endif class="form-line">
+                                                 <input type="text" class="form-control" name="dirrecion" required value="{{ old('dirrecion') }}"/>
+                                            </div>
+                                            @if ($errors->has('dirrecion'))
+                                                <label class="error">{{ $errors->first('dirrecion') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>TELEFONO</th>
-                                        <th>
-                                            <input type="text" class="form-control date" name="telefono">
+                                        <th>Telefono</th>
+                                        <th {{ $errors->has('telefono') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('telefono')) class="form-line error" @endif class="form-line">
+                                                <input type="text" class="form-control date" name="telefono" required value="{{ old('telefono') }}"/>
+                                            </div>
+                                            @if ($errors->has('telefono'))
+                                                <label class="error">{{ $errors->first('telefono') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>SEXO</th>
-                                        <th>
-                                            <select class="form-control" name="sexo">
-                                                <option>-- Seleccion Sexo --</option>
-                                                <option name="femenino">Femenino</option>
-                                                <option name="masculino">Masculino</option>
-                                            </select>
-                                        </th>
+                                        <th>Sexo</th>
+                                        <select class="form-control" name="genero">
+                                            <option>-- Seleccione Sexo --</option>
+                                            <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
+                                            <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
+                                        </select>
+                                        @if ($errors->has('genero'))
+                                            <label class="error">{{ $errors->first('genero') }}</label>
+                                        @endif
                                     </tr>
                                     <tr>
-                                        <th>CIUDAD</th>
-                                        <th>
-                                            <input type="text"  name="ciudad" class="form-control date">
+                                        <th>Ciudad</th>
+                                        <th {{ $errors->has('nombre') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('nombre')) class="form-line error" @endif class="form-line">
+                                                 <input type="text"  name="nombre" class="form-control" required value="{{ old('nombre') }}"/>
+                                            </div>
+                                            @if ($errors->has('nombre'))
+                                                <label class="error">{{ $errors->first('nombre') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     </tbody>
@@ -114,43 +165,66 @@
                                 <table  class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>NOMBRES</th>
-                                        <th>
-                                            <input type="text" name="nombres" class="form-control date">
+                                        <th>Nombres</th>
+                                        <th {{ $errors->has('nombres') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="nombres" class="form-control" name="names" required value="{{ old('nombres') }}"/>
+                                            </div>
+                                            @if ($errors->has('nombres'))
+                                                <label class="error">{{ $errors->first('fecha') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>APELLIDOS</th>
-                                        <th>
-                                            <input type="text" name="apellidos" class="form-control date">
+                                        <th>Apellidos</th>
+                                        <th {{ $errors->has('apellidos') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="apellidos" class="form-control" name="names" required value="{{ old('apellidos') }}"/>
+                                            </div>
+                                            @if ($errors->has('apellidos'))
+                                                <label class="error">{{ $errors->first('apellidos') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th>DIRECCION</th>
-                                        <th>
-                                            <input type="text" name="dirrecion" class="form-control date">
+                                        <th>Direccion</th>
+                                        <th {{ $errors->has('dirrecion') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('dirrecion')) class="form-line error" @endif class="form-line">
+                                                <input type="text" class="form-control" name="dirrecion" required value="{{ old('dirrecion') }}"/>
+                                            </div>
+                                            @if ($errors->has('dirrecion'))
+                                                <label class="error">{{ $errors->first('dirrecion') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>TELEFONO</th>
-                                        <th>
-                                            <input type="text" name="telefono" class="form-control date">
+                                        <th>Telefono</th>
+                                        <th {{ $errors->has('telefono') ? ' has-error' : '' }}>
+                                            <div  @if ($errors->has('telefono')) class="form-line error" @endif class="form-line">
+                                                <input type="text" class="form-control date" name="telefono" required value="{{ old('telefono') }}"/>
+                                            </div>
+                                            @if ($errors->has('telefono'))
+                                                <label class="error">{{ $errors->first('telefono') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>PARENTESCO</th>
+                                        <th>Parentesco</th>
                                         <th>
-                                            <select class="form-control" name="parentesco">
-                                                <option>-- Seleccion Parentesco Con Paciente --</option>
-                                                <option name="madre">Madre</option>
-                                                <option name="padre">Padre</option>
-                                                <option name="hermano(a)">Hermano(a)</option>
-                                                <option name="tio(a)">Tio(a)</option>
-                                                <option name="abuelo(a)">Abuelo(a)</option>
-                                                <option name="amigo(a)">Amigo(a)</option>
+                                            <select class="form-control show-tick" name="parentesco" required>
+                                                <option>-- Parentesco Con Interno --</option>
+                                                <option name="madre" @if (old('parentesco'))=='madre' selected @endif>Madre</option>
+                                                <option name="padre" @if (old('parentesco'))=='padre' selected @endif>Padre</option>
+                                                <option name="hijo(a)" @if (old('parentesco'))=='hijo(a)' selected @endif>Hijo(a)</option>
+                                                <option name="tio(a)" @if (old('parentesco'))=='tio(a)' selected @endif>Tio(a)</option>
+                                                <option name="primo(a)" @if (old('parentesco'))=='primo(a)' selected @endif>Primo(a)</option>
+                                                <option name="amigo(a)" @if (old('parentesco'))=='amigo(a)' selected @endif>Amigo(a)</option>
                                             </select>
+                                            @if ($errors->has('parentesco'))
+                                                <label class="error">{{ $errors->first('parentesco') }}</label>
+                                            @endif
                                         </th>
                                     </tr>
                                     </tbody>
@@ -160,18 +234,24 @@
                             <div class="row clearfix">
                                 <div class="col-md-6">
                                     <h2 class="card-inside-title">Datos de Ingreso</h2>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="motivo_consulta" placeholder="Motivo de Consulta"></textarea>
+                                    <div class="form-group {{ $errors->has('motivo_consulta') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('motivo_consulta')) class="form-line error" @endif class="form-line">
+                                            <textarea rows="3" class="form-control no-resize" name="motivo_consulta" placeholder="Motivo de Consulta" required value="{{ old('motivo_consulta') }}"></textarea>
                                         </div>
+                                        @if ($errors->has('motivo_consulta'))
+                                            <label class="error">{{ $errors->first('motivo_consulta') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="card-inside-title">Observaciones</h2>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <textarea rows="3"  class="form-control no-resize" name="observaciones"></textarea>
+                                    <div class="form-group {{ $errors->has('observaciones') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('observaciones')) class="form-line error" @endif class="form-line">
+                                            <textarea rows="3"  class="form-control no-resize" name="observaciones" required value="{{ old('observaciones') }}"></textarea>
                                         </div>
+                                        @if ($errors->has('observaciones'))
+                                            <label class="error">{{ $errors->first('observaciones') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -79,7 +79,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group {{ $errors->has('cronica') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('cronica')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="cronica" placeholder="Cronica : ......" value="{{ old('cronica') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="cronica" placeholder="Cronica : ......" value="{{ old('cronica') }}"></textarea>
                                         </div>
                                         @if ($errors->has('cronica'))
                                             <label class="error">{{ $errors->first('cronica') }}</label>
@@ -91,7 +91,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group {{ $errors->has('estado_inicial') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('estado_inicial')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="estado_inicial" placeholder="Estado de Animo Inicial: ......" value="{{ old('estado_inicial') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="estado_inicial" placeholder="Estado de Animo Inicial: ......" value="{{ old('estado_inicial') }}"></textarea>
                                         </div>
                                         @if ($errors->has('estado_inicial'))
                                             <label class="error">{{ $errors->first('estado_inicial') }}</label>
@@ -101,7 +101,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group {{ $errors->has('estado_final') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('estado_final')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="estado_final" placeholder="Estado de Animo Final: ......" value="{{ old('estado_final') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="estado_final" placeholder="Estado de Animo Final: ......" value="{{ old('estado_final') }}"></textarea>
                                         </div>
                                         @if ($errors->has('estado_final'))
                                             <label class="error">{{ $errors->first('estado_final') }}</label>
@@ -115,7 +115,7 @@
                                     <h2 class="card-inside-title" align="center">Experiencias Positivas</h2>
                                     <div class="form-group {{ $errors->has('experiencias_positivas') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('experiencias_positivas')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="experiencias_positivas"  placeholder="1......." value="{{ old('experiencias_positivas') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="experiencias_positivas"  placeholder="1......." value="{{ old('experiencias_positivas') }}"></textarea>
                                         </div>
                                         @if ($errors->has('experiencias_positivas'))
                                             <label class="error">{{ $errors->first('experiencias_positivas') }}</label>
@@ -126,7 +126,7 @@
                                     <h2 class="card-inside-title" align="center">Experiencias Negativas</h2>
                                     <div class="form-group {{ $errors->has('experiencias_negativas') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('experiencias_negativas')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="experiencias_negativas"  placeholder="1......." value="{{ old('experiencias_negativas') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="experiencias_negativas"  placeholder="1......." value="{{ old('experiencias_negativas') }}"></textarea>
                                         </div>
                                         @if ($errors->has('experiencias_negativas'))
                                             <label class="error">{{ $errors->first('experiencias_negativas') }}</label>
@@ -138,7 +138,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group {{ $errors->has('compromiso') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('compromiso')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="3" class="form-control no-resize" name="compromiso" placeholder="Que compromiso hago para cambiar mi forma de actuar" value="{{ old('compromiso') }}"/></textarea>
+                                            <textarea rows="3" class="form-control no-resize" name="compromiso" placeholder="Que compromiso hago para cambiar mi forma de actuar" value="{{ old('compromiso') }}"></textarea>
                                         </div>
                                         @if ($errors->has('compromiso'))
                                             <label class="error">{{ $errors->first('compromiso') }}</label>

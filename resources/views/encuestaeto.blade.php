@@ -30,17 +30,23 @@
                         <div class="row clearfix">
                             <div class="col-md-1"></div>
                             <div class="col-md-5">
-                                <div class="input-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="nombres"  placeholder="Nombres" value="{{ old('nombres') }}"/>
                                     </div>
+                                    @if ($errors->has('nombres'))
+                                        <label class="error">{{ $errors->first('nombres') }}</label>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <div class="input-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
+                                <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
+                                    <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
+                                        <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
                                     </div>
+                                    @if ($errors->has('apellidos'))
+                                        <label class="error">{{ $errors->first('apellidos') }}</label>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -48,62 +54,76 @@
                             <div class="row clearfix">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-5">
-                                    <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">date_range</i>
-                                    </span>
-                                        <div class="form-line">
-                                            <input type="date" class="form-control date" name="fecha">
+                                    <div class="input-group"{{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }} >
+                                        <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
+                                            <input align="right" type="text" name="fecha_nacimiento" class="datepicker form-control"  placeholder="Fecha Nacimiento" required value="{{ old('fecha_nacimiento') }}" />
                                         </div>
+                                        @if ($errors->has('fecha_nacimiento'))
+                                            <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="edad" placeholder="Edad">
+                                    <div class="input-group {{ $errors->has('edad') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="edad" placeholder="Edad" value="{{ old('edad') }}"/>
                                         </div>
+                                        @if ($errors->has('edad'))
+                                            <label class="error">{{ $errors->first('edad') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-5">
-                                    <select class="form-control" name="estado_civil">
-                                        <option>-- Seleccione Estado Civil --</option>
-                                        <option name="soltero(a)">Soltero(a)</option>
-                                        <option name="casado(a)">Casado(a)</option>
-                                        <option name="viudo(a)">Viudo(a)</option>
-                                        <option name="union libre">Union libre</option>
+                                    <select class="form-control" name="estado_civil" required>
+                                        <option>-- Estado Civil --</option>
+                                        <option name="soltero(a)" @if (old('estado_civil'))=='soltero(a)' selected @endif>Soltero(a)</option>
+                                        <option name="casado(a)" @if (old('estado_civil'))=='casado(a)' selected @endif>Casado(a)</option>
+                                        <option name="viudo(a)" @if (old('estado_civil'))=='viudo(a)' selected @endif>Viudo(a)</option>
+                                        <option name="union libre" @if (old('estado_civil'))=='union libre' selected @endif>Union Libre</option>
                                     </select>
+                                    @if ($errors->has('estado_civil'))
+                                        <label class="error">{{ $errors->first('estado_civil') }}</label>
+                                    @endif
                                 </div>
-                                <div class="col-md-5">
-                                    <select class="form-control" name="escolaridad">
-                                        <option>-- Seleccione Escolaridad --</option>
-                                        <option name="primaria">Primaria</option>
-                                        <option name="segundaria">Segundaria</option>
-                                        <option name="universidad">Universidad</option>
-                                    </select>
-                                </div>
+                                <select class="form-control" name="estudios">
+                                    <option>-- Nivel Educativo --</option>
+                                    <option name="primaria" @if (old('estudios'))=='primaria' selected @endif>Primaria</option>
+                                    <option name="secundaria" @if (old('estudios'))=='secundaria' selected @endif>Secundaria</option>
+                                    <option name="universitaria" @if (old('estudios'))=='universitaria' selected @endif>Universitaria</option>
+                                    <option name="ninguno" @if (old('estudios'))=='ninguno' selected @endif>Ninguno</option>
+                                </select>
+                                @if ($errors->has('estudios'))
+                                    <label class="error">{{ $errors->first('estudios') }}</label>
+                                @endif
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-5">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="emfermedad_actual" placeholder="Emfermedad Actual">
+                                    <div class="input-group {{ $errors->has('emfermedad_actual') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('emfermedad_actual')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="emfermedad_actual" placeholder="Emfermedad Actual"value="{{ old('emfermedad_actual') }}"/>
                                         </div>
+                                        @if ($errors->has('emfermedad_actual'))
+                                            <label class="error">{{ $errors->first('emfermedad_actual') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" name="natural" placeholder="Natural">
+                                    <div class="input-group {{ $errors->has('emfermedad natural') ? ' has-error' : '' }}" >
+                                        <div  @if ($errors->has('emfermedad natural')) class="form-line error" @endif class="form-line">
+                                            <input type="text" class="form-control date" name="emfermedad natural" placeholder="Emfermedad Natural" value="{{ old('emfermedad natural') }}"/>
                                         </div>
+                                        @if ($errors->has('emfermedad natural'))
+                                            <label class="error">{{ $errors->first('emfermedad natural') }}</label>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                             <h2 class="card-inside-title">1. Que actividades le gusta hacer en su tiempo libre</h2>
-                            <div class="demo-radio-button">
+                            <div class="demo-radio-button" name="actividades">
                                 <input name="group1" type="radio" id="radio_1" class="with-gap radio-col-green" />
                                 <label for="radio_1">Caminar</label>
                                 <input name="group2" type="radio" id="radio_2" class="with-gap radio-col-green" />

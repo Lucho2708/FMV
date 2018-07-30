@@ -184,7 +184,7 @@ FMV | Crear Paciente
                                 <div class="col-md-4">
                                     <div class="input-group {{ $errors->has('procedencia') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="form-control date"  name="procedencia" placeholder="Grupo Etnico" value="{{ old('procedencia') }}"/>
+                                            <input type="text" class="form-control date"  name="procedencia" placeholder="Lugar nacimiento" value="{{ old('procedencia') }}"/>
                                         </div>
                                         @if ($errors->has('procedencia'))
                                             <label class="error">{{ $errors->first('procedencia') }}</label>
@@ -246,9 +246,9 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
-                                    <div class="input-group{{ $errors->has('senales') ? ' has-error' : '' }}" >
+                                    <div class="input-group {{ $errors->has('senales') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('senales')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales" value="{{ old('senales') }}"/></textarea>
+                                            <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales" value="{{ old('senales') }}"></textarea>
                                         </div>
                                         @if ($errors->has('senales'))
                                             <label class="error">{{ $errors->first('senales') }}</label>
