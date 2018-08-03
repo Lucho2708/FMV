@@ -31,9 +31,10 @@
                             <div class="row clearfix">
                                 <br>
                                 <div class="col-md-2">
+                                    <label>No. Historia Clinica</label>
                                     <div class="input-group {{ $errors->has('no_hc') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('no_hc')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="form-control date" name="numero_hc" placeholder="No. Historia Clinica" value="{{ old('no_hc') }}"/>
+                                            <input type="text" class="form-control date" name="no_hc" placeholder="No. Historia Clinica" value="{{ old('no_hc') }}"/>
                                         </div>
                                         @if ($errors->has('no_hc'))
                                             <label class="error">{{ $errors->first('no_hc') }}</label>
@@ -43,12 +44,13 @@
                                 <div class="col-md-2">
                                 </div>
                                 <div class="col-md-3">
+                                    <label>Fecha</label>
                                     <div class="input-group {{ $errors->has('fecha') ? ' has-error' : '' }}" >
                                         <span class="input-group-addon">
                                             <i class="material-icons">date_range</i>
                                         </span>
                                         <div  @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="datepicker form-control" name="fecha" placeholder="fecha" value="{{ old('fecha') }}"/>
+                                            <input type="date" class="form-control date" name="fecha" placeholder="fecha" value="{{ old('fecha') }}"/>
                                         </div>
                                         @if ($errors->has('fecha'))
                                             <label class="error">{{ $errors->first('fecha') }}</label>
@@ -58,6 +60,7 @@
                                 <div class="col-md-3">
                                 </div>
                                 <div class="col-md-2">
+                                    <label>Sesion</label>
                                     <div class="input-group {{ $errors->has('sesion') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('sesion')) class="form-line error" @endif class="form-line">
                                             <input type="text" name="sesion" class="form-control date" placeholder="No. Sesion" value="{{ old('sesion') }}"/>

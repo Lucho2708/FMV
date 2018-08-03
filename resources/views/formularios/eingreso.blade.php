@@ -36,7 +36,7 @@
                                         <th>Fecha</th>
                                         <th {{ $errors->has('fecha') ? ' has-error' : '' }} >
                                             <div  @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
-                                                <input align="right" type="text" name="fecha" class="datepicker form-control"  required value="{{ old('fecha') }}" />
+                                                <input align="right" type="date" name="fecha" class="form-control date"  required value="{{ old('fecha') }}" />
                                             </div>
                                             @if ($errors->has('fecha'))
                                                 <label class="error">{{ $errors->first('fecha') }}</label>
@@ -52,7 +52,7 @@
                                                 <input type="text" name="nombres" class="form-control" name="nombres" required value="{{ old('nombres') }}"/>
                                             </div>
                                             @if ($errors->has('nombres'))
-                                                <label class="error">{{ $errors->first('fecha') }}</label>
+                                                <label class="error">{{ $errors->first('nombres') }}</label>
                                             @endif
                                         </th>
                                     </tr>
@@ -343,6 +343,7 @@
                                     <thead>
                                     <tr>
                                         <th {{ $errors->has('t.a') ? ' has-error' : '' }}>
+                                            T.A.
                                             <div  @if ($errors->has('t.a')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="t.a" class="form-control" placeholder="T.A." required value="{{ old('t.a') }}"/>
                                             </div>
@@ -351,6 +352,7 @@
                                             @endif
                                         </th>
                                         <th {{ $errors->has('f.c') ? ' has-error' : '' }}>
+                                            F.C
                                             <div  @if ($errors->has('f.c')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="f.c" class="form-control"  placeholder="F.C." required value="{{ old('f.c') }}"/>
                                             </div>
@@ -359,6 +361,7 @@
                                             @endif
                                         </th>
                                         <th {{ $errors->has('f.r') ? ' has-error' : '' }}>
+                                            F.R
                                             <div  @if ($errors->has('f.r')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="f.r" class="form-control"  placeholder="F.R." required value="{{ old('f.r') }}"/>
                                             </div>
@@ -367,6 +370,7 @@
                                             @endif
                                         </th>
                                         <th {{ $errors->has('temp') ? ' has-error' : '' }}>
+                                            TEMP
                                             <div  @if ($errors->has('temp')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="temp" class="form-control"  placeholder="TEMP." required value="{{ old('temp') }}"/>
                                             </div>
@@ -379,6 +383,7 @@
                                     <tbody>
                                     <tr>
                                         <th {{ $errors->has('peso') ? ' has-error' : '' }}>
+                                            PESO
                                             <div  @if ($errors->has('peso')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="peso" class="form-control"  placeholder="PESO:" required value="{{ old('peso') }}"/>
                                             </div>
@@ -387,6 +392,7 @@
                                             @endif
                                         </th>
                                         <th {{ $errors->has('glasglow') ? ' has-error' : '' }}>
+                                            GLASGLOW
                                             <div  @if ($errors->has('glasglow')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="glasglow" class="form-control"  placeholder="GLASGLOW" required value="{{ old('glasglow') }}"/>
                                             </div>
@@ -395,6 +401,7 @@
                                             @endif
                                         </th>
                                         <th {{ $errors->has('talla') ? ' has-error' : '' }}>
+                                            TALLA
                                             <div  @if ($errors->has('talla')) class="form-line error" @endif class="form-line">
                                                 <input type="text" name="talla" class="form-control"  placeholder="TALLA." required value="{{ old('talla') }}"/>
                                             </div>
@@ -402,12 +409,13 @@
                                                 <label class="error">{{ $errors->first('talla') }}</label>
                                             @endif
                                         </th>
-                                        <th {{ $errors->has('sato') ? ' has-error' : '' }}>
-                                            <div  @if ($errors->has('sato')) class="form-line error" @endif class="form-line">
-                                                <input type="text" name="sato" class="form-control"  placeholder="SATO" required value="{{ old('sato') }}"/>
+                                        <th {{ $errors->has('sato2') ? ' has-error' : '' }}>
+                                            SATO2
+                                            <div  @if ($errors->has('sato2')) class="form-line error" @endif class="form-line">
+                                                <input type="text" name="sato2" class="form-control"  placeholder="SATO2" required value="{{ old('sato2') }}"/>
                                             </div>
-                                            @if ($errors->has('sato'))
-                                                <label class="error">{{ $errors->first('sato') }}</label>
+                                            @if ($errors->has('sato2'))
+                                                <label class="error">{{ $errors->first('sato2') }}</label>
                                             @endif
                                         </th>
                                     </tr>

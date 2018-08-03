@@ -37,7 +37,7 @@
                                         <th>Fecha Consulta</th>
                                         <th {{ $errors->has('fecha_consulta') ? ' has-error' : '' }} >
                                             <div  @if ($errors->has('fecha_consulta')) class="form-line error" @endif class="form-line">
-                                                <input align="right" type="text" class="datepicker form-control" name="fecha_consulta" required value="{{ old('fecha_consulta') }}" />
+                                                <input align="right" type="date" class="form-control date" name="fecha_consulta" required value="{{ old('fecha_consulta') }}" />
                                             </div>
                                             @if ($errors->has('fecha_consulta'))
                                                 <label class="error">{{ $errors->first('fecha_consulta') }}</label>
@@ -136,14 +136,16 @@
                                     </tr>
                                     <tr>
                                         <th>Sexo</th>
-                                        <select class="form-control" name="genero">
-                                            <option>-- Seleccione Sexo --</option>
-                                            <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
-                                            <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
-                                        </select>
-                                        @if ($errors->has('genero'))
-                                            <label class="error">{{ $errors->first('genero') }}</label>
-                                        @endif
+                                        <th>
+                                            <select class="form-control date" name="genero">
+                                                <option>-- Seleccione Sexo --</option>
+                                                <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
+                                                <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
+                                            </select>
+                                            @if ($errors->has('genero'))
+                                                <label class="error">{{ $errors->first('genero') }}</label>
+                                            @endif
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Ciudad</th>

@@ -30,6 +30,7 @@
                             <div class="row clearfix">
                                 <br>
                                 <div class="col-md-3">
+                                    <label>Numero</label>
                                     <div class="input-group {{ $errors->has('numero') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('numero')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="numero" placeholder="No." value="{{ old('numero') }}"/>
@@ -42,9 +43,10 @@
                                 <div class="col-md-5">
                                 </div>
                                 <div class="col-md-3">
+                                    <label>Fecha</label>
                                     <div class="input-group {{ $errors->has('fecha') ? ' has-error' : '' }}" >
                                         <div align="right" @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
-                                            <input align="right" type="text" class="datepicker form-control" name="fecha" placeholder="fecha" value="{{ old('fecha') }}"/>
+                                            <input align="right" type="date" class="form-control date" name="fecha" placeholder="fecha" value="{{ old('fecha') }}"/>
                                         </div>
                                         @if ($errors->has('fecha'))
                                             <label class="error">{{ $errors->first('fecha') }}</label>
@@ -57,6 +59,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Nombres</label>
                                     <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="nombres" placeholder="Nombre" value="{{ old('nombres') }}"/>
@@ -67,6 +70,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Apellidos</label>
                                     <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
@@ -80,6 +84,7 @@
                             <div class="row clearfix">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-5">
+                                    <label>Documento</label>
                                     <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control" name="documento" placeholder="Documento" value="{{ old('documento') }}"/>
@@ -90,8 +95,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Parentesco Con Interno</label>
                                     <select class="form-control show-tick" name="parentesco" required>
-                                        <option>-- Parentesco Con Interno --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="madre" @if (old('parentesco'))=='madre' selected @endif>Madre</option>
                                         <option name="padre" @if (old('parentesco'))=='padre' selected @endif>Padre</option>
                                         <option name="hijo(a)" @if (old('parentesco'))=='hijo(a)' selected @endif>Hijo(a)</option>
@@ -110,6 +116,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Nombres</label>
                                     <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="nombres" placeholder="Nombre" value="{{ old('nombres') }}"/>
@@ -120,6 +127,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Apellidos</label>
                                     <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
@@ -134,8 +142,9 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Tipo de Documento</label>
                                     <select class="form-control" name="tipo_documento" required>
-                                        <option>-- tipo de documento --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="CC" @if (old('tipo_documento'))=='CC' selected @endif>CC</option>
                                         <option name="TI" @if (old('tipo_documento'))=='TI' selected @endif>TI</option>
                                         <option name="CE" @if (old('tipo_documento'))=='CE' selected @endif>CE</option>
@@ -146,6 +155,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Documento</label>
                                     <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad" value="{{ old('documento') }}"/>
@@ -160,8 +170,9 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Sexo</label>
                                     <select class="form-control" name="genero">
-                                        <option>-- Seleccione Sexo --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
                                         <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
                                     </select>
@@ -170,6 +181,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Edad</label>
                                     <div class="input-group {{ $errors->has('edad') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="edad" placeholder="Edad" value="{{ old('edad') }}"/>
@@ -184,8 +196,9 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Estado Civil</label>
                                     <select class="form-control" name="estado_civil" required>
-                                        <option>-- Estado Civil --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="soltero(a)" @if (old('estado_civil'))=='soltero(a)' selected @endif>Soltero(a)</option>
                                         <option name="casado(a)" @if (old('estado_civil'))=='casado(a)' selected @endif>Casado(a)</option>
                                         <option name="viudo(a)" @if (old('estado_civil'))=='viudo(a)' selected @endif>Viudo(a)</option>
@@ -196,9 +209,10 @@
                                     @endif
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Fecha Nacimiento</label>
                                     <div class="input-group {{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="datepicker form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" value="{{ old('fecha_nacimiento') }}"/>
+                                            <input type="date" class="form-control date" name="fecha_nacimiento"  value="{{ old('fecha_nacimiento') }}"/>
                                         </div>
                                         @if ($errors->has('fecha_nacimiento'))
                                             <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
@@ -210,6 +224,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Procedencia</label>
                                     <div class="input-group {{ $errors->has('procedencia') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date"  name="procedencia" placeholder="Lugar nacimiento" value="{{ old('procedencia') }}"/>
@@ -220,12 +235,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="input-group {{ $errors->has('dirrecion') ? ' has-error' : '' }}">
-                                        <div @if ($errors->has('dirrecion')) class="form-line error" @endif class="form-line" >
-                                            <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion" required value="{{ old('dirrecion') }}">
+                                    <label>Direccion</label>
+                                    <div class="input-group {{ $errors->has('direccion') ? ' has-error' : '' }}">
+                                        <div @if ($errors->has('direccion')) class="form-line error" @endif class="form-line" >
+                                            <input type="text" class="form-control date" name="direccion" placeholder="Direccion" required value="{{ old('direccion') }}">
                                         </div>
-                                        @if ($errors->has('dirrecion'))
-                                            <label class="error">{{ $errors->first('dirrecion') }}</label>
+                                        @if ($errors->has('direccion'))
+                                            <label class="error">{{ $errors->first('direccion') }}</label>
                                         @endif
                                     </div>
                                 </div>
@@ -234,6 +250,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Ciudad</label>
                                     <div class="input-group {{ $errors->has('nombre') ? ' has-error' : '' }}">
                                         <div @if ($errors->has('nombre')) class="form-line error" @endif class="form-line" >
                                             <input type="text" class="form-control date" name="nombre" placeholder="Ciudad" required value="{{ old('nombre') }}">
@@ -244,6 +261,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Telefono</label>
                                     <div class="input-group {{ $errors->has('telefono') ? ' has-error' : '' }}">
                                     <span class="input-group-addon">
                                         <i class="material-icons">phone_iphone</i>
@@ -261,8 +279,9 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Nivel Educativo</label>
                                     <select class="form-control" name="estudios">
-                                        <option>-- Nivel Educativo --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="primaria" @if (old('estudios'))=='primaria' selected @endif>Primaria</option>
                                         <option name="secundaria" @if (old('estudios'))=='secundaria' selected @endif>Secundaria</option>
                                         <option name="universitaria" @if (old('estudios'))=='universitaria' selected @endif>Universitaria</option>
@@ -273,8 +292,9 @@
                                     @endif
                                 </div>
                                 <div class="col-md-5">
+                                    <label>Eps</label>
                                     <select class="form-control" name="nombre" required>
-                                        <option>-- Seleccione Eps, Sisben, Ars --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name=""></option>
                                     </select>
                                 </div>
@@ -352,9 +372,10 @@
                             <div class="row clearfix">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
+                                    <label>A. Objectivo general</label>
                                     <div class="form-group {{ $errors->has('objectivo_general') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('objectivo_general')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="4" class="form-control no-resize" name="objectivo_general" placeholder="A. Objectivo general" value="{{ old('objectivo_general') }}"></textarea>
+                                            <textarea rows="4" class="form-control no-resize" name="objectivo_general"  value="{{ old('objectivo_general') }}"></textarea>
                                         </div>
                                         @if ($errors->has('objectivo_general'))
                                             <label class="error">{{ $errors->first('objectivo_general') }}</label>
@@ -362,9 +383,10 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-5">
+                                    <label>B. Objectivo especifico</label>
                                     <div class="form-group {{ $errors->has('objectivo_especifico') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('objectivo_especifico')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="4" class="form-control no-resize" name="objectivo_especifico" placeholder="B. Objectivo especifico" value="{{ old('objectivo_especifico') }}"></textarea>
+                                            <textarea rows="4" class="form-control no-resize" name="objectivo_especifico" value="{{ old('objectivo_especifico') }}"></textarea>
                                         </div>
                                         @if ($errors->has('objectivo_especifico'))
                                             <label class="error">{{ $errors->first('objectivo_especifico') }}</label>
@@ -375,9 +397,10 @@
                             <div class="row clearfix">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
+                                    <label>C. Tecnicas</label>
                                     <div class="form-group {{ $errors->has('tecnica') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('tecnica')) class="form-line error" @endif class="form-line">
-                                            <textarea rows="4" class="form-control no-resize" name="tecnica" placeholder="C. Tecnicas" value="{{ old('tecnica') }}"></textarea>
+                                            <textarea rows="4" class="form-control no-resize" name="tecnica"  value="{{ old('tecnica') }}"></textarea>
                                         </div>
                                         @if ($errors->has('tecnica'))
                                             <label class="error">{{ $errors->first('tecnica') }}</label>

@@ -30,6 +30,7 @@ FMV | Editar Acudiente
                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                        <div class="row clearfix">
                                 <div class="col-md-6">
+                                    <label>Nombres</label>
                                     <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="nombres"  value="{{$acudiente->nombres}}" placeholder="Nombres">
@@ -40,6 +41,7 @@ FMV | Editar Acudiente
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label>Apellidos</label>
                                     <div class="input-group{{ $errors->has('apellidos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="apellidos" value="{{$acudiente->apellidos}}" placeholder="Apellidos">
@@ -53,15 +55,17 @@ FMV | Editar Acudiente
                             <div class="input-group-lg">
                                 <div class="row clearfix">
                                     <div class="col-md-4">
-                                        <select class="form-control show-tick" name="tipo_documento" required>
-                                            <option>-- Tipo De Documento --</option>
+                                        <label>Tipo de Documento</label>
+                                        <select class="form-control show-tick" name="tipo_documento" required >
+                                            <option>-- Seleccione --</option>
                                             <option name="CC" @if($acudiente->tipo_documento == 'CC') selected @endif>CC</option>
                                             <option name="TI" @if($acudiente->tipo_documento == 'TI') selected @endif>TI</option>
                                             <option name="CE" @if($acudiente->tipo_documento == 'CE') selected @endif>CE</option>
                                             <option name="RC" @if($acudiente->tipo_documento == 'RC') selected @endif>RC</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
+                                        <label>Documento</label>
                                         <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}">
                                             <div @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
                                                 <input type="text" class="form-control date" name="documento" value="{{$acudiente->documento}}" placeholder="Numero Identidad">
@@ -71,19 +75,21 @@ FMV | Editar Acudiente
                                             @endif
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-group {{ $errors->has('dirrecion') ? ' has-error' : '' }}">
-                                            <div @if ($errors->has('dirrecion')) class="form-line error" @endif class="form-line" >
-                                                <input type="text" class="form-control date" name="dirrecion" value="{{$acudiente->dirrecion}}" placeholder="Dirrecion">
+                                    <div class="col-md-5">
+                                        <label>Direccion</label>
+                                        <div class="input-group {{ $errors->has('direccion') ? ' has-error' : '' }}">
+                                            <div @if ($errors->has('direccion')) class="form-line error" @endif class="form-line" >
+                                                <input type="text" class="form-control date" name="direccion" value="{{$acudiente->direccion}}" placeholder="Direccion">
                                             </div>
-                                            @if ($errors->has('dirrecion'))
-                                                <label class="error">{{ $errors->first('dirrecion') }}</label>
+                                            @if ($errors->has('direccion'))
+                                                <label class="error">{{ $errors->first('direccion') }}</label>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row clearfix">
                                     <div class="col-md-4">
+                                        <label>Ciudad</label>
                                         <div class="input-group {{ $errors->has('ciudad') ? ' has-error' : '' }}">
                                             <div @if ($errors->has('ciudad')) class="form-line error" @endif class="form-line" >
                                                 <input type="text" class="form-control date" name="ciudad" value="{{$acudiente->ciudad}}" placeholder="Ciudad">
@@ -94,6 +100,7 @@ FMV | Editar Acudiente
                                         </div>
                                     </div>
                                     <div class="col-md-4">
+                                        <label>Telefono</label>
                                         <div class="input-group {{ $errors->has('telefono') ? ' has-error' : '' }}">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">phone_iphone</i>
@@ -107,21 +114,7 @@ FMV | Editar Acudiente
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="input-group{{ $errors->has('telefono') ? ' has-error' : '' }}">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">phone_iphone</i>
-                                            </span>
-                                            <div @if ($errors->has('telefono')) class="form-line error" @endif class="form-line" >
-                                                <input type="text" class="form-control mobile-phone-number" placeholder="Telefono (Adicional)" value="{{$acudiente->telefono}}" name="telefono">
-                                            </div>
-                                            @if ($errors->has('telefono'))
-                                                <label class="error">{{ $errors->first('telefono') }}</label>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-md-4">
+                                        <label>Profesion</label>
                                         <div class="input-group {{ $errors->has('profesion') ? ' has-error' : '' }}">
                                             <div @if ($errors->has('profesion')) class="form-line error" @endif class="form-line" >
                                                 <input type="text" class="form-control date" placeholder="Profesion" value="{{$acudiente->profesion}}" name="profesion">
@@ -131,7 +124,10 @@ FMV | Editar Acudiente
                                             @endif
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row clearfix">
                                     <div class="col-md-4">
+                                        <label>Empresa</label>
                                         <div class="input-group {{ $errors->has('empresa_labora') ? ' has-error' : '' }}">
                                             <div @if ($errors->has('empresa_labora')) class="form-line error" @endif class="form-line" >
                                                 <input type="text" class="form-control date" placeholder="Empresa" value="{{$acudiente->empresa_labora}}" name="empresa_labora">
@@ -142,8 +138,9 @@ FMV | Editar Acudiente
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control" name="parentesco" required>
-                                            <option>-- Selecciona Parentesco Con Interno --</option>
+                                        <label>Parentesco con Interno</label>
+                                        <select class="form-control show-tick" name="parentesco" required>
+                                            <option>-- Seleccione --</option>
                                             <option name="Madre" @if($acudiente->parentesco == 'Madre') selected @endif>Madre</option>
                                             <option name="Padre" @if($acudiente->parentesco == 'Padre') selected @endif>Padre</option>
                                             <option name="Hijo(a)" @if($acudiente->parentesco == 'Hijo(a)') selected @endif>Hijo(a)</option>
@@ -152,15 +149,17 @@ FMV | Editar Acudiente
                                             <option name="Amigo(a)" @if($acudiente->parentesco == 'Amigo(a)') selected @endif>Amigo(a)</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row clearfix">
                                     <div class="col-md-6">
-                                        <select class="form-control" name="nombre" required>
-                                            <option>-- Selecciona Eps-Sisben-Ars --</option>
+                                        <label>Eps</label>
+                                        <select class="form-control show-tick" name="nombre" required>
+                                            <option>-- Seleccione --</option>
                                             <option name=""></option>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="row clearfix">
                                     <div class="col-md-6">
+                                        <label>Aporte</label>
                                         <div class="input-group {{ $errors->has('aporte') ? ' has-error' : '' }}">
                                         <span class="input-group-addon">
                                             <i class="material-icons">attach_money</i>
@@ -175,8 +174,6 @@ FMV | Editar Acudiente
                                     </div>
                                 </div>
                         {!! Form::submit('Actualizar', ['class' =>'btn btn-primary']) !!}
-
-
                     {!! Form::close() !!}
                 </div>
             </div>

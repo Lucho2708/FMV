@@ -89,13 +89,14 @@ FMV | Crear Paciente
                                     <img  src="/images/perfil-d.jpeg"  style="width: 150px; height: 150px; float:left; border-radius: 50%; margin-right:25px ">
                                 </div>
                                 <div class="col-md-3">
-                                    <div  id="estilo-foto" class="glyphicon glyphicon-download-alt ">
+                                    <div  id="estilo-foto" class="glyphicon glyphicon-picture">
                                         <div class="form">
                                             <input type="file" class="form-control" name="foto" id="files">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
+                                    <label>Nombres</label>
                                     <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="nombres"  placeholder="Nombres" value="{{ old('nombres') }}"/>
@@ -106,6 +107,7 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-7">
+                                    <label>Apellidos</label>
                                     <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
@@ -118,9 +120,10 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
+                                    <label>Fecha Nacimiento</label>
                                     <div class="input-group {{ $errors->has('fecha_nacimiento') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('fecha_nacimiento')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="datepicker form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" value="{{ old('fecha_nacimiento') }}"/>
+                                            <input type="date" class="form-control date" name="fecha_nacimiento"  value="{{ old('fecha_nacimiento') }}"/>
                                         </div>
                                         @if ($errors->has('fecha_nacimiento'))
                                             <label class="error">{{ $errors->first('fecha_nacimiento') }}</label>
@@ -128,6 +131,7 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Edad</label>
                                     <div class="input-group {{ $errors->has('edad') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('edad')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="edad" placeholder="Edad" value="{{ old('edad') }}"/>
@@ -138,8 +142,9 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Tipo de Documento</label>
                                     <select class="form-control" name="tipo_documento" required>
-                                        <option>-- tipo de documento --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="CC" @if (old('tipo_documento'))=='CC' selected @endif>CC</option>
                                         <option name="TI" @if (old('tipo_documento'))=='TI' selected @endif>TI</option>
                                         <option name="CE" @if (old('tipo_documento'))=='CE' selected @endif>CE</option>
@@ -152,6 +157,7 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
+                                    <label>Documento</label>
                                     <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('documento')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad" value="{{ old('documento') }}"/>
@@ -162,8 +168,9 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Sexo</label>
                                     <select class="form-control" name="genero">
-                                        <option>-- Seleccione Sexo --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="Masculino" @if (old('genero'))=='Masculino' selected @endif>Masculino</option>
                                         <option name="Femenino" @if (old('genero'))=='Femenino' selected @endif>Femenino</option>
                                     </select>
@@ -172,6 +179,7 @@ FMV | Crear Paciente
                                     @endif
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Ubicacion</label>
                                     <select class="form-control" name="ubicacion_id" data-live-search="true" required>
                                         <option>-- Selecciona ubicacion --</option>
                                         @foreach($ubicacion as $ubicacion)
@@ -182,6 +190,7 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
+                                    <label>Procedencia</label>
                                     <div class="input-group {{ $errors->has('procedencia') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date"  name="procedencia" placeholder="Lugar nacimiento" value="{{ old('procedencia') }}"/>
@@ -192,17 +201,19 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Eps</label>
                                     <select class="form-control" name="eps_id"  data-live-search="true" required>
-                                        <option>-- Selecciona Eps --</option>
+                                        <option>-- Seleccione --</option>
                                         @foreach($eps as $eps)
                                             <option value={{ $eps->id }}>{{$eps->nombre}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Fecha Ingreso</label>
                                     <div class="input-group {{ $errors->has('fecha_ingreso') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('procedencia')) class="form-line error" @endif class="form-line">
-                                            <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso" value="{{ old('fecha_ingreso') }}"/>
+                                            <input type="date" class="form-control date" name="fecha_ingreso"  value="{{ old('fecha_ingreso') }}"/>
                                         </div>
                                         @if ($errors->has('fecha_ingreso'))
                                             <label class="error">{{ $errors->first('fecha_ingreso') }}</label>
@@ -212,8 +223,9 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
+                                    <label>Estado Civil</label>
                                     <select class="form-control" name="estado_civil" required>
-                                        <option>-- Estado Civil --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="soltero(a)" @if (old('estado_civil'))=='soltero(a)' selected @endif>Soltero(a)</option>
                                         <option name="casado(a)" @if (old('estado_civil'))=='casado(a)' selected @endif>Casado(a)</option>
                                         <option name="viudo(a)" @if (old('estado_civil'))=='viudo(a)' selected @endif>Viudo(a)</option>
@@ -224,6 +236,7 @@ FMV | Crear Paciente
                                     @endif
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Hijos</label>
                                     <div class="input-group {{ $errors->has('hijos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('hijos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="hijos" placeholder="No. Hijos" value="{{ old('hijos') }}"/>
@@ -234,6 +247,7 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Alias</label>
                                     <div class="input-group{{ $errors->has('alias') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('alias')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="alias" placeholder="Alias" value="{{ old('alias') }}"/>
@@ -246,6 +260,7 @@ FMV | Crear Paciente
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
+                                    <label>Señales</label>
                                     <div class="input-group {{ $errors->has('senales') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('senales')) class="form-line error" @endif class="form-line">
                                             <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales" value="{{ old('senales') }}"></textarea>
@@ -256,6 +271,7 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Rh</label>
                                     <div class="input-group{{ $errors->has('rh') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('rh')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="rh" placeholder="RH" value="{{ old('rh') }}"/>
@@ -266,8 +282,9 @@ FMV | Crear Paciente
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Nivel Educativo</label>
                                     <select class="form-control" name="estudios">
-                                        <option>-- Nivel Educativo --</option>
+                                        <option>-- Seleccione --</option>
                                         <option name="primaria" @if (old('estudios'))=='primaria' selected @endif>Primaria</option>
                                         <option name="secundaria" @if (old('estudios'))=='secundaria' selected @endif>Secundaria</option>
                                         <option name="universitaria" @if (old('estudios'))=='universitaria' selected @endif>Universitaria</option>

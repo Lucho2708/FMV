@@ -58,7 +58,7 @@ class EigresoUpdateResquest extends FormRequest
             'peso'=> 'required|string',
             'glasglow'=> 'required|string',
             'talla'=> 'required|string',
-            'sato'=> 'required|string',
+            'sato2'=> 'required|string',
         ];
     }
 }

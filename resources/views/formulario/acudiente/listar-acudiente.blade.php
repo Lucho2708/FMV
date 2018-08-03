@@ -65,7 +65,7 @@ FMV | Ver Acudiente
                                 <td>{{$acudiente->parentesco}}</td>
                                 <td>{{$acudiente->tipo_documento}}</td>
                                 <td>{{$acudiente->documento}}</td>
-                                <td>{{$acudiente->dirrecion}}</td>
+                                <td>{{$acudiente->direccion}}</td>
                                 <td>{{$acudiente->telefono}}</td>
                                 <td>{{$acudiente->profesion}}</td>
                                 <td>{{$acudiente->empresa_labora}}</td>

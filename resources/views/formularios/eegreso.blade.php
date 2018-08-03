@@ -35,7 +35,7 @@
                                         <th>Fecha</th>
                                         <th {{ $errors->has('fecha') ? ' has-error' : '' }} >
                                             <div  @if ($errors->has('fecha')) class="form-line error" @endif class="form-line">
-                                                <input align="right" type="text" name="fecha" class="datepicker form-control"  required value="{{ old('fecha') }}" />
+                                                <input align="right" type="date" name="fecha" class="form-control date"  required value="{{ old('fecha') }}" />
                                             </div>
                                             @if ($errors->has('fecha'))
                                                 <label class="error">{{ $errors->first('fecha') }}</label>
@@ -51,7 +51,7 @@
                                                <input type="text" name="nombres" class="form-control" name="names" required value="{{ old('nombres') }}"/>
                                             </div>
                                             @if ($errors->has('nombres'))
-                                                <label class="error">{{ $errors->first('fecha') }}</label>
+                                                <label class="error">{{ $errors->first('nombres') }}</label>
                                             @endif
                                         </th>
                                     </tr>

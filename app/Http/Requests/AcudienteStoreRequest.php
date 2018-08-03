@@ -28,7 +28,7 @@ class AcudienteStoreRequest extends FormRequest
             'apellidos'     => 'required|string',
             'tipo_documento'=> 'required|string',
             'documento'     => 'required|numeric|max:1000000000',
-            'dirrecion'     => 'required|string',
+            'direccion'     => 'required|string',
             'ciudad'        => 'required|string',
             'telefono'      => 'required|numeric|size:100000000',
             'profesion'     => 'required|string',

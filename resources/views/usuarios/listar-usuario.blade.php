@@ -98,7 +98,7 @@ FMV | Ver Usuarios
                                         <td>{{$usuario->apellidos}}</td>
                                         <td>{{$usuario->tipo_documento}}</td>
                                         <td>{{$usuario->documento}}</td>
-                                        <td>{{$usuario->dirrecion}}</td>
+                                        <td>{{$usuario->direccion}}</td>
                                         <td>{{$usuario->telefono}}</td>
                                         <td>{{$usuario->email}}</td>
                                         <td>{{$usuario->usuario}}</td>

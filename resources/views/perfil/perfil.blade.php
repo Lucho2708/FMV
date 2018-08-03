@@ -6,6 +6,26 @@ FMV | Perfil
 
 @section('css')
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+    <style>
+        #estilo-foto{
+            width: 150px;
+            padding: 20px;
+            margin: 50px;
+            position: relative;
+            font-size: 30px;
+        }
+
+        #files{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
 @endsection
 
 @section('menu')
@@ -39,8 +59,11 @@ FMV | Perfil
                                 <div class="form">
                                     <h3>{{ $user->nombres }} {{ $user->apellidos }}</h3>
                                 </div>
-
-                                <input type="file" name="avatar">
+                                <div  id="estilo-foto" class="glyphicon glyphicon-picture">
+                                    <div class="form">
+                                         <input type="file" name="avatar" id="files">
+                                    </div>
+                                </div>
                                 
                             </div>
                         </div>
@@ -48,6 +71,7 @@ FMV | Perfil
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Nombres</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="text" class="form-control" name="nombres" value="{{$user->nombres}}" placeholder="Nombres" required>
@@ -55,6 +79,7 @@ FMV | Perfil
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Apellidos</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="text" class="form-control" name="apellidos" value="{{$user->apellidos}}" placeholder="Apellidos" required>
@@ -64,9 +89,10 @@ FMV | Perfil
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Tipo de Documento</label>
                             <div class="input-group">
                                 <select class="form-control" name="tipo_documento" required>
-                                    <option>-- Seleccione tipo de documento --</option>
+                                    <option>-- Seleccione --</option>
                                     <option name="CC" @if($user->tipo_documento == 'CC') selected @endif>CC</option>
                                     <option name="TI" @if($user->tipo_documento == 'TI') selected @endif>TI</option>
                                     <option name="CE" @if($user->tipo_documento == 'CE') selected @endif>CE</option>
@@ -75,6 +101,7 @@ FMV | Perfil
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Documento</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="text" class="form-control" name="documento" value="{{$user->documento}}" placeholder="Documento" required>
@@ -84,14 +111,16 @@ FMV | Perfil
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Direccion</label>
                             <div class="input-group">
                                 <div class="form-line">
-                                    <textarea name="dirrecion"  cols="1" rows="2" class="form-control no-resize" placeholder="Dirección" required>{{$user->dirrecion}}</textarea>
+                                    <textarea name="direccion"  cols="1" rows="2" class="form-control no-resize" placeholder="Dirección" required>{{$user->direccion}}</textarea>
 
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Telefono</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="tel" class="form-control" name="telefono" value="{{$user->telefono}}" placeholder="Telefono" required>
@@ -101,6 +130,7 @@ FMV | Perfil
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Correo Electronico</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="email" class="form-control" name="email" value="{{$user->email}}" placeholder="Email" required>
@@ -108,6 +138,7 @@ FMV | Perfil
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Usuario</label>
                             <div class="input-group">
                                 <div class="form-line">
                                     <input type="usuario" class="form-control" name="usuario" value="{{$user->usuario}}" placeholder="Usuario" required>

@@ -28,7 +28,7 @@ class UsuarioStoreRequest extends FormRequest
             'apellidos'     => 'required|string',
             'documento'     => 'required|numeric|max:10',
             'tipo_documento'=> 'required',
-            'dirrecion'     => 'required|string',
+            'direccion'     => 'required|string',
             'telefono'      => 'required|numeric|size:11',
             'email'         => 'required|string|email|max:255|unique:users',
             'usuario'       => 'required|string|unique:users',

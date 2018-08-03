@@ -30,6 +30,7 @@
                             <div class="row clearfix">
                                 <br>
                                 <div class="col-md-4">
+                                    <label>Nombres</label>
                                     <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="nombres"  placeholder="Nombres" value="{{ old('nombres') }}"/>
@@ -40,6 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Apellidos</label>
                                     <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos" value="{{ old('apellidos') }}"/>
@@ -50,6 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <label>Fecha</label>
                                     <div class="input-group {{ $errors->has('fecha') ? ' has-error' : '' }}" >
                                         <span class="input-group-addon">
                                             <i class="material-icons">date_range</i>
@@ -64,7 +67,9 @@
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-md-12">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <label>TItulo del Dia</label>
                                     <div class="input-group {{ $errors->has('titulo_dia') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                             <input type="text" class="form-control date" name="titulo_dia" placeholder="TItulo del Dia" value="{{ old('titulo_dia') }}"/>
@@ -76,7 +81,9 @@
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-sm-12">
+                                <div class="col-md-1"></div>
+                                <div class="col-sm-10">
+                                    <label>Cronica</label>
                                     <div class="form-group {{ $errors->has('cronica') ? ' has-error' : '' }}" >
                                         <div  @if ($errors->has('cronica')) class="form-line error" @endif class="form-line">
                                             <textarea rows="3" class="form-control no-resize" name="cronica" placeholder="Cronica : ......" value="{{ old('cronica') }}"></textarea>
@@ -89,6 +96,7 @@
                             </div>
                             <div class="row clearfix">
                                 <div class="col-sm-6">
+                                    <label>Estado de Animo Inicia</label>
                                     <div class="form-group {{ $errors->has('estado_inicial') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('estado_inicial')) class="form-line error" @endif class="form-line">
                                             <textarea rows="3" class="form-control no-resize" name="estado_inicial" placeholder="Estado de Animo Inicial: ......" value="{{ old('estado_inicial') }}"></textarea>
@@ -99,6 +107,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label>Estado de Animo Final</label>
                                     <div class="form-group {{ $errors->has('estado_final') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('estado_final')) class="form-line error" @endif class="form-line">
                                             <textarea rows="3" class="form-control no-resize" name="estado_final" placeholder="Estado de Animo Final: ......" value="{{ old('estado_final') }}"></textarea>
@@ -136,6 +145,7 @@
                             </div>
                             <div class="row clearfix">
                                 <div class="col-sm-12">
+                                    <label>Compromiso</label>
                                     <div class="form-group {{ $errors->has('compromiso') ? ' has-error' : '' }}">
                                         <div  @if ($errors->has('compromiso')) class="form-line error" @endif class="form-line">
                                             <textarea rows="3" class="form-control no-resize" name="compromiso" placeholder="Que compromiso hago para cambiar mi forma de actuar" value="{{ old('compromiso') }}"></textarea>

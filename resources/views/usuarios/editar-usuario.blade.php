@@ -28,6 +28,7 @@ FMV | Editar Usuario
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Nombres</label>
                             <div class="input-group {{ $errors->has('nombres') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('nombres')) class="form-line error" @endif class="form-line">
                                     <input type="text" class="form-control" name="nombres" value="{{$usuario->nombres}}" placeholder="Nombres" required>
@@ -38,6 +39,7 @@ FMV | Editar Usuario
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Apellidos</label>
                             <div class="input-group {{ $errors->has('apellidos') ? ' has-error' : '' }}">
                                 <div  @if ($errors->has('apellidos')) class="form-line error" @endif class="form-line">
                                     <input type="text" class="form-control" name="apellidos" value="{{$usuario->apellidos}}" placeholder="Apellidos" required>
@@ -51,8 +53,9 @@ FMV | Editar Usuario
                     <div class="row clearfix">
                         <div class="col-md-6">
                             <div class="input-group">
-                                <select class="form-control show-tick" name="tipo_documento" required>
-                                    <option value="">-- Tipo de documento --</option>
+                                <label>Tipo de Documento</label>
+                                <select class="form-control show-tick" name="tipo_documento" required >
+                                    <option value="">-- Seleccione --</option>
                                     <option name="CC" @if($usuario->tipo_documento == 'CC') selected @endif>CC</option>
                                     <option name="TI" @if($usuario->tipo_documento == 'TI') selected @endif>TI</option>
                                     <option name="CE" @if($usuario->tipo_documento == 'CE') selected @endif>CE</option>
@@ -61,6 +64,7 @@ FMV | Editar Usuario
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Numero de Documento</label>
                             <div class="input-group {{ $errors->has('documento') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('documento')) class="form-line error" @endif  class="form-line">
                                     <input type="text" class="form-control" name="documento" value="{{$usuario->documento}}" placeholder="Documento" required>
@@ -72,17 +76,19 @@ FMV | Editar Usuario
                         </div>
                     </div>
                     <div class="row clearfix">
-                        <div class="col-md-6 {{ $errors->has('dirrecion') ? ' has-error' : '' }}">
+                        <label>Direccion</label>
+                        <div class="col-md-6 {{ $errors->has('direccion') ? ' has-error' : '' }}">
                             <div class="input-group">
-                                <div @if ($errors->has('dirrecion')) class="form-line error" @endif class="form-line" >
-                                    <textarea name="dirrecion"  cols="1" rows="1" class="form-control no-resize" placeholder="Dirección" required>{{$usuario->dirrecion}}</textarea>
+                                <div @if ($errors->has('direccion')) class="form-line error" @endif class="form-line" >
+                                    <textarea name="dirrecion"  cols="1" rows="1" class="form-control no-resize" placeholder="Dirección" required>{{$usuario->direccion}}</textarea>
                                 </div>
-                                @if ($errors->has('dirrecion'))
-                                    <label class="error">{{ $errors->first('dirrecion') }}</label>
+                                @if ($errors->has('direccion'))
+                                    <label class="error">{{ $errors->first('direccion') }}</label>
                                 @endif
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <label>Telefono</label>
                             <div class="input-group {{ $errors->has('telefono') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('telefono')) class="form-line error" @endif class="form-line" >
                                     <input type="tel" class="form-control" name="telefono" value="{{$usuario->telefono}}" placeholder="Telefono" required>
@@ -95,6 +101,7 @@ FMV | Editar Usuario
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Correo Electronico</label>
                             <div class="input-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('email')) class="form-line error" @endif class="form-line">
                                     <input type="email" class="form-control" name="email" value="{{$usuario->email}}" placeholder="Email" required>
@@ -117,6 +124,7 @@ FMV | Editar Usuario
                     </div>
                     <div class="row clearfix">
                         <div class="col-md-6">
+                            <label>Usuario</label>
                             <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('password')) class="form-line error" @endif class="form-line">
                                     <input type="password" class="form-control" name="contrasena" value="{{$usuario->contrasena}}" placeholder="Password" required>
@@ -128,8 +136,10 @@ FMV | Editar Usuario
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
-                                <select class="form-control show-tick " name="perfil" required>
-                                    <option>-- Seleccione perfil --</option>
+                                <label>Perfil</label>
+                                <div class="input-group">
+                                    <select class="form-control show-tick " name="perfil" required
+                                    <option value="">-- Seleccione --</option>
                                     <option name="admin" @if ($usuario->perfil =='Administrador') selected  @endif>Administrador</option>
                                     <option name="psico" @if ($usuario->perfil =='Psicologo' ) selected  @endif>Psicologo</option>
                                     <option name="tbs" @if ($usuario->perfil =='Trabajador Social') selected @endif>Trabajador Social</option>

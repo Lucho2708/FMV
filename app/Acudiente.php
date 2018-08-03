@@ -15,7 +15,7 @@ class Acudiente extends Model
         'tipo_documento',
         'nombres',
         'apellidos',
-        'dirrecion',
+        'direccion',
         'telefono',
         'profesion',
         'empresa_labora',
