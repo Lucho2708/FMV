@@ -16,4 +16,4 @@ class Intervencion extends Model
         'tecnica'
     ];
 }
-}
+

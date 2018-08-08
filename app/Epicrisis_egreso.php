@@ -11,12 +11,11 @@ class Epicrisis_egreso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-        'fecha',
+        'linea_pago',
         'incapacidades',
         'plan_mejora',
         'medicamentos',
         'estado_salud',
-        'linea_pago',
         'servicio',
         'observaciones'
     ];

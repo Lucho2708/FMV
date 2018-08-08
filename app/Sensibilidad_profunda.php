@@ -17,4 +17,4 @@ class Sensibilidad_profunda extends Model
         'grafestesia'
     ];
 }
-}
+

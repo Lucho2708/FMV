@@ -14,7 +14,7 @@ class Patrones_integrales_movimiento extends Model
         'alcance_plano_superior',
         'alcance_plano_inferior',
         'agarre_mano_llena',
-        'agarre_cilindrp',
+        'agarre_cilindro',
         'enganche',
         'salto_involuntario',
         'lanzar_proporcional',

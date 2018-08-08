@@ -38,9 +38,9 @@ class AgregarTablaAntecedentes extends Migration
             $table->string('glasglow');
             $table->string('talla');
             $table->string('sato2');
-            $table->unsignedInteger('epicrisi_ingreso_id');
+            $table->unsignedInteger('epicrisis_ingreso_id');
 
-            $table->foreign('epicrisi_ingreso_id')->references('id')->on('epicrisis_ingresos');
+            $table->foreign('epicrisis_ingreso_id')->references('id')->on('epicrisis_ingresos');
         });
     }
 

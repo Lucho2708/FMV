@@ -17,8 +17,8 @@ class AgregarTablaEpicrisisIngresos extends Migration
             $table->increments('id');
             $table->string('linea_pago');
             $table->string('servicio');
-            $table->string('consulta');
-            $table->string('enfermedad');
+            $table->string('motivo_consulta');
+            $table->string('emfermedad_actual');
             $table->string('conducta');
             $table->string('evolucion');
             $table->unsignedInteger('paciente_id');

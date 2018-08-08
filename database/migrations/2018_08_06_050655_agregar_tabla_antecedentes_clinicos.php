@@ -15,8 +15,8 @@ class AgregarTablaAntecedentesClinicos extends Migration
     {
         Schema::create('antecedentes_clinicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('familiar');//Funcion Familiar
-            $table->string('consulta');
+            $table->string('funcion_familiar');
+            $table->string('motivo_consulta');
             $table->string('diagnostico');
             $table->string('problema');
             $table->string('hipotesis');

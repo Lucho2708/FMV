@@ -11,7 +11,6 @@ class Epicrisis_ingreso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-        'fecha',
         'linea_pago',
         'servicio',
         'motivo_consulta',

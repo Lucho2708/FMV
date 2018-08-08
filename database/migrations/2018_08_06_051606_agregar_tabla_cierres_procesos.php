@@ -20,6 +20,8 @@ class AgregarTablaCierresProcesos extends Migration
             $table->string('consultante');
             $table->string('psicologico');
             $table->string('otros');
+            $table->string('e_p_c');
+            $table->string('e_p_p');
             $table->unsignedInteger('antecedente_clinico_id');
 
             $table->foreign('antecedente_clinico_id')->references('id')->on('antecedentes_clinicos');

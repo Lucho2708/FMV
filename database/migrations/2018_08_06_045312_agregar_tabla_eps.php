@@ -15,7 +15,7 @@ class AgregarTablaEps extends Migration
     {
         Schema::create('eps', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('eps');
+            $table->string('nombre');
         });
     }
 

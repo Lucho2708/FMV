@@ -33,7 +33,7 @@ class Antecedente extends Model
         'peso',
         'glasglow',
         'talla',
-        'sato'
+        'sato2'
 
     ];
 }
