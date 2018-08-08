@@ -4,12 +4,17 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
-class Eps extends Model
+class EpicrisiIngreso extends Model
 {
     //
     use Notifiable;
-    protected $table = 'eps';
+    protected $table = 'epicrisis_ingresos';
     protected  $fillable = [
-    	'eps'
+		'linea_pago',
+		'servicio',
+		'consulta',
+		'enfermedad',
+		'conducta',
+		'evolucion'
     ];
 }

@@ -1,40 +1,24 @@
 <?php
 
 namespace App;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 class Paciente extends Model
 {
+    //
     use Notifiable;
-    protected $table = 'paciente';
-    public $timestamps = false;
-
+    protected $table = 'pacientes';
     protected  $fillable = [
-        'nombres',
-        'apellidos',
-        'documento',
-        'tipo_documento',
-        'procedencia',
-        'fecha_nacimiento',
-        'fecha_ingreso',
-        'edad',
-        'estado_civil',
-        'hijos',
-        'alias',
-        'estudios',
-        'genero',
-        'rh',
-        'senales',
-        'foto'
+		'nombres',
+		'apellidos',
+		'tipo_documento',
+		'fecha_nacimiento',
+		'estado_civil',
+		'hijos',
+		'estudios',
+		'genero',
+		'rh',
+		'senales'
     ];
-
-    public function setFotoAttribute($foto)
-    {
-        $this->attributes['foto'] = Carbon::now()->day.$foto->getClientOriginalName();
-        $name = Carbon::now()->day.$foto->getClientOriginalName();
-        \Storage::disk('local')->put($name, \File::get($foto));
-    }
 }
-

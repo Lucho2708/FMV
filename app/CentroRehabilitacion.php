@@ -4,12 +4,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
-class Eps extends Model
+class CentroRehabilitacion extends Model
 {
     //
     use Notifiable;
-    protected $table = 'eps';
+    protected $table = 'centros_rehabilitacion';
     protected  $fillable = [
-    	'eps'
+		'nombre'
     ];
 }

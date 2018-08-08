@@ -141,3 +141,10 @@ Route::post('logout', [
 /*
 End | Authentication Routes...
 */
+/*
+Star | Resource Registro Paciente 
+*/
+Route::group([],function(){
+    Route::resource('registro','RegistroPacienteController')->middleware('auth');
+});
+/*

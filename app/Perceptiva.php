@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Perceptiva extends Model
 {
+    //
     use Notifiable;
-    protected $table = 'perceptiva';
-    public $timestamps = false;
-
+    protected $table = 'perceptivas';
     protected  $fillable = [
 
     ];

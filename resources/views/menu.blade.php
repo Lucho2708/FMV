@@ -5,16 +5,16 @@
             <span>Inicio</span>
         </a>
     </li>
-    <li class=" {{ Request::is('usuario') || Request::is('usuario/create') || Route::is('usuario.edit')? 'active' : null}}">
+    <li class=" {{Route::is('usuario.*')? 'active' : null}}">
 	    <a href="javascript:void(0);" class="menu-toggle">
 	        <i class="material-icons">perm_identity</i>
 	        <span>Usuarios</span>
 	    </a>
     	<ul class="ml-menu">
-	        <li class="{{ Request::is('usuario') ? 'active' : null}}">
+	        <li class="{{ Route::is('usuario.index') ? 'active' : null}}">
 	            <a href="{{route('usuario.index')}}">Ver Usuarios</a>
 	        </li>
-	        <li class="{{ Request::is('usuario/create') ? 'active' : null}}">
+	        <li class="{{ Route::is('usuario.create') ? 'active' : null}}">
 	            <a href="{{route('usuario.create')}}">Crear Usuarios</a>
 	        </li>
     	</ul>
@@ -48,6 +48,12 @@
             </li>
 
         </ul>
+    </li>
+    <li class="{{ Route::is('registro.*') ? 'active' : null}}">
+        <a href="{{ route('registro.create') }}">
+            <i class="material-icons">group_add</i>
+            <span>Nuevo registro</span>
+        </a>
     </li>
     <li class="{{ Request::is('cproceso') || Request::is('')? 'active' : null}}" >
         <a href="javascript:void(0);" class="menu-toggle">

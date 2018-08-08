@@ -4,12 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-class Ubicacion extends Model
+class SensibilidadProfunda extends Model
 {
     //
     use Notifiable;
-    protected $table = 'ubicaciones';
+    protected $table = 'sensibilidades_profundas';
     protected  $fillable = [
-    	'ciudad'
+		'barognosia',
+		'esterognosia',
+		'diferenciacion_texturas',
+		'grafestesia'
     ];
 }

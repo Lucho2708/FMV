@@ -13,7 +13,7 @@ class AgregarTablaUsuarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table-> string('nombres');
             $table-> string('apellidos');
@@ -24,7 +24,7 @@ class AgregarTablaUsuarios extends Migration
             $table-> string('email');
             $table-> string('usuario');
             $table-> string('password');
-            $table-> string('avatar');
+            $table-> string('avatar')->default('user.png');
             $table-> string('perfil');
             $table-> rememberToken();
             $table->timestamps();
@@ -38,6 +38,6 @@ class AgregarTablaUsuarios extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios');
+        Schema::dropIfExists('users');
     }
 }

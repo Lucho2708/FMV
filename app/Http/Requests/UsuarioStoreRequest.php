@@ -26,10 +26,10 @@ class UsuarioStoreRequest extends FormRequest
         return [
             'nombres'       => 'required|string',
             'apellidos'     => 'required|string',
-            'documento'     => 'required|numeric|max:10',
+            'documento'     => 'required|numeric',
             'tipo_documento'=> 'required',
             'direccion'     => 'required|string',
-            'telefono'      => 'required|numeric|size:11',
+            'telefono'      => 'required|numeric',
             'email'         => 'required|string|email|max:255|unique:users',
             'usuario'       => 'required|string|unique:users',
             'password'      => 'required|string|min:6|confirmed',

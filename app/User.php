@@ -8,14 +8,25 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    public $timestamps = false;
+    
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'nombres', 'apellidos', 'documento','tipo_documento', 'direccion','telefono','email','usuario','password','avatar','perfil',
+        'nombres', 
+        'apellidos', 
+        'documento',
+        'tipo_documento', 
+        'direccion',
+        'telefono',
+        'email',
+        'usuario',
+        'password',
+        'avatar',
+        'perfil',
     ];
 
     /** 
@@ -24,6 +35,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 
+        'remember_token',
     ];
 }

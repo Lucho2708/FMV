@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-class Ubicacion extends Model
+class EvaluacionTerapiaOcupacional extends Model
 {
     //
     use Notifiable;
-    protected $table = 'ubicaciones';
+    protected $table = 'evaluaciones_terapias_ocupacionales';
     protected  $fillable = [
-    	'ciudad'
+		'emfermedad_actual',
+		'emfermedad_natural'
     ];
 }

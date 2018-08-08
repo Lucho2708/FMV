@@ -27,12 +27,12 @@ class AgregarTablaPacientes extends Migration
             $table-> string('genero');
             $table-> string('rh');
             $table-> string('senales');
-            $table-> unsignedInteger('usuario_id')->unsigned();
+            $table-> unsignedInteger('user_id')->unsigned();
             $table-> unsignedInteger('acudiente_id')->unsigned();
             $table-> unsignedInteger('eps_id')->unsigned();
             $table-> unsignedInteger('ubicacion_id')->unsigned();
 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('acudiente_id')->references('id')->on('acudientes');
             $table->foreign('eps_id')->references('id')->on('eps');
             $table->foreign('ubicacion_id')->references('id')->on('ubicaciones');

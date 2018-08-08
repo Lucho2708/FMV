@@ -1,19 +1,17 @@
 <?php
 
 namespace App;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 class Intervencion extends Model
 {
+    //
     use Notifiable;
-    protected $table = 'intervencion';
-    public $timestamps = false;
-
+    protected $table = 'intervenciones';
     protected  $fillable = [
-        'objetivo_general',
-        'objetivo_especifico',
-        'tecnica'
+		'objetivo_general',
+		'objetivo_espesifico',
+		'tecnica',
     ];
-}
 }
