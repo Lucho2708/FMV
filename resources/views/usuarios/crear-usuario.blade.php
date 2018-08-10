@@ -77,7 +77,7 @@ FMV | Crear Usuario
                             <label>Direccion</label>
                             <div class="input-group {{ $errors->has('direccion') ? ' has-error' : '' }}">
                                 <div @if ($errors->has('direccion')) class="form-line error" @endif class="form-line" >
-                                    <textarea name="dirrecion" cols="1" rows="1" class="form-control no-resize" placeholder="Dirección" required value="{{ old('direccion') }}"></textarea>
+                                    <textarea name="direccion" cols="1" rows="1" class="form-control no-resize" placeholder="Dirección" required value="{{ old('direccion') }}"></textarea>
                                 </div>
                                 @if ($errors->has('direccion'))
                                     <label class="error">{{ $errors->first('direccion') }}</label>

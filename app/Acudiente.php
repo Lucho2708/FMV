@@ -11,10 +11,10 @@ class Acudiente extends Model
 	use Notifiable;
     protected $table = 'acudientes';
     protected  $fillable = [
-        'documento',
-        'tipo_documento',
         'nombres',
         'apellidos',
+        'documento',
+        'tipo_documento',
         'direccion',
         'telefono',
         'profesion',
