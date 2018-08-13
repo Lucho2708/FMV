@@ -46,7 +46,7 @@ FMV | Crear Acudiente
 						                            <label>Nombre</label>
 						                            <div class="input-group" >
 						                                <div class="form-line">
-						                                    <input name="paciente-nombres" type="text" class="form-control" placeholder="Nombres" />
+						                                    <input name="PNombres" type="text" class="form-control" placeholder="Nombres" />
 						                                </div>
 						                            </div>
 						                        </div>
@@ -54,7 +54,7 @@ FMV | Crear Acudiente
 						                            <label>Apellidos</label>
 						                            <div class="input-group" >
 						                                <div class="form-line">
-						                                    <input name="paciente-apellidos" type="text" class="form-control" placeholder="Apellidos"/>
+						                                    <input name="PApellidos" type="text" class="form-control" placeholder="Apellidos"/>
 						                                </div>
 						                            </div>
 						                        </div>
@@ -63,7 +63,7 @@ FMV | Crear Acudiente
 					                    <div class="row clearfix">
 					                    	<div class="col-sm-6">
 					                    		<label>Tipo de Documento</label>
-					                            <select class="form-control" name="paciente-tipo_documento" required>
+					                            <select class="form-control" name="PTipoDocumento" required>
 					                                <option>-- Seleccione --</option>
 					                                <option name="CC" @if (old('tipo_documento'))=='CC' selected @endif>CC</option>
 					                                <option name="TI" @if (old('tipo_documento'))=='TI' selected @endif>TI</option>
@@ -75,7 +75,7 @@ FMV | Crear Acudiente
 					                    		<label>No. Documento</label>
 					                            <div class="input-group" >
 					                                <div class="form-line">
-					                                    <input type="number" class="form-control date" name="paciente-documento" placeholder="Numero Identidad" />
+					                                    <input type="number" class="form-control date" name="PDocumento" placeholder="Numero Identidad" />
 					                                </div>
 					                            </div>
 					                    	</div>
@@ -85,7 +85,7 @@ FMV | Crear Acudiente
 					            				<label>Alias</label>
 					                			<div class="input-group">
 					            					<div class="form-line" >
-					                					<input type="text" name="" class="form-control" name="paciente-alias">
+					                					<input type="text" class="form-control" name="PAlias">
 					                				</div>
 					                			</div>
 					                		</div>
@@ -93,7 +93,7 @@ FMV | Crear Acudiente
 					                    		<label>Fecha de nacimiento</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line" >
-					                    				<input type="date" name="" class="form-control" name="paciente-fecha_nacimiento">
+					                    				<input type="date" class="form-control" name="PFechaNacimiento">
 					                    			</div>
 					                    		</div>
 					                    	</div>
@@ -101,16 +101,16 @@ FMV | Crear Acudiente
 					            				<label>Rh</label>
 					                			<div class="input-group">
 					            					<div class="form-line" >
-					                					<input type="text" name="" class="form-control" name="paciente-rh">
+					                					<input type="text" class="form-control" name="PRh">
 					                				</div>
 					                			</div>
 					                		</div>
 					                    	<div class="col-sm-3">
 					                    		<label>Genero</label>
-					                            <select class="form-control" name="paciente-tipo_documento" required>
+					                            <select class="form-control" name="PGenero" required>
 					                                <option>-- Seleccione --</option>
-					                                <option name="CC" @if (old('tipo_documento'))=='Masculino' selected @endif>Masculino</option>
-					                                <option name="TI" @if (old('tipo_documento'))=='Masculino' selected @endif>Femenino</option>
+					                                <option name="CC" @if (old('PGenero'))=='Masculino' selected @endif>Masculino</option>
+					                                <option name="TI" @if (old('PGenero'))=='Masculino' selected @endif>Femenino</option>
 					                            </select>
 					                    	</div>                    	
 					                    </div>
@@ -118,7 +118,7 @@ FMV | Crear Acudiente
 					                    	<div class="col-sm-3">
 					                    		<div class="form-line" >
 					                				<label>Ciudad</label>
-					                                <select class="form-control" name="paciente-ubicacion_id" data-live-search="true" required>
+					                                <select class="form-control" name="PUbicacion" data-live-search="true" required>
 					                                    <option>-- Selecciona ubicacion --</option>
 					                                    @foreach($ubicacion as $ubicacion)
 					                                        <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
@@ -130,7 +130,7 @@ FMV | Crear Acudiente
 					                    		<label>Estudios</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                    				<input type="text" name="paciente-estudios" class="form-control">
+					                    				<input type="text" name="PEstudios" class="form-control">
 					                    			</div>
 					                    		</div>
 					                    	</div>
@@ -138,7 +138,7 @@ FMV | Crear Acudiente
 					                    		<label>Estado civil</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                					<input type="text" name="paciente-estado_civil" class="form-control">
+					                					<input type="text" name="PEstadoCivil" class="form-control">
 					                    			</div>
 					                    		</div>
 					                    	</div>
@@ -146,7 +146,7 @@ FMV | Crear Acudiente
 					                    		<label>Hijos</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                					<input type="number" name="paciente-hijos" class="form-control" min="0">
+					                					<input type="number" name="PHijos" class="form-control" min="0">
 					                    			</div>
 					                    		</div>
 					                    	</div>                   	
@@ -154,7 +154,7 @@ FMV | Crear Acudiente
 					                    <div class="form-group">
 					                    	<label>Observaciones generales:</label>
 					                        <div class="form-line">
-					                            <textarea rows="4" class="form-control no-resize auto-growth" placeholder="Descripcion del paciente, rasgos fisicos, estado de salud, entre otros." name="paciente-observacion"></textarea>
+					                            <textarea rows="4" class="form-control no-resize auto-growth" placeholder="Descripcion del paciente, rasgos fisicos, estado de salud, entre otros." name="PObservacion"></textarea>
 					                        </div>
 					                    </div>
 	                                </div>
@@ -176,7 +176,7 @@ FMV | Crear Acudiente
 					                            <label>Nombre:</label>
 					                            <div class="input-group" >
 					                                <div class="form-line">
-					                                    <input name="acudiente-nombres" type="text" class="form-control" placeholder="Nombres" />
+					                                    <input name="ANombres" type="text" class="form-control" placeholder="Nombres" />
 					                                </div>
 					                            </div>
 					                        </div>
@@ -184,7 +184,7 @@ FMV | Crear Acudiente
 					                            <label>Apellidos</label>
 					                            <div class="input-group" >
 					                                <div class="form-line">
-					                                    <input name="acudiente-apellidos" type="text" class="form-control" placeholder="Apellidos"/>
+					                                    <input name="AApellidos" type="text" class="form-control" placeholder="Apellidos"/>
 					                                </div>
 					                            </div>
 					                        </div>
@@ -192,7 +192,7 @@ FMV | Crear Acudiente
 					                    <div class="row clearfix">
 					                    	<div class="col-sm-6">
 					                    		<label>Tipo de Documento</label>
-					                            <select class="form-control" name="acudiente-tipo_documento" >
+					                            <select class="form-control" name="ATipoDocumento" >
 					                                <option>-- Seleccione --</option>
 					                                <option name="CC" @if (old('tipo_documento'))=='CC' selected @endif>CC</option>
 					                                <option name="TI" @if (old('tipo_documento'))=='TI' selected @endif>TI</option>
@@ -204,7 +204,7 @@ FMV | Crear Acudiente
 					                    		<label>No. Documento</label>
 					                            <div class="input-group" >
 					                                <div class="form-line">
-					                                    <input type="number" class="form-control date" name="acudiente-documento" placeholder="Numero Identidad" value="{{ old('documento') }}"/>
+					                                    <input type="number" class="form-control date" name="ADocumento" placeholder="Numero Identidad" value="{{ old('documento') }}"/>
 					                                </div>
 					                            </div>
 					                    	</div>
@@ -214,7 +214,7 @@ FMV | Crear Acudiente
 					                    	<div class="col-sm-3">
 					                    		<div class="form-line" >
 					                				<label>Ciudad</label>
-					                                <select class="form-control" name="acudiente-ubicacion_id" data-live-search="true" >
+					                                <select class="form-control" name="PUbicacion" data-live-search="true" >
 					                                    <option>-- Selecciona ubicacion --</option>
 					                                    @foreach($ubicacion as $ubicacion)
 					                                        <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
@@ -226,7 +226,7 @@ FMV | Crear Acudiente
 					                    		<label>Dirección</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                    				<input type="text" name="acudiente-direccion" class="form-control">
+					                    				<input type="text" name="ADireccion" class="form-control">
 					                    			</div>
 					                    		</div>
 					                    	</div>
@@ -234,7 +234,7 @@ FMV | Crear Acudiente
 					                    		<label>Telefono</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                					<input type="text" name="acudiente-telefono" class="form-control">
+					                					<input type="text" name="ATelefono" class="form-control">
 					                    			</div>
 					                    		</div>
 					                    	</div>
@@ -242,7 +242,7 @@ FMV | Crear Acudiente
 					                    		<label>Profesion</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                					<input type="number" name="acudiente-profesion" class="form-control" min="0">
+					                					<input type="number" name="AProfesion" class="form-control" min="0">
 					                    			</div>
 					                    		</div>
 					                    	</div>                   	
@@ -252,7 +252,7 @@ FMV | Crear Acudiente
 					                    		<label>Empresa donde labora</label>
 					                    		<div class="input-group">
 						                    		<div class="form-line">
-						                    			<input type="text" name="acudiente-empresa_labora">
+						                    			<input type="text" name="AEmpresaLabora">
 						                    		</div>
 					                    		</div>
 					                    	</div>
@@ -260,7 +260,7 @@ FMV | Crear Acudiente
 					                    		<label>Parentesco</label>
 					                    		<div class="input-group">
 						                    		<div class="form-line">
-						                    			<input type="text" name="acudiente-parentesco">
+						                    			<input type="text" name="AParentesco">
 						                    		</div>
 					                    		</div>
 					                    	</div>

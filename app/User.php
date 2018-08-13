@@ -38,4 +38,9 @@ class User extends Authenticatable
         'password', 
         'remember_token',
     ];
+
+    public function  pacientes(){
+        return $this->hasMany('App\Paciente');
+    }
+    
 }

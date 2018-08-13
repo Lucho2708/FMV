@@ -16,9 +16,15 @@ class Acudiente extends Model
         'documento',
         'tipo_documento',
         'direccion',
+        'email',
         'telefono',
-        'profesion',
+        'profecion',
         'empresa_labora',
         'parentesco'
     ]; 
+
+    public function  pacientes(){
+        return $this->hasMany('App\Paciente');
+    }
+
 }

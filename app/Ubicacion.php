@@ -12,4 +12,8 @@ class Ubicacion extends Model
     protected  $fillable = [
     	'ciudad'
     ];
+
+    public function  pacientes(){
+        return $this->hasOne('App\Paciente');
+    }
 }

@@ -12,4 +12,7 @@ class Eps extends Model
     protected  $fillable = [
     	'eps'
     ];
+    public function  pacientes(){
+        return $this->hasOne('App\Paciente');
+    }
 }
