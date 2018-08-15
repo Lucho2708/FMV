@@ -18,7 +18,7 @@ class Acudiente extends Model
         'direccion',
         'email',
         'telefono',
-        'profecion',
+        'profesion',
         'empresa_labora',
         'parentesco'
     ]; 

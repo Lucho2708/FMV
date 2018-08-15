@@ -23,7 +23,7 @@ class AgregarTablaAcudientes extends Migration
             $table-> integer('telefono');
             $table-> string('email');
             $table-> string('empresa_labora');
-            $table-> string('profecion');
+            $table-> string('profesion');
             $table-> string('parentesco');
             $table-> timestamps();
         });

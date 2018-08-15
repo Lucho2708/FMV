@@ -23,7 +23,8 @@ FMV | Crear Acudiente
                 </h2>
             </div>
             <div class="body">
-                <form method="POST" action="{{ route('registro.store') }} " >
+            	{!! Form::open(['route' => 'registro.store', 'method' => 'POST',$Pubicacion,$Aubicacion,'files'=> true ]) !!}
+           
 	                <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
 	                    <div class="panel-group" id="accordion_17" role="tablist" aria-multiselectable="true">
 	                        <div class="panel panel-col-blue">
@@ -118,11 +119,12 @@ FMV | Crear Acudiente
 					                    	<div class="col-sm-3">
 					                    		<div class="form-line" >
 					                				<label>Ciudad</label>
+
 					                                <select class="form-control" name="PUbicacion" data-live-search="true" required>
 					                                    <option>-- Selecciona ubicacion --</option>
-					                                    @foreach($ubicacion as $ubicacion)
-					                                        <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
-					                                    @endforeach
+					                                    @foreach($Pubicacion as $Pubicacion)
+                                            				<option  value="{{$Pubicacion->id}}">{{$Pubicacion->ciudad}}</option>
+                                        				@endforeach
 					                                </select>
 					                			</div>
 					                    	</div>
@@ -214,11 +216,11 @@ FMV | Crear Acudiente
 					                    	<div class="col-sm-3">
 					                    		<div class="form-line" >
 					                				<label>Ciudad</label>
-					                                <select class="form-control" name="PUbicacion" data-live-search="true" >
+					                                <select class="form-control" name="AUbicacion" data-live-search="true" >
 					                                    <option>-- Selecciona ubicacion --</option>
-					                                    @foreach($ubicacion as $ubicacion)
-					                                        <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
-					                                    @endforeach
+					                                   	@foreach($Aubicacion as $Aubicacion)
+                                            				<option  value="{{$Aubicacion->id}}">{{$Aubicacion->ciudad}}</option>
+                                        				@endforeach
 					                                </select>
 					                			</div>
 					                    	</div>
@@ -242,7 +244,7 @@ FMV | Crear Acudiente
 					                    		<label>Profesion</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line">
-					                					<input type="number" name="AProfesion" class="form-control" min="0">
+					                					<input type="text" name="AProfesion" class="form-control" min="0">
 					                    			</div>
 					                    		</div>
 					                    	</div>                   	
@@ -252,7 +254,7 @@ FMV | Crear Acudiente
 					                    		<label>Empresa donde labora</label>
 					                    		<div class="input-group">
 						                    		<div class="form-line">
-						                    			<input type="text" name="AEmpresaLabora">
+						                    			<input type="text" name="AEmpresaLabora" class="form-control">
 						                    		</div>
 					                    		</div>
 					                    	</div>
@@ -260,7 +262,7 @@ FMV | Crear Acudiente
 					                    		<label>Parentesco</label>
 					                    		<div class="input-group">
 						                    		<div class="form-line">
-						                    			<input type="text" name="AParentesco">
+						                    			<input type="text" name="AParentesco" class="form-control">
 						                    		</div>
 					                    		</div>
 					                    	</div>
@@ -273,7 +275,7 @@ FMV | Crear Acudiente
 	                
 	                	<button class="btn btn-primary waves-effect" type="submit">Crear</button>
                    		<button class="btn btn-danger waves-effect" type="reset">Cancelar</button>
-                </form>
+                {!! Form::close() !!}
             </div>   
         </div>
     </div>

@@ -33,9 +33,10 @@ class RegistroPacienteController extends Controller
     public function create()
     {
         
-        $ubicacion = Ubicacion::all();
+        $Pubicacion = Ubicacion::all();
+        $Aubicacion = Ubicacion::all();
         $eps = Eps::all();
-        return view('formulario.registro-paciente.crear',compact('ubicacion','eps'));
+        return view('formulario.registro-paciente.crear',compact('Pubicacion','Aubicacion','eps'));
     }
 
     /**
@@ -48,43 +49,25 @@ class RegistroPacienteController extends Controller
     {
         
         $registro = $request->validated();
-
         $user = Auth::user();
-        $acudiente= Acudiente::find(34);
-        
-        /**
-        $paciente = Paciente::create(
-            [
-                'nombres'   =>  $Vpaciente['PNombres'] ,
-                'apellidos' =>  $Vpaciente['PApellidos'],
-                'tipo_documento'=>$Vpaciente['PTipoDocumento'],
-                'documento' => $Vpaciente['PDocumento'],
-                'alias' => $Vpaciente['PAlias'],
-                'fecha_nacimiento' =>$Vpaciente['PFechaNacimiento'],
-                'rh' => $Vpaciente['PRh'],
-                'genero'=>$Vpaciente['PGenero'],
-                'estudios'=>$Vpaciente['PEstudios'],
-                'estado_civil'=>$Vpaciente['PEstadoCivil'],
-                'hijos'=>$Vpaciente['PHijos'],
-                'senales'=>$Vpaciente['PObservacion'],
+        $acudiente= new Acudiente([
+            'nombres' =>$registro['ANombres'],
+            'apellidos' =>$registro['AApellidos'],
+            'documento' =>$registro['ADocumento'],
+            'tipo_documento' =>$registro['ATipoDocumento'],
+            'direccion' =>$registro['ADireccion'],
+            'email' =>'emai@com.es',
+            'telefono' =>$registro['ATelefono'],
+            'profesion' =>$registro['AProfesion'],
+            'empresa_labora' =>$registro['AEmpresaLabora'],
+            'parentesco' =>$registro['AParentesco'],
+        ]);        
+        $acudiente->save();
 
+        $ADocumento = (int)$registro['ADocumento'];
 
-            ]
-        );
-        **/
-        /**$acudiente = new Acudiente([
-            'nombres'=>$registro['ANombres'],
-            'apellidos'=>$registro['AApellidos'],
-            'documento'=>$registro['ADocumento'],
-            'tipo_documento'=>$registro['ATipoDocumento'],
-            'direccion'=>$registro['ADireccion'],
-            'telefono'=>$registro['ATelefono'],
-            'profecion'=>$registro['AProfesion'],
-            'email'=>$registro['AProfesion'],
-            'empresa_labora'=>$registro['AEmpresaLabora'],
-            'parentesco'=>$registro['AParentesco']
-        ]);
-        $acudiente->save();**/  
+        $acudienteFind = Acudiente::where('documento',$ADocumento)->firstOrFail();
+
         $paciente = new Paciente([
 
             'nombres'   =>  $registro['PNombres'] ,
@@ -100,11 +83,9 @@ class RegistroPacienteController extends Controller
             'hijos'=>$registro['PHijos'],
             'senales'=>$registro['PObservacion'],
         ]);
-        $acudiente->pacientes()->append($paciente);
 
-        $user->pacientes()->append($paciente);
-
-        //$user->pacientes()->save($paciente);
+        $paciente->user()->associate(Auth::user());
+        $paciente->acudiente()->associate($acudiente);
 
         $paciente->save();       
     }
