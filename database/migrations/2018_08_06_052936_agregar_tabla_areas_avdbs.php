@@ -15,12 +15,12 @@ class AgregarTablaAreasAvdbs extends Migration
     {
         Schema::create('areas_avdbs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('alimentacion');
-            $table->string('vestido');
-            $table->string('higiene_mayor');
-            $table->string('higiene_menor');
-            $table->string('desplazamiento');
-            $table->string('observacion');
+            $table->enum('alimentacion',['indepediente','semindepediente','dependiente']);
+            $table->enum('vestido',['indepediente','semindepediente','dependiente']);
+            $table->enum('higiene_mayor',['indepediente','semindepediente','dependiente']);
+            $table->enum('higiene_menor',['indepediente','semindepediente','dependiente']);
+            $table->enum('desplazamiento',['indepediente','semindepediente','dependiente']);
+            $table->string('observacion',100);
             $table->unsignedInteger('eto_id');
 
             $table->foreign('eto_id')->references('id')->on('evaluaciones_terapias_ocupacionales');

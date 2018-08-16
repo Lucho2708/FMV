@@ -15,21 +15,21 @@ class AgregarTablaPatronesFuncionalesMovimientos extends Migration
     {
         Schema::create('patrones_funcionales_movimientos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('mano_cabeza');
-            $table->string('mano_boca');
-            $table->string('mano_espalda');
-            $table->string('mano_hombro');
-            $table->string('mano_pierna');
-            $table->string('mano_pie');
-            $table->string('mano_cola');
-            $table->string('mano_bilateral');
-            $table->string('destreza_manual');
-            $table->string('motricidad_gruesa');
-            $table->string('motricidad_fina');
-            $table->string('movimiento_bilateral');
-            $table->string('coordinacion');
-            $table->string('velocidad_desempeno');
-            $table->string('observaciones');
+            $table->enum('mano_cabeza',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_boca',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_espalda',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_hombro',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_pierna',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_pie',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_cola',['funcional','semifuncional','no funcional']);
+            $table->enum('mano_bilateral',['funcional','semifuncional','no funcional']);
+            $table->enum('destreza_manual',['funcional','semifuncional','no funcional']);
+            $table->enum('motricidad_gruesa',['funcional','semifuncional','no funcional']);
+            $table->enum('motricidad_fina',['funcional','semifuncional','no funcional']);
+            $table->enum('movimiento_bilateral',['funcional','semifuncional','no funcional']);
+            $table->enum('coordinacion',['funcional','semifuncional','no funcional']);
+            $table->enum('velocidad_desempeno',['funcional','semifuncional','no funcional']);
+            $table->string('observaciones',100);
             $table->unsignedInteger('eto_id');
 
             $table->foreign('eto_id')->references('id')->on('evaluaciones_terapias_ocupacionales');

@@ -15,15 +15,15 @@ class AgregarTablaPatronesIntegralesMovimientos extends Migration
     {
         Schema::create('patrones_integrales_movimientos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('alcance_plano_superior');
-            $table->string('alcance_plano_inferior');
-            $table->string('agarre_mano_llena');
-            $table->string('agarre_cilindro');
-            $table->string('enganche');
-            $table->string('salto_involuntario');
-            $table->string('lanzar_proporcional');
-            $table->string('lanzar_rudimentaria');
-            $table->string('observaciones');
+            $table->enum('alcance_plano_superior',['funcional','semifuncional','no funcional']);
+            $table->enum('alcance_plano_inferior',['funcional','semifuncional','no funcional']);
+            $table->enum('agarre_mano_llena',['funcional','semifuncional','no funcional']);
+            $table->enum('agarre_cilindro',['funcional','semifuncional','no funcional']);
+            $table->enum('enganche',['funcional','semifuncional','no funcional']);
+            $table->enum('salto_involuntario',['funcional','semifuncional','no funcional']);
+            $table->enum('lanzar_proporcional',['funcional','semifuncional','no funcional']);
+            $table->enum('lanzar_rudimentaria',['funcional','semifuncional','no funcional']);
+            $table->string('observaciones',100);
             $table->unsignedInteger('eto_id');
 
             $table->foreign('eto_id')->references('id')->on('evaluaciones_terapias_ocupacionales');

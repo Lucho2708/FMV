@@ -15,9 +15,9 @@ class AgregarTablaIntervenciones extends Migration
     {
         Schema::create('intervenciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('objetivo_general');
-            $table->string('objetivo_espesifico');
-            $table->string('tecnica');
+            $table->string('objetivo_general',100);
+            $table->string('objetivo_espesifico',100);
+            $table->string('tecnica',100);
             $table->unsignedInteger('antecedente_clinico_id');
 
             $table->foreign('antecedente_clinico_id')->references('id')->on('antecedentes_clinicos');

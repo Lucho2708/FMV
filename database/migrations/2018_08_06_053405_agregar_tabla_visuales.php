@@ -15,11 +15,12 @@ class AgregarTablaVisuales extends Migration
     {
         Schema::create('visuales', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('agudes_visual');
-            $table->string('campo_visual');
-            $table->string('forma');
-            $table->string('color');
-            $table->string('tamano');
+            $table->enum('agudes_visual',['funcional','semifuncional','no funcional']);
+            $table->enum('campo_visual',['funcional','semifuncional','no funcional']);
+            $table->enum('forma',['funcional','semifuncional','no funcional']);
+            $table->enum('color',['funcional','semifuncional','no funcional']);
+            $table->enum('tamano',['funcional','semifuncional','no funcional']);
+            $table->string('observaciones',100);
             $table->unsignedInteger('perceptiva_id');
 
             $table->foreign('perceptiva_id')->references('id')->on('perceptivas');

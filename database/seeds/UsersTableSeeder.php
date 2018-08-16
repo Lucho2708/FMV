@@ -23,6 +23,20 @@ class UsersTableSeeder extends Seeder
 			'usuario'=>"luis.silva.2708",
 			'avatar'=>"user.png",
 			'perfil'=>"Administrador",
-		]);   
+		]);
+
+        App\User::create([
+            'nombres'=>"Hans",
+            'apellidos'=>"Acero Hernandez",
+            'email'=>"zonaacero92@gmail.com",
+            'tipo_documento'=>"CC",
+            'documento'=>"1070606951",
+            'direccion'=>"Mz 31 casa 5 Br/ diamante",
+            'telefono'=>"8333085",
+            'password'=>bcrypt('123456'),
+            'usuario'=>"hans.acero26",
+            'avatar'=>"user.png",
+            'perfil'=>"Administrador",
+        ]);
     }
 }

@@ -15,13 +15,13 @@ class AgregarTablaEpicrisisEgresos extends Migration
     {
         Schema::create('epicrisis_egresos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('linea_pago');
-            $table->string('incapacidades');
-            $table->string('plan_mejora');
-            $table->string('medicamentos');
-            $table->string('estado_salud');
-            $table->string('servicio');
-            $table->string('observaciones');
+            $table->string('linea_pago',60);;
+            $table->string('incapacidades',60);
+            $table->string('plan_mejora',60);
+            $table->string('medicamentos',60);
+            $table->string('estado_salud',60);
+            $table->string('servicio',60);
+            $table->string('observaciones',60);
             $table->unsignedInteger('paciente_id');
 
             $table->foreign('paciente_id')->references('id')->on('pacientes');

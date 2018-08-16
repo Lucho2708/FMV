@@ -15,12 +15,12 @@ class AgregarTablaAntecedentesClinicos extends Migration
     {
         Schema::create('antecedentes_clinicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('familiar');//Funcion Familiar
-            $table->string('consulta');
-            $table->string('diagnostico');
-            $table->string('problema');
-            $table->string('hipotesis');
-            $table->string('observacion');
+            $table->string('familiar',50);//Funcion Familiar
+            $table->string('consulta',50);
+            $table->string('diagnostico',50);
+            $table->string('problema',50);
+            $table->string('hipotesis',50);
+            $table->string('observacion',50);
             $table->unsignedInteger('paciente_id');
 
             $table->foreign('paciente_id')->references('id')->on('pacientes');

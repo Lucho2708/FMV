@@ -15,10 +15,10 @@ class AgregarTablaSensibilidadesProfundas extends Migration
     {
         Schema::create('sensibilidades_profundas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('barognosia');
-            $table->string('esterognosia');
-            $table->string('diferenciacion_texturas');
-            $table->string('grafestesia');
+            $table->enum('barognosia',['funcional','semifuncional','no funcional']);
+            $table->enum('esterognosia',['funcional','semifuncional','no funcional']);
+            $table->enum('diferenciacion_texturas',['funcional','semifuncional','no funcional']);
+            $table->enum('grafestesia',['funcional','semifuncional','no funcional']);
             $table->unsignedInteger('perceptiva_id');
 
             $table->foreign('perceptiva_id')->references('id')->on('perceptivas');

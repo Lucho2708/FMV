@@ -15,7 +15,7 @@ class AgregarTablaUbicaciones extends Migration
     {
         Schema::create('ubicaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table-> string('ciudad');
+            $table-> string('ciudad',100);
 
         });
     }

@@ -15,10 +15,10 @@ class AgregarTablaSeguimientosProcesos extends Migration
     {
         Schema::create('seguimientos_procesos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('asistentes');
-            $table->string('resumen');
-            $table->string('hipotesis');
-            $table->string('compromiso');
+            $table->string('asistentes',100);
+            $table->string('resumen',150);
+            $table->string('hipotesis',100);
+            $table->string('compromiso',150);
             $table->unsignedInteger('antecedente_clinico_id');
 
             $table->foreign('antecedente_clinico_id')->references('id')->on('antecedentes_clinicos');
