@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
 			'password'=>bcrypt('123456789'),
 			'usuario'=>"luis.silva.2708",
 			'avatar'=>"user.png",
-			'perfil'=>"Administrador",
+			'perfil'=>"admin",
 		]);
 
         App\User::create([
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
             'password'=>bcrypt('123456'),
             'usuario'=>"hans.acero26",
             'avatar'=>"user.png",
-            'perfil'=>"Administrador",
+            'perfil'=>"admin",
         ]);
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Eps extends Model
 {
     //
+    public $timestamps = false;
     use Notifiable;
     protected $table = 'eps';
     protected  $fillable = [

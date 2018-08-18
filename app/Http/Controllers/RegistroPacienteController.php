@@ -34,7 +34,7 @@ class RegistroPacienteController extends Controller
     {
         
         $Pubicacion = Ubicacion::all();
-        $Aubicacion = Ubicacion::all();
+        $Aubicacion = $Pubicacion;
         $eps = Eps::all();
         return view('formulario.registro-paciente.crear',compact('Pubicacion','Aubicacion','eps'));
     }
@@ -109,7 +109,7 @@ class RegistroPacienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

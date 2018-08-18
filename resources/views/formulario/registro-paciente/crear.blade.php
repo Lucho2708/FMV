@@ -83,13 +83,18 @@ FMV | Crear Acudiente
 					                    </div>
 					                    <div class="row clearfix">
 					                    	<div class="col-sm-3">
-					            				<label>Alias</label>
-					                			<div class="input-group">
-					            					<div class="form-line" >
-					                					<input type="text" class="form-control" name="PAlias">
-					                				</div>
+					                    		<div class="form-line" >
+					                				<label>Ciudad de nacimiento</label>
+
+					                                <select class="form-control" name="PUbicacion" data-live-search="true" required>
+					                                    <option>-- Selecciona ubicacion --</option>
+					                                    @foreach($Pubicacion as $Pubicacion)
+                                            				<option  value="{{$Pubicacion->id}}">{{$Pubicacion->ciudad}}</option>
+                                        				@endforeach
+					                                </select>
 					                			</div>
-					                		</div>
+					                    	</div>
+					                    	
 					                    	<div class="col-sm-3">
 					                    		<label>Fecha de nacimiento</label>
 					                    		<div class="input-group">
@@ -117,17 +122,13 @@ FMV | Crear Acudiente
 					                    </div>
 					                    <div class="row clearfix"> 
 					                    	<div class="col-sm-3">
-					                    		<div class="form-line" >
-					                				<label>Ciudad</label>
-
-					                                <select class="form-control" name="PUbicacion" data-live-search="true" required>
-					                                    <option>-- Selecciona ubicacion --</option>
-					                                    @foreach($Pubicacion as $Pubicacion)
-                                            				<option  value="{{$Pubicacion->id}}">{{$Pubicacion->ciudad}}</option>
-                                        				@endforeach
-					                                </select>
+					            				<label>Alias</label>
+					                			<div class="input-group">
+					            					<div class="form-line" >
+					                					<input type="text" class="form-control" name="PAlias">
+					                				</div>
 					                			</div>
-					                    	</div>
+					                		</div>
 					                    	<div class="col-sm-3">
 					                    		<label>Estudios</label>
 					                    		<div class="input-group">
