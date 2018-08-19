@@ -9,6 +9,8 @@ use App\Ubicacion;
 use App\CentroRehabilitacion;
 use App\Http\Requests\StoreRegistroPaciente;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 
 use Illuminate\Http\Request;
@@ -22,7 +24,9 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        
+        $paciente = Paciente::findOrFail(1);
+        return $paciente->ubicacion();
+
     }
 
     /**
@@ -35,8 +39,8 @@ class RegistroPacienteController extends Controller
         
         $Pubicacion = Ubicacion::all();
         $Aubicacion = $Pubicacion;
-        $eps = Eps::all();
-        return view('formulario.registro-paciente.crear',compact('Pubicacion','Aubicacion','eps'));
+        $Peps = Eps::all();
+        return view('formulario.registro-paciente.crear',compact('Pubicacion','Aubicacion','Peps'));
     }
 
     /**
@@ -49,8 +53,17 @@ class RegistroPacienteController extends Controller
     {
         
         $registro = $request->validated();
-        $user = Auth::user();
-        $acudiente= new Acudiente([
+        
+        $AUbicacionFind = Ubicacion::findOrFail($request['AUbicacion']);
+        $PUbicacionFind = Ubicacion::findOrFail($request['PUbicacion']);
+        $PEpsFind = Eps::findOrFail($request['PEps']);
+
+       
+        
+
+        DB::transaction(function () use ($registro, $AUbicacionFind, $PUbicacionFind, $PEpsFind){
+
+            $acudiente= new Acudiente([
             'nombres' =>$registro['ANombres'],
             'apellidos' =>$registro['AApellidos'],
             'documento' =>$registro['ADocumento'],
@@ -61,7 +74,10 @@ class RegistroPacienteController extends Controller
             'profesion' =>$registro['AProfesion'],
             'empresa_labora' =>$registro['AEmpresaLabora'],
             'parentesco' =>$registro['AParentesco'],
-        ]);        
+        ]);
+
+        $acudiente->ubicacion()->associate($AUbicacionFind);
+
         $acudiente->save();
 
         $ADocumento = (int)$registro['ADocumento'];
@@ -81,13 +97,24 @@ class RegistroPacienteController extends Controller
             'estudios'=>$registro['PEstudios'],
             'estado_civil'=>$registro['PEstadoCivil'],
             'hijos'=>$registro['PHijos'],
+            'foto'=>'\user.png',
             'senales'=>$registro['PObservacion'],
         ]);
 
-        $paciente->user()->associate(Auth::user());
-        $paciente->acudiente()->associate($acudiente);
+        
 
-        $paciente->save();       
+        $paciente->ubicacion()->associate($PUbicacionFind);
+        $paciente->eps()->associate($PEpsFind);
+        $paciente->user()->associate(Auth::user());
+        $paciente->acudiente()->associate($acudienteFind);
+        
+        $paciente->save(); 
+
+
+
+        });    
+
+
     }
 
     /**

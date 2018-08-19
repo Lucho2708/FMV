@@ -14,13 +14,13 @@ class AgregarTablaUsuarios extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table-> string('nombres',45);
             $table-> string('apellidos',45);
             $table-> enum('tipo_documento',['CC','CE','TI','RC']);
-            $table-> integer('documento');
+            $table-> integer('documento')->unsigned();
             $table-> string('direccion',50);
-            $table-> integer('telefono');
+            $table-> integer('telefono')->unsigned();
             $table-> string('email',50)->unique();
             $table-> string('usuario',40);
             $table-> string('password');

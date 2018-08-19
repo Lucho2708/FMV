@@ -15,6 +15,10 @@ class Ubicacion extends Model
     ];
 
     public function  pacientes(){
-        return $this->hasOne('App\Paciente');
+        return $this->hasMany('App\Paciente');
+    }
+
+    public function  acudientes(){
+        return $this->hasMany('App\Paciente');
     }
 }

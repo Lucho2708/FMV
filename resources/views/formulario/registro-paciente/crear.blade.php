@@ -14,6 +14,8 @@ FMV | Crear Acudiente
 
 @section('content')
 
+
+
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
@@ -82,7 +84,7 @@ FMV | Crear Acudiente
 					                    	</div>
 					                    </div>
 					                    <div class="row clearfix">
-					                    	<div class="col-sm-3">
+					                    	<div class="col-sm-6">
 					                    		<div class="form-line" >
 					                				<label>Ciudad de nacimiento</label>
 
@@ -95,7 +97,7 @@ FMV | Crear Acudiente
 					                			</div>
 					                    	</div>
 					                    	
-					                    	<div class="col-sm-3">
+					                    	<div class="col-sm-6">
 					                    		<label>Fecha de nacimiento</label>
 					                    		<div class="input-group">
 					                    			<div class="form-line" >
@@ -103,24 +105,37 @@ FMV | Crear Acudiente
 					                    			</div>
 					                    		</div>
 					                    	</div>
-					                    	<div class="col-sm-3">
+					                    </div>
+					                    <div class="row clearfix">
+					                    	<div class="col-sm-6">
+					                				<label>Eps</label>
+					                                <select class="form-control" name="PEps" data-live-search="true" >
+					                                    <option>-- Selecciona eps --</option>
+					                                   	@foreach($Peps as $Peps)
+                                            				<option  value="{{$Peps->id}}">{{$Peps->eps}}</option>
+                                        				@endforeach
+					                                </select>
+					                		</div> 
+					                    	<div class="col-sm-6">
+					                    		<label>Genero</label>
+					                            <select class="form-control" name="PGenero" required>
+					                                <option>-- Seleccione --</option>
+					                                <option name="masculino" @if (old('PGenero'))=='masculino' selected @endif>Masculino</option>
+					                                <option name="femenino" @if (old('PGenero'))=='femenino' selected @endif>Femenino</option>
+					                            </select>
+					                    	</div> 
+
+					                    </div>
+					                    <div class="row clearfix"> 
+					                  
+					                		<div class="col-sm-3">
 					            				<label>Rh</label>
 					                			<div class="input-group">
 					            					<div class="form-line" >
 					                					<input type="text" class="form-control" name="PRh">
 					                				</div>
 					                			</div>
-					                		</div>
-					                    	<div class="col-sm-3">
-					                    		<label>Genero</label>
-					                            <select class="form-control" name="PGenero" required>
-					                                <option>-- Seleccione --</option>
-					                                <option name="CC" @if (old('PGenero'))=='Masculino' selected @endif>Masculino</option>
-					                                <option name="TI" @if (old('PGenero'))=='Masculino' selected @endif>Femenino</option>
-					                            </select>
-					                    	</div>                    	
-					                    </div>
-					                    <div class="row clearfix"> 
+					                		</div> 
 					                    	<div class="col-sm-3">
 					            				<label>Alias</label>
 					                			<div class="input-group">
@@ -225,6 +240,9 @@ FMV | Crear Acudiente
 					                                </select>
 					                			</div>
 					                    	</div>
+					                    		<div class="col-sm-3">
+					                 
+					                    	</div>
 					                    	<div class="col-sm-3">
 					                    		<label>Dirección</label>
 					                    		<div class="input-group">
@@ -277,6 +295,11 @@ FMV | Crear Acudiente
 	                	<button class="btn btn-primary waves-effect" type="submit">Crear</button>
                    		<button class="btn btn-danger waves-effect" type="reset">Cancelar</button>
                 {!! Form::close() !!}
+                @php
+					DB::listen(function($query){
+						echo "<pre>{$query->sql}</pre>";
+					});
+				@endphp
             </div>   
         </div>
     </div>

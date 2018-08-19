@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+DB::listen(function($query){
+  echo "<div><pre>{$query->sql}</pre></div>";
+  //echo "<div><pre>{$query->bindings}</pre></div>";
+  //echo "<div><pre>{$query->time}</pre></div>";
+});
 /*
 Pagina Web Principal
 */

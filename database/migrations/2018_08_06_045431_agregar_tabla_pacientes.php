@@ -17,7 +17,7 @@ class AgregarTablaPacientes extends Migration
             $table->increments('id');
             $table-> string('nombres',45);
             $table-> string('apellidos',45);
-            $table-> enum('tipo_documento',['CC'.'CE'.'TI'.'RC']);
+            $table-> enum('tipo_documento',['CC','CE','TI','RC']);
             $table-> integer('documento');
             $table-> date('fecha_nacimiento');
             $table-> enum('estado_civil',['casado(a)','soltero(a)','viudo(a)']);
@@ -27,7 +27,7 @@ class AgregarTablaPacientes extends Migration
             $table-> enum('genero',['masculino','femenino']);
             $table-> string('rh' ,3);
             $table-> string('senales',50);
-            $table-> string('foto',100);
+            $table-> string('foto')->nullable();
             $table-> unsignedInteger('user_id')->unsigned();
             $table-> unsignedInteger('acudiente_id')->unsigned();
             $table-> unsignedInteger('eps_id')->unsigned();

@@ -17,7 +17,7 @@ class AgregarTablaAcudientes extends Migration
             $table-> increments('id');
             $table-> string('nombres',45);
             $table-> string('apellidos',45);
-            $table-> enum('tipo_documento',['CC'.'CE'.'TI'.'RC']);
+            $table-> enum('tipo_documento',['CC','CE','TI','RC']);
             $table-> integer('documento');
             $table-> string('direccion',50);
             $table-> integer('telefono');
@@ -25,6 +25,9 @@ class AgregarTablaAcudientes extends Migration
             $table-> string('empresa_labora',50);
             $table-> string('profesion',50);
             $table-> enum('parentesco',['madre','padre','tio(a)','primo(a)','amigo(a)']);
+            $table-> unsignedInteger('ubicacion_id')->unsigned();
+
+            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones');
             $table-> timestamps();
         });
     }

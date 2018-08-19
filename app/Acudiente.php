@@ -27,4 +27,8 @@ class Acudiente extends Model
         return $this->hasMany('App\Paciente');
     }
 
+    public function ubicacion(){
+        return $this->belongsTo('App\Ubicacion');
+    }
+
 }

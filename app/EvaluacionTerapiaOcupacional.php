@@ -13,4 +13,5 @@ class EvaluacionTerapiaOcupacional extends Model
 		'emfermedad_actual',
 		'emfermedad_natural'
     ];
+    
 }
