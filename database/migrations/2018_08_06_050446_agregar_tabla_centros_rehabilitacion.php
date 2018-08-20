@@ -14,8 +14,8 @@ class AgregarTablaCentrosRehabilitacion extends Migration
     public function up()
     {
         Schema::create('centros_rehabilitacion', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre',50);
+            $table->increments('id')->unsigned();
+            $table->string('nombre',75);
             $table->unsignedInteger('paciente_id');
 
             $table->foreign('paciente_id')->references('id')->on('pacientes');

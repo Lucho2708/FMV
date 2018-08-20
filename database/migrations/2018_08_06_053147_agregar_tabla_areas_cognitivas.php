@@ -14,7 +14,7 @@ class AgregarTablaAreasCognitivas extends Migration
     public function up()
     {
         Schema::create('areas_cognitivas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->enum('observacion',['alta','media','baja']);
             $table->enum('nivel_atencion',['alta','media','baja']);
             $table->enum('concentracion',['alta','media','baja']);
@@ -24,7 +24,7 @@ class AgregarTablaAreasCognitivas extends Migration
             $table->enum('competencia',['alta','media','baja']);
             $table->enum('interpretacion',['alta','media','baja']);
             $table->enum('planeacion',['alta','media','baja']);
-            $table->string('observaciones',100);
+            $table->string('observaciones',150);
             $table->unsignedInteger('eto_id');
 
             $table->foreign('eto_id')->references('id')->on('evaluaciones_terapias_ocupacionales');

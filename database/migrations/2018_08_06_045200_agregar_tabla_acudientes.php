@@ -14,17 +14,17 @@ class AgregarTablaAcudientes extends Migration
     public function up()
     {
         Schema::create('acudientes', function (Blueprint $table) {
-            $table-> increments('id');
-            $table-> string('nombres',45);
-            $table-> string('apellidos',45);
+            $table-> increments('id')->unsigned();
+            $table-> string('nombres',100);
+            $table-> string('apellidos',100);
             $table-> enum('tipo_documento',['CC','CE','TI','RC']);
-            $table-> integer('documento');
-            $table-> string('direccion',50);
-            $table-> integer('telefono');
-            $table-> string('email',50)->unique();
-            $table-> string('empresa_labora',50);
-            $table-> string('profesion',50);
-            $table-> enum('parentesco',['madre','padre','tio(a)','primo(a)','amigo(a)']);
+            $table-> integer('documento')->unsigned();
+            $table-> string('direccion',100);
+            $table-> integer('telefono')->unsigned();
+            $table-> string('email',100)->unique();
+            $table-> string('empresa_labora',75);
+            $table-> string('profesion',75);
+            $table-> enum('parentesco',['madre','padre','hijo(a)','tio(a)','primo(a)','amigo(a)']);
             $table-> unsignedInteger('ubicacion_id')->unsigned();
 
             $table->foreign('ubicacion_id')->references('id')->on('ubicaciones');

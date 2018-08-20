@@ -14,7 +14,7 @@ class AgregarTablaPerceptivas extends Migration
     public function up()
     {
         Schema::create('perceptivas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             
             $table->unsignedInteger('eto_id');
 

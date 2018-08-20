@@ -14,7 +14,7 @@ class AgregarTablaSensibilidadesSuperficiales extends Migration
     public function up()
     {
         Schema::create('sensibilidades_superficiales', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->enum('calor',['funcional','semifuncional','no funcional']);
             $table->enum('frio',['funcional','semifuncional','no funcional']);
             $table->enum('dolor',['funcional','semifuncional','no funcional']);

@@ -14,11 +14,11 @@ class AgregarTablaAuditivas extends Migration
     public function up()
     {
         Schema::create('auditivas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->enum('fuerte',['funcional','semifuncional','no funcional']);
             $table->enum('leve',['funcional','semifuncional','no funcional']);
             $table->enum('vibrante',['funcional','semifuncional','no funcional']);
-            $table->string('observaciones',100);
+            $table->string('observaciones',150);
             $table->unsignedInteger('perceptiva_id');
 
             $table->foreign('perceptiva_id')->references('id')->on('perceptivas');

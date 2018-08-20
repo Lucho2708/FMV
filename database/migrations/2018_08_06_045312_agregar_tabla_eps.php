@@ -14,8 +14,8 @@ class AgregarTablaEps extends Migration
     public function up()
     {
         Schema::create('eps', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('eps',200);
+            $table->increments('id')->unsigned();
+            $table->string('eps',255);
         });
     }
 

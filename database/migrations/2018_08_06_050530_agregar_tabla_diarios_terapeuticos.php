@@ -14,11 +14,11 @@ class AgregarTablaDiariosTerapeuticos extends Migration
     public function up()
     {
         Schema::create('diarios_terapeuticos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titulo',50);
-            $table->string('cronica',50);
-            $table->string('estado_inicial',50);
-            $table->string('estado_final',50);
+            $table->increments('id')->unsigned();
+            $table->string('titulo',75);
+            $table->string('cronica',75);
+            $table->string('estado_inicial',75);
+            $table->string('estado_final',75);
             $table->string('experiencias_positivas',150);
             $table->string('experiencias_negativas',150);
             $table->string('compromiso',150);

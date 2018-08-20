@@ -89,7 +89,7 @@ FMV | Editar Paciente
                                 <label>Tipo de Documento</label>
                                 <select class="form-control" name="tipo_documento" required>
                                     <option>-- Seleccione --</option>
-                                    <option name="CC "@if($paciente->tipo_documento == 'CC')  selected @endif>CC</option>
+                                    <option name="CC" @if($paciente->tipo_documento == 'CC') selected @endif>CC</option>
                                     <option name="TI" @if($paciente->tipo_documento == 'TI') selected @endif>TI</option>
                                     <option name="CE" @if($paciente->tipo_documento == 'CE') selected @endif>CE</option>
                                     <option name="RC" @if($paciente->tipo_documento == 'RC') selected @endif>RC</option>

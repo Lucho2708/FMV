@@ -14,9 +14,9 @@ class AgregarTablaEvaluacionesTerapiasOcupacionales extends Migration
     public function up()
     {
         Schema::create('evaluaciones_terapias_ocupacionales', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('emfermedad_actual',70);;
-            $table->string('emfermedad_natural',70);
+            $table->increments('id')->unsigned();
+            $table->string('emfermedad_actual',100);;
+            $table->string('emfermedad_natural',100);
             $table->unsignedInteger('paciente_id');
 
             $table->foreign('paciente_id')->references('id')->on('pacientes');

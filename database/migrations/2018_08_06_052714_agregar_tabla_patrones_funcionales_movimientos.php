@@ -14,7 +14,7 @@ class AgregarTablaPatronesFuncionalesMovimientos extends Migration
     public function up()
     {
         Schema::create('patrones_funcionales_movimientos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->enum('mano_cabeza',['funcional','semifuncional','no funcional']);
             $table->enum('mano_boca',['funcional','semifuncional','no funcional']);
             $table->enum('mano_espalda',['funcional','semifuncional','no funcional']);
@@ -29,7 +29,7 @@ class AgregarTablaPatronesFuncionalesMovimientos extends Migration
             $table->enum('movimiento_bilateral',['funcional','semifuncional','no funcional']);
             $table->enum('coordinacion',['funcional','semifuncional','no funcional']);
             $table->enum('velocidad_desempeno',['funcional','semifuncional','no funcional']);
-            $table->string('observaciones',100);
+            $table->string('observaciones',150);
             $table->unsignedInteger('eto_id');
 
             $table->foreign('eto_id')->references('id')->on('evaluaciones_terapias_ocupacionales');

@@ -14,7 +14,7 @@ class AgregarTablaIntervenciones extends Migration
     public function up()
     {
         Schema::create('intervenciones', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('objetivo_general',100);
             $table->string('objetivo_espesifico',100);
             $table->string('tecnica',100);

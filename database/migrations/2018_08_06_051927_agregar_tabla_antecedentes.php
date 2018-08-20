@@ -14,33 +14,33 @@ class AgregarTablaAntecedentes extends Migration
     public function up()
     {
         Schema::create('antecedentes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('patologicos',100);
-            $table->string('quirurjicos',100);
-            $table->string('toxicos',100);
-            $table->string('farmacologicos',100);
-            $table->string('inmunisacion',100);
-            $table->string('transfusion',60);
+            $table->increments('id')->unsigned();
+            $table->string('patologicos',150);
+            $table->string('quirurjicos',150);
+            $table->string('toxicos',150);
+            $table->string('farmacologicos',150);
+            $table->string('inmunisacion',150);
+            $table->string('transfusion',100);
             $table->string('ginecobstetricios',100);
-            $table->string('menarquias',60);
+            $table->string('menarquias',100);
             $table->enum('ciclos',['si','no']);
             $table->enum('regular',['si','no']);;
-            $table->string('planificacion_ets',5);
-            $table->string('patologia_embarazo_actual',60);
-            $table->string('patologia_embarazo_anterior',60);
-            $table->string('otros',60);
-            $table->string('familiares',60);
-            $table->string('t_a',60);
-            $table->string('f_c',60);
-            $table->string('f_r',60);
-            $table->string('temp',60);
-            $table->string('peso',60);
-            $table->string('glasglow',60);
-            $table->string('talla',60);
-            $table->string('sato2',60);
-            $table->unsignedInteger('epicrisi_ingreso_id');
+            $table->string('planificacion_ets',10);
+            $table->string('patologia_embarazo_actual',100);
+            $table->string('patologia_embarazo_anterior',100);
+            $table->string('otros',100);
+            $table->string('familiares',100);
+            $table->string('t_a',100);
+            $table->string('f_c',100);
+            $table->string('f_r',100);
+            $table->string('temp',100);
+            $table->string('peso',100);
+            $table->string('glasglow',100);
+            $table->string('talla',100);
+            $table->string('sato2',100);
+            $table->unsignedInteger('epicrisis_ingreso_id');
 
-            $table->foreign('epicrisi_ingreso_id')->references('id')->on('epicrisis_ingresos');
+            $table->foreign('epicrisis_ingreso_id')->references('id')->on('epicrisis_ingresos');
         });
     }
 

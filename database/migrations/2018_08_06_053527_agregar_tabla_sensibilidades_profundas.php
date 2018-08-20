@@ -14,7 +14,7 @@ class AgregarTablaSensibilidadesProfundas extends Migration
     public function up()
     {
         Schema::create('sensibilidades_profundas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->enum('barognosia',['funcional','semifuncional','no funcional']);
             $table->enum('esterognosia',['funcional','semifuncional','no funcional']);
             $table->enum('diferenciacion_texturas',['funcional','semifuncional','no funcional']);

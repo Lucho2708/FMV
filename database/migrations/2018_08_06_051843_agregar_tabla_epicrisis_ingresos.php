@@ -14,11 +14,11 @@ class AgregarTablaEpicrisisIngresos extends Migration
     public function up()
     {
         Schema::create('epicrisis_ingresos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('linea_pago',60);
-            $table->string('servicio' ,60);
+            $table->increments('id')->unsigned();
+            $table->string('linea_pago',100);
+            $table->string('servicio' ,100);
             $table->string('consulta',100);
-            $table->string('enfermedad',70);
+            $table->string('enfermedad',100);
             $table->string('conducta',100);
             $table->string('evolucion',100);
             $table->unsignedInteger('paciente_id');

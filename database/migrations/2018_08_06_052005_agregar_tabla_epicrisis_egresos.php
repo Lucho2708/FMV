@@ -14,14 +14,14 @@ class AgregarTablaEpicrisisEgresos extends Migration
     public function up()
     {
         Schema::create('epicrisis_egresos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('linea_pago',60);;
-            $table->string('incapacidades',60);
-            $table->string('plan_mejora',60);
-            $table->string('medicamentos',60);
-            $table->string('estado_salud',60);
-            $table->string('servicio',60);
-            $table->string('observaciones',60);
+            $table->increments('id')->unsigned();
+            $table->string('linea_pago',100);
+            $table->string('incapacidades',100);
+            $table->string('plan_mejora',100);
+            $table->string('medicamentos',100);
+            $table->string('estado_salud',100);
+            $table->string('servicio',100);
+            $table->string('observaciones',100);
             $table->unsignedInteger('paciente_id');
 
             $table->foreign('paciente_id')->references('id')->on('pacientes');

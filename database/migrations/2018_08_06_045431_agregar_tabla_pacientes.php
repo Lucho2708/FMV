@@ -14,19 +14,19 @@ class AgregarTablaPacientes extends Migration
     public function up()
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->increments('id');
-            $table-> string('nombres',45);
-            $table-> string('apellidos',45);
+            $table->increments('id')->unsigned();
+            $table-> string('nombres',100);
+            $table-> string('apellidos',100);
             $table-> enum('tipo_documento',['CC','CE','TI','RC']);
-            $table-> integer('documento');
+            $table-> integer('documento')->unsigned();
             $table-> date('fecha_nacimiento');
-            $table-> enum('estado_civil',['casado(a)','soltero(a)','viudo(a)']);
-            $table-> integer('hijos');
-            $table-> string('alias',50);
+            $table-> enum('estado_civil',['soltero(a)','casado(a)','viudo(a)', 'union_libre']);
+            $table-> integer('hijos')->unsigned();
+            $table-> string('alias',60);
             $table-> enum('estudios',['primaria','secundaria','universitario','ninguno']);
             $table-> enum('genero',['masculino','femenino']);
             $table-> string('rh' ,3);
-            $table-> string('senales',50);
+            $table-> string('senales',100);
             $table-> string('foto')->nullable();
             $table-> unsignedInteger('user_id')->unsigned();
             $table-> unsignedInteger('acudiente_id')->unsigned();
