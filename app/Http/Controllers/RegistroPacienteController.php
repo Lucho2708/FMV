@@ -24,8 +24,8 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        $paciente = Paciente::findOrFail(1);
-        return $paciente->ubicacion();
+        
+        return view('formulario.registro-paciente.index');
 
     }
 
