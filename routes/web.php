@@ -11,9 +11,10 @@
 |
 */
 DB::listen(function($query){
-  echo "<div><pre>{$query->sql}</pre></div>";
+  //echo "<footer><h1>{$query->sql}</h1></footer>";
   //echo "<div><pre>{$query->bindings}</pre></div>";
   //echo "<div><pre>{$query->time}</pre></div>";
+
 });
 /*
 Pagina Web Principal
@@ -33,9 +34,6 @@ Route::get('/hv', function () {
 })->middleware('auth');
 Route::get('/formulario/acudiente', function () {
     return view('formularios/acudiente');
-})->middleware('auth');
-Route::get('/diario', function () {
-    return view('formularios/diario');
 })->middleware('auth');
 Route::get('/hc', function () {
     return view('formularios/hc');
@@ -150,5 +148,9 @@ Star | Resource Registro Paciente
 */
 Route::group([],function(){
     Route::resource('registro','RegistroPacienteController')->middleware('auth');
+});
+
+Route::group([],function(){
+    Route::resource('diario','DiarioController')->middleware('auth');
 });
 

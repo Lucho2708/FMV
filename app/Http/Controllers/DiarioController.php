@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Paciente;
 
 class DiarioController extends Controller
 {
@@ -13,7 +14,7 @@ class DiarioController extends Controller
      */
     public function index()
     {
-        //
+        return view('formularios.diario');
     }
 
     /**
@@ -21,9 +22,11 @@ class DiarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $paciente = Paciente::findOrFail(1);
+
+        return view('formulario.diario.crear',compact('paciente'));
     }
 
     /**
@@ -34,7 +37,7 @@ class DiarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

@@ -55,6 +55,12 @@
             <span>Nuevo registro</span>
         </a>
     </li>
+    <li class="{{ Route::is('diario.*') ? 'active' : null}}">
+        <a href="{{ route('diario.create') }}">
+            <i class="material-icons">group_add</i>
+            <span>Nuevo diario</span>
+        </a>
+    </li>
     <li class="{{ Request::is('cproceso') || Request::is('')? 'active' : null}}" >
         <a href="javascript:void(0);" class="menu-toggle">
             <i class="material-icons">assignment</i>
