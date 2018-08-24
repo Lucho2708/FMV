@@ -69,7 +69,7 @@ class RegistroPacienteController extends Controller
             'documento' =>$registro['ADocumento'],
             'tipo_documento' =>$registro['ATipoDocumento'],
             'direccion' =>$registro['ADireccion'],
-            'email' =>'emai@com.es',
+            'email' =>'maribel.rodriguez1@gmail.com',
             'telefono' =>$registro['ATelefono'],
             'profesion' =>$registro['AProfesion'],
             'empresa_labora' =>$registro['AEmpresaLabora'],

@@ -24,7 +24,7 @@ class DiarioController extends Controller
      */
     public function create(Request $request)
     {
-        $paciente = Paciente::findOrFail(1);
+        $paciente = Paciente::findOrFail(2);
 
         return view('formulario.diario.crear',compact('paciente'));
     }

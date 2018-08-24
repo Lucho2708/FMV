@@ -215,7 +215,7 @@ FMV | Crear Registro
                                             <label>Observaciones generales:</label>
                                             <div class="input-group {{ $errors->has('PObservacion') ? ' has-error' : '' }}" >
                                                 <div  @if ($errors->has('PObservacion')) class="form-line error" @endif class="form-line">
-                                                    <textarea rows="4"   class="form-control no-resize auto-growth" name="senales" placeholder="Descripcion del paciente, rasgos fisicos, estado de salud, entre otros." value="{{ old('PObservacion') }}"></textarea>
+                                                    <textarea rows="4" name="PObservacion"  class="form-control no-resize auto-growth" name="senales" placeholder="Descripcion del paciente, rasgos fisicos, estado de salud, entre otros." value="{{ old('PObservacion') }}"></textarea>
                                                 </div>
                                                 @if ($errors->has('PObservacion'))
                                                     <label class="error">{{ $errors->first('PObservacion') }}</label>
