@@ -45,7 +45,7 @@ FMV | Crear Registro
 	            			<label>Titulo de la sesión</label>
 	            			<div class="input-group">
 	            				<div class="form-line">
-		            				<textarea rows="1" class="form-control no-resize auto-growth"></textarea>
+		            				<textarea name="titulo" rows="1" class="form-control no-resize auto-growth"></textarea>
 	            				</div>
 	            			</div>
 	            		</div>
@@ -53,7 +53,23 @@ FMV | Crear Registro
 	            			<label>Cronica</label>
 	            			<div class="input-group">
 	            				<div class="form-line">
-		            				<textarea rows="1" class="form-control no-resize auto-growth"></textarea>
+		            				<textarea name="cronica" rows="1" class="form-control no-resize auto-growth"></textarea>
+	            				</div>
+	            			</div>
+	            		</div>
+	            		<div class="col-sm-6">
+	            			<label>Estado de animo inicial</label>
+	            			<div class="input-group">
+	            				<div class="form-line">
+		            				<textarea name="estado_inicial" rows="1" class="form-control no-resize auto-growth"></textarea>
+	            				</div>
+	            			</div>
+	            		</div>
+	            		<div class="col-sm-6">
+	            			<label>Estado de animo final</label>
+	            			<div class="input-group">
+	            				<div class="form-line">
+		            				<textarea name="estado_final" rows="1" class="form-control no-resize auto-growth"></textarea>
 	            				</div>
 	            			</div>
 	            		</div>
@@ -61,7 +77,7 @@ FMV | Crear Registro
 	            			<label>Experiencias positivas</label>
 	            			<div class="input-group">
 	            				<div class="form-line">
-		            				<textarea rows="1" class="form-control no-resize auto-growth"></textarea>
+		            				<textarea name="experiencias_positivas" rows="1" class="form-control no-resize auto-growth"></textarea>
 	            				</div>
 	            			</div>
 	            		</div>
@@ -69,7 +85,7 @@ FMV | Crear Registro
 	            			<label>Experiencias negativas</label>
 	            			<div class="input-group">
 	            				<div class="form-line">
-		            				<textarea rows="1" class="form-control no-resize auto-growth"></textarea>
+		            				<textarea name="experiencias_negativas" rows="1" class="form-control no-resize auto-growth"></textarea>
 	            				</div>
 	            			</div>
 	            		</div>
@@ -77,7 +93,7 @@ FMV | Crear Registro
 	            			<label>Que compromiso hago para cambiar mi forma de actuar?</label>
 	            			<div class="input-group">
 	            				<div class="form-line">
-		            				<textarea rows="1" class="form-control no-resize auto-growth"></textarea>
+		            				<textarea name="compromiso" rows="1" class="form-control no-resize auto-growth"></textarea>
 	            				</div>
 	            			</div>
 	            		</div>
