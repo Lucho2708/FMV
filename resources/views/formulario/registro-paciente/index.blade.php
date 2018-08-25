@@ -27,7 +27,7 @@ FMV | Crear Registro
             <div class="body">
                 <div class="row">
 
-				|	@foreach($pacientes as $paciente)
+					@foreach($pacientes as $paciente)
 
 							<div class="col-sm-6 col-md-3">
 								<div class="thumbnail">

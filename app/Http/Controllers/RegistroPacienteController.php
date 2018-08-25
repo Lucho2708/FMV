@@ -22,7 +22,7 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        $pacientes = Paciente::paginate(1);
+        $pacientes = Paciente::paginate(8);
         return view('formulario.registro-paciente.index',compact('pacientes'));
 
     }

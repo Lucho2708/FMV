@@ -15,15 +15,15 @@ class AgregarTablaAcudientes extends Migration
     {
         Schema::create('acudientes', function (Blueprint $table) {
             $table-> increments('id')->unsigned();
-            $table-> string('nombres',100);
-            $table-> string('apellidos',100);
+            $table-> string('nombres');
+            $table-> string('apellidos');
             $table-> enum('tipo_documento',['CC','CE','TI','RC']);
             $table-> integer('documento')->unsigned();
-            $table-> string('direccion',100);
+            $table-> string('direccion');
             $table-> integer('telefono')->unsigned();
             $table-> string('email',100)->unique();
-            $table-> string('empresa_labora',75);
-            $table-> string('profesion',75);
+            $table-> string('empresa_labora');
+            $table-> string('profesion');
             $table-> enum('parentesco',['madre','padre','hijo(a)','tio(a)','primo(a)','amigo(a)']);
             $table-> unsignedInteger('ubicacion_id')->unsigned();
 

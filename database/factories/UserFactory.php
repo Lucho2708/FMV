@@ -1,8 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Faker\Provider\Base;
-use Faker\Provider\en_US\Person;
 use App\User;
 
 /*
@@ -21,7 +19,7 @@ $factory->define(User::class, function (Faker $faker) {
         "nombres" => $faker->firstName,
         "apellidos"=> $faker->lastName,
         "documento"=> $faker->unique()->ean8,
-        "usuario"=>$faker->userName,
+        "usuario"=>$faker->unique()->userName,
         "direccion"=>$faker->streetAddress,
         "telefono"=>$faker->ean8,
         "tipo_documento"=>$faker->randomElement(array('CC','CE','TI','RC')),

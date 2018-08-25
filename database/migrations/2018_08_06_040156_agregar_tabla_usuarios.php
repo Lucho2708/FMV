@@ -15,15 +15,15 @@ class AgregarTablaUsuarios extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table-> string('nombres',100);
-            $table-> string('apellidos',100);
+            $table-> string('nombres');
+            $table-> string('apellidos');
             $table-> enum('tipo_documento',['CC','CE','TI','RC']);
             $table-> integer('documento')->unsigned();
-            $table-> string('direccion',100);
+            $table-> string('direccion');
             $table-> integer('telefono')->unsigned();
             $table-> string('email',100)->unique();
-            $table-> string('usuario',75)->unique();
-            $table-> string('password', 100);
+            $table-> string('usuario',100)->unique();
+            $table-> string('password');
             $table-> string('avatar')->default('user.png');
             $table-> enum('perfil',['admin','director', 'social','psicologa','terapeuta']);
             $table-> rememberToken();

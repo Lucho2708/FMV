@@ -23,7 +23,7 @@ class Paciente extends Model
 		'genero',
 		'rh',
 		'senales',
-        'foto'
+        'avatar'
     ];
 
     public function user(){
