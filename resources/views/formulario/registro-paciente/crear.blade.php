@@ -6,7 +6,57 @@ FMV | Crear Registro
 
 @section('css')
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+
+    <style>
+        .thumb {
+            width: 100%;
+            height: 50%;
+            float:left;
+            border-radius: 50%;
+            margin-right:25px
+        }
+
+        #files{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
 @endsection
+
+@section('js')
+    <script type="text/javascript">
+        function archivo(evt) {
+            var files = evt.target.files; // FileList object
+
+            // Obtenemos la imagen del campo "file".
+            for (var i = 0, f; f = files[i]; i++) {
+                //Solo admitimos imágenes.
+                if (!f.type.match('image.*')) {
+                    continue;
+                }
+
+                var reader = new FileReader();
+
+                reader.onload = (function(theFile) {
+                    return function(e) {
+                        // Insertamos la imagen
+                        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                    };
+                })(f);
+
+                reader.readAsDataURL(f);
+            }
+        }
+        document.getElementById('files').addEventListener('change', archivo, true);
+    </script>
+@endsection
+
 
 @section('menu')
     @include('menu')
@@ -32,7 +82,7 @@ FMV | Crear Registro
                                 <div class="panel-heading" role="tab" id="headingOne_17">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion_17" href="#collapseOne_17" aria-expanded="true" aria-controls="collapseOne_17">
-                                            <i class="material-icons">perm_contact_calendar</i> paciente:
+                                            <i class="material-icons">perm_contact_calendar</i> Paciente:
                                         </a>
                                     </h4>
                                 </div>
@@ -40,8 +90,12 @@ FMV | Crear Registro
                                     <div class="panel-body">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class="row clearfix">
-                                            <div class="col-sm-4">
-                                                <img src="{{ asset('/images/user.png') }}"  width="100%">
+                                            <div class="col-sm-4"  id="list">
+                                                <div>
+                                                    <div class="form">
+                                                        <input type="file" class="form-control" name="foto" id="files"><img src="{{ asset('/images/user.png') }}"  style="width: 100%; height: 50%; float:left; border-radius: 50%; margin-right:25px">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="col-sm-12">
@@ -211,7 +265,7 @@ FMV | Crear Registro
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <label>Observaciones generales:</label>
                                             <div class="input-group {{ $errors->has('PObservacion') ? ' has-error' : '' }}" >
                                                 <div  @if ($errors->has('PObservacion')) class="form-line error" @endif class="form-line">
@@ -230,7 +284,7 @@ FMV | Crear Registro
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_17" href="#collapseTwo_17" aria-expanded="false"
                                            aria-controls="collapseTwo_17">
-                                            <i class="material-icons">contact_phone</i> acudiente:
+                                            <i class="material-icons">contact_phone</i> Acudiente:
                                         </a>
                                     </h4>
                                 </div>
@@ -341,6 +395,19 @@ FMV | Crear Registro
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
+                                                <label>Correo</label>
+                                                <div class="input-group {{ $errors->has('AEmail') ? ' has-error' : '' }}" >
+                                                    <div  @if ($errors->has('AEmail')) class="form-line error" @endif class="form-line">
+                                                        <input type="email" name="AEmail" class="form-control" value="{{ old('AEmail') }}"/>
+                                                    </div>
+                                                    @if ($errors->has('AEmail'))
+                                                        <label class="error">{{ $errors->first('AEmail') }}</label>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-6">
                                                 <label>Profesion</label>
                                                 <div class="input-group {{ $errors->has('AProfesion') ? ' has-error' : '' }}" >
                                                     <div  @if ($errors->has('AProfesion')) class="form-line error" @endif class="form-line">
@@ -351,8 +418,6 @@ FMV | Crear Registro
                                                     @endif
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row clearfix">
                                             <div class="col-sm-6">
                                                 <label>Empresa donde labora</label>
                                                 <div class="input-group {{ $errors->has('AEmpresaLabora') ? ' has-error' : '' }}" >

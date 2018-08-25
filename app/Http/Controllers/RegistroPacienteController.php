@@ -11,8 +11,6 @@ use App\Http\Requests\StoreRegistroPaciente;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-
-
 use Illuminate\Http\Request;
 
 class RegistroPacienteController extends Controller
@@ -24,8 +22,8 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        
-        return view('formulario.registro-paciente.index');
+        $pacientes = Paciente::paginate(1);
+        return view('formulario.registro-paciente.index',compact('pacientes'));
 
     }
 

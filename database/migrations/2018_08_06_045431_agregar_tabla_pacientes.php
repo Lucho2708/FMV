@@ -27,7 +27,7 @@ class AgregarTablaPacientes extends Migration
             $table-> enum('genero',['masculino','femenino']);
             $table-> string('rh' ,3);
             $table-> string('senales',100);
-            $table-> string('foto')->nullable();
+            $table-> string('foto',100);
             $table-> unsignedInteger('user_id')->unsigned();
             $table-> unsignedInteger('acudiente_id')->unsigned();
             $table-> unsignedInteger('eps_id')->unsigned();

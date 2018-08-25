@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
 class Paciente extends Model
 {
     //
@@ -21,7 +22,8 @@ class Paciente extends Model
 		'estudios',
 		'genero',
 		'rh',
-		'senales'
+		'senales',
+        'foto'
     ];
 
     public function user(){
@@ -36,5 +38,13 @@ class Paciente extends Model
     }
     public function ubicacion(){
     	return $this->belongsTo('App\Ubicacion');
-    }    
+    }
+
+    public function setFotoAttribute($foto)
+    {
+        $this->attributes['foto'] = Carbon::now()->day.$foto;
+        $name = Carbon::now()->day.$foto;
+        \Storage::disk('local')->put($name, \File::get($foto));
+    }
+
 }

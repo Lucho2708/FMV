@@ -26,230 +26,73 @@ FMV | Crear Registro
             </div>
             <div class="body">
                 <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
+				|	@foreach($pacientes as $paciente)
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
+							<div class="col-sm-6 col-md-3">
+								<div class="thumbnail">
+									<img src="{{ $paciente->foto}}" width="100%">
+									<div class="caption">
+										<h4>{{$paciente->nombres}}</h4>
+										<p>{{$paciente->documento}}</p>
+										<hr>
+										<div class="row">
+											<div class="col-md-4">
+												<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
+													<i class="material-icons">remove_red_eye</i>
+												</button>
+											</div>
+											<div class="col-md-4">
+												<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
+													<i class="material-icons">mode_edit</i>
+												</button>
+											</div>
+											<div class="col-md-4">
+												<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
+													<i class="material-icons">delete_forever</i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
+							<div class="col-sm-6 col-md-3">
+								<div class="thumbnail">
+									<img src="{{ $paciente->foto}}" width="100%">
+									<div class="caption">
+										<h4>{{$paciente->nombres}}</h4>
+										<p>{{$paciente->documento}}</p>
+										<hr>
+										<div class="row">
+											<div class="col-md-4">
+												<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
+													<i class="material-icons">remove_red_eye</i>
+												</button>
+											</div>
+											<div class="col-md-4">
+												<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
+													<i class="material-icons">mode_edit</i>
+												</button>
+											</div>
+											<div class="col-md-4">
+												<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
+													<i class="material-icons">delete_forever</i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
+					@endforeach
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
+					<div class="text-center">
+						{!! $pacientes->render(); !!}
+					</div>
 
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{{ asset('/images/1525364066.jpg') }}" width="100%">
-                            <div class="caption">
-                                <h4>Luis Eduardo Silva Rodriguez</h4>
-                                <p>1070608568</p>
-                                <hr>
-                                <div class="row">
-                                	<div class="col-md-4">
-		                                <button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-				            				<i class="material-icons">remove_red_eye</i>
-				        				</button>
-			        				</div>
-			        				<div class="col-md-4">
-								        <button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-								            <i class="material-icons">mode_edit</i>
-								        </button>
-								    </div>
-								    <div class="col-md-4">
-								        <button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-								            <i class="material-icons">delete_forever</i>
-								        </button>
-								    </div>
-						        </div>
-                            </div>
-                        </div>
-                    </div>
 
-                   
+
                 </div>
 
             </div>
