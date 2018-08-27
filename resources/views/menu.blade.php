@@ -61,6 +61,12 @@
             <span>Nuevo diario</span>
         </a>
     </li>
+    <li class="{{ Request::is('pruebavuejs') ? 'active' : null}}">
+        <a href="{{ url('/pruebavuejs') }}">
+            <i class="material-icons">group_add</i>
+            <span>Prueba Registros VUEJS</span>
+        </a>
+    </li>
     <li class="{{ Request::is('cproceso') || Request::is('')? 'active' : null}}" >
         <a href="javascript:void(0);" class="menu-toggle">
             <i class="material-icons">assignment</i>

@@ -22,8 +22,11 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        $pacientes = Paciente::paginate(8);
-        return view('formulario.registro-paciente.index',compact('pacientes'));
+        $pacientes = Paciente::get();
+
+        return $pacientes;
+
+        //return view('formulario.registro-paciente.index',compact('pacientes'));
 
     }
 
@@ -123,7 +126,9 @@ class RegistroPacienteController extends Controller
      */
     public function show($id)
     {
-        
+        $paciente = Paciente::findOrFail($id);
+
+        return $paciente;         
     }
 
     /**
@@ -134,7 +139,9 @@ class RegistroPacienteController extends Controller
      */
     public function edit($id)
     {
-        
+        $paciente = Paciente::findOrFail($id);
+
+        return $paciente; 
     }
 
     /**
@@ -146,7 +153,7 @@ class RegistroPacienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -157,6 +164,7 @@ class RegistroPacienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $paciente = Paciente::findOrFail($id);
+        $paciente->delete();
     }
 }

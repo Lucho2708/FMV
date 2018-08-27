@@ -24,49 +24,48 @@ FMV | Crear Registro
                     <small>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</small>
                 </h2>
             </div>
-            <div class="body">
+            <div id="crudregistros" class="body">
                 <div class="row">
-
-					@foreach($pacientes as $paciente)
-
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="{{  asset('/images/user.png')}}" width="100%">
-									<div class="caption">
-										<h4>{{$paciente->nombres}}</h4>
-										<p>{{$paciente->documento}}</p>
-										<hr>
-										<div class="row">
-											<div class="col-md-4">
-												<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
-													<i class="material-icons">remove_red_eye</i>
-												</button>
-											</div>
-											<div class="col-md-4">
-												<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
-													<i class="material-icons">mode_edit</i>
-												</button>
-											</div>
-											<div class="col-md-4">
-												<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar">
-													<i class="material-icons">delete_forever</i>
-												</button>
-											</div>
-										</div>
+					<div v-for="registro in registros" class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="{{  asset('/images/user.png')}}" width="100%">
+							<div class="caption">
+								<h4>@{{ registro.nombres}} @{{ registro.apellidos}}</h4>
+								<p>@{{registro.tipo_documento}} : @{{ registro.documento}}</p>
+								<hr>
+								<div class="row">
+									<div class="col-md-4">
+										<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
+											<i class="material-icons">remove_red_eye</i>
+										</button>
+									</div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
+											<i class="material-icons">mode_edit</i>
+										</button>
+									</div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar" v-on:click.prevent="deleteRegistros(registro)">
+											<i class="material-icons">delete_forever</i>
+										</button>
 									</div>
 								</div>
 							</div>
-
-					@endforeach
-
-					
-
-
+						</div>
+					</div>
                 </div>
+                <!--
                 <div class="row">
                 	<div class="col-sm-12">
-						{!! $pacientes->render(); !!}
+						
 					</div>
+                </div>
+                -->
+
+                <div class="row">
+                	<pre>
+                		@{{ $data }}
+                	</pre>
                 </div>
 
             </div>
@@ -79,4 +78,5 @@ FMV | Crear Registro
 
 @section('js')
 <script src="{{ asset('/js/pages/ui/tooltips-popovers.js') }}"></script>
+<script src="{{ asset('/js/app.js') }}"></script>
 @endsection

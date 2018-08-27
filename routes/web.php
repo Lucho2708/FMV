@@ -154,3 +154,12 @@ Route::group([],function(){
     Route::resource('diario','DiarioController')->middleware('auth');
 });
 
+/*
+Star | Pagina Web registros
+*/
+Route::get('/pruebavuejs', function(){
+  return view('formulario.registro-paciente.index');
+});
+/*
+End | Pagina Web registros
+*/
