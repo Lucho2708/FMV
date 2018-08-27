@@ -18,6 +18,7 @@ new Vue({
 			var urlDelete = 'registro/'+ registro.id ;
 			axios.delete(urlDelete).then(response => {
 				this.getRegistros();
+				toastr.success('Eliminado correctamente');
 			});
 		}
 	}

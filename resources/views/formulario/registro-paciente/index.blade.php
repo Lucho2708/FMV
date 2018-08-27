@@ -5,7 +5,9 @@ FMV | Crear Registro
 @endsection
 
 @section('css')
+	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
+    
 @endsection
 
 @section('menu')
@@ -25,27 +27,35 @@ FMV | Crear Registro
                 </h2>
             </div>
             <div id="crudregistros" class="body">
-                <div class="row">
+            	<div class="row clearfix">
+            		<div class="col-sm-12">
+	            		<button type="button" class="btn btn-primary btn-circle pull-right waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom"  data-original-title="Crear registro">
+	            			<i class="material-icons">create_new_folder</i>
+	            		</button>
+            		</div>
+            	</div>
+            	<hr>
+                <div class="row clearfix">
 					<div v-for="registro in registros" class="col-sm-6 col-md-3">
 						<div class="thumbnail">
-							<img src="{{  asset('/images/user.png')}}" width="100%">
+							<img v-bind:src="registro.avatar" width="100%">
 							<div class="caption">
 								<h4>@{{ registro.nombres}} @{{ registro.apellidos}}</h4>
-								<p>@{{registro.tipo_documento}} : @{{ registro.documento}}</p>
+								<p>@{{registro.tipo_documento}}: @{{ registro.documento}}</p>
 								<hr>
 								<div class="row">
 									<div class="col-md-4">
-										<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver">
+										<button type="button" class="btn bg-light-green btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" data-original-title="Ver">
 											<i class="material-icons">remove_red_eye</i>
 										</button>
 									</div>
 									<div class="col-md-4">
-										<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Actualizar">
+										<button type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" data-original-title="Actualizar">
 											<i class="material-icons">mode_edit</i>
 										</button>
 									</div>
 									<div class="col-md-4">
-										<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Eliminar" v-on:click.prevent="deleteRegistros(registro)">
+										<button type="button" class="btn btn btn-danger btn-circle waves-effect waves-circle waves-float" data-toggle="tooltip" data-placement="bottom" data-original-title="Eliminar" v-on:click.prevent="deleteRegistros(registro)">
 											<i class="material-icons">delete_forever</i>
 										</button>
 									</div>
@@ -62,10 +72,12 @@ FMV | Crear Registro
                 </div>
                 -->
 
-                <div class="row">
-                	<pre>
-                		@{{ $data }}
-                	</pre>
+                <div class="row clearfix">
+                	<div class="col-sm-12">
+	                	<pre>
+	                		@{{ $data }}
+	                	</pre>
+	                </div>
                 </div>
 
             </div>
@@ -77,6 +89,7 @@ FMV | Crear Registro
 @endsection
 
 @section('js')
-<script src="{{ asset('/js/pages/ui/tooltips-popovers.js') }}"></script>
 <script src="{{ asset('/js/app.js') }}"></script>
+<script src="{{ asset('/js/pages/ui/tooltips-popovers.js') }}"></script>
+
 @endsection

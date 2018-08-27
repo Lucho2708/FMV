@@ -17,7 +17,7 @@ $factory->define(Paciente::class, function (Faker $faker) {
         "genero"=>$faker->randomElement(array('masculino','femenino')),
         "rh"=>$faker->randomElement(array('A+','A-','B+','B-','O+','O-','AB+','AB-')),
         "senales"=>$faker->text($maxNbChars = 200),
-        "avatar"=>'user.png',
+        "avatar"=>$faker->imageUrl($width = 640, $height = 480),
         "user_id"=>$faker->numberBetween($min=1, $max=200),
         "acudiente_id"=>$faker->numberBetween($min=1, $max=200),
         "eps_id"=>$faker->numberBetween($min=1, $max=120),
