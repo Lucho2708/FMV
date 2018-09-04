@@ -22,12 +22,8 @@ class RegistroPacienteController extends Controller
      */
     public function index()
     {
-        $pacientes = Paciente::get();
-
-        return $pacientes;
-
-        //return view('formulario.registro-paciente.index',compact('pacientes'));
-
+       //return view('formulario.registro-paciente.index',compact('pacientes'));
+        return Paciente::orderBy('id','DESC')->get();
     }
 
     /**
@@ -58,9 +54,6 @@ class RegistroPacienteController extends Controller
         $AUbicacionFind = Ubicacion::findOrFail($request['AUbicacion']);
         $PUbicacionFind = Ubicacion::findOrFail($request['PUbicacion']);
         $PEpsFind = Eps::findOrFail($request['PEps']);
-
-       
-        
 
         DB::transaction(function () use ($registro, $AUbicacionFind, $PUbicacionFind, $PEpsFind){
 
@@ -102,20 +95,14 @@ class RegistroPacienteController extends Controller
             'senales'=>$registro['PObservacion'],
         ]);
 
-        
-
         $paciente->ubicacion()->associate($PUbicacionFind);
         $paciente->eps()->associate($PEpsFind);
         $paciente->user()->associate(Auth::user());
-        $paciente->acudiente()->associate($acudienteFind);
-        
+        $paciente->acudiente()->associate($acudienteFind);     
         $paciente->save(); 
 
-
-
-        });    
-
-
+        });
+        return;
     }
 
     /**

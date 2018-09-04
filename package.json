@@ -17,5 +17,13 @@
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "adminbsb-materialdesign": "^1.0.5",
+        "ajv-keywords": "^3.2.0",
+        "bootstrap-select": "^1.13.2",
+        "img-loader": "^3.0.0",
+        "moment": "^2.22.2",
+        "toastr": "^2.1.4"
     }
 }

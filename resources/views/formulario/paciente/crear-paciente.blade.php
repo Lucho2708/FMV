@@ -5,7 +5,6 @@ FMV | Crear Paciente
 @endsection
 
 @section('css')
-    <link href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet">
 
     <style>
         .thumb {

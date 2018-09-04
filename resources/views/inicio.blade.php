@@ -157,16 +157,7 @@ FMV | Inicio
 </div>
 
 @endsection
+
 @section('js')
-<!-- Waves Effect Plugin Js -->
-<script src="{{ asset('plugins/node-waves/waves.js') }}"></script>
-
-<!-- Jquery CountTo Plugin Js -->
-<script src="{{ asset('plugins/jquery-countto/jquery.countTo.js') }}"></script>
-
-<!-- Sparkline Chart Plugin Js -->
-<script src="{{ asset('plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
-
-<script src="{{ asset('js/pages/widgets/infobox/infobox-2.js') }} "></script>
 
 @endsection

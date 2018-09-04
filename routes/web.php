@@ -159,7 +159,7 @@ Star | Pagina Web registros
 */
 Route::get('/pruebavuejs', function(){
   return view('formulario.registro-paciente.index');
-});
+})->middleware('auth');
 /*
 End | Pagina Web registros
 */

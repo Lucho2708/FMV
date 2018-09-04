@@ -11,11 +11,5 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.scripts([ 
-	'resources/assets/js/toastr.js',
-	'resources/assets/js/vue.js',
-	'resources/assets/js/axios.js',
-	'resources/assets/js/app.js'
-	], 'public/js/app.js').styles([
-	'resources/assets/css/toastr.css'		
-	], 'public/css/app.css');
+mix.js('resources/assets/js/app.js', 'public/js')
+   .sass('resources/assets/sass/app.scss', 'public/css');
