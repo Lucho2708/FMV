@@ -38,8 +38,7 @@
 		<link rel="stylesheet" href="{{asset("../../css/animate.css")}}" >
 		<!-- Main Stylesheet -->
 		<link rel="stylesheet" href="{{asset("../../css/main.css")}}" >
-		<!-- Modernizer Script for old Browsers -->
-		<script src="{{asset("../../js/modernizr-2.6.2.min.js")}}"></script>
+
 
     </head>
 	
@@ -813,19 +812,21 @@
 				</div>
 			</div>
 		</footer>
-		
+
 		<!-- Essential jQuery Plugins
 		================================================== -->
+        <!-- Google Map API -->
+        <script src="{{asset("http://maps.google.com/maps/api/js?sensor=false")}}"></script>
 		<!-- Main jQuery -->
 		<script src="{{asset("../../js/jquery-1.11.1.min.js")}}"></script>
 		<!-- Twitter Bootstrap -->
 		<script src="{{asset("../../js/bootstrap.min.js")}}"></script>
+        <!-- Modernizer Script for old Browsers -->
+        <script src="{{asset("../../js/modernizr-2.6.2.min.js")}}"></script>
 		<!-- Single Page Nav -->
 		<script src="{{asset("../../js/jquery.singlePageNav.min.js")}}"></script>
 		<!-- jquery.fancybox.pack -->
 		<script src="{{asset("../../js/jquery.fancybox.pack.js")}}"></script>
-		<!-- Google Map API -->
-		<script src="{{asset("http://maps.google.com/maps/api/js?sensor=false")}}"></script>
 		<!-- Owl Carousel -->
 		<script src="{{asset("../../js/owl.carousel.min.js")}}"></script>
         <!-- jquery easing -->
