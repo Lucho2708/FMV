@@ -24,6 +24,7 @@
         "bootstrap-select": "^1.13.2",
         "img-loader": "^3.0.0",
         "moment": "^2.22.2",
-        "toastr": "^2.1.4"
+        "toastr": "^2.1.4",
+        "vue-form-wizard": "^0.8.4"
     }
 }

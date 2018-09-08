@@ -21,7 +21,9 @@ FMV | Crear Registro
                 </h2>
             </div>
             <div id="app">
-                <pacientes></pacientes>
+                <crearpacientes></crearpacientes>
+                <listarpacientes></listarpacientes>
+
             </div>
         </div>
     </div>

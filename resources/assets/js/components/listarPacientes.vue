@@ -37,27 +37,11 @@
             </div>
         </div>
     </div>
-    <div class="row clearfix">
-        <div class="col-sm-12">
-            <pre>
-                {{ $data }}
-            </pre>
-        </div>
-        <div class="col-sm-12">
-        	<select class="form-control show-tick">
-                <option value="">-- Please select --</option>
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="40">40</option>
-                <option value="50">50</option>
-            </select>
-        </div>
-    </div>
-
 </div>
 </template>
 <script>
+
+    import VueFormWizard from 'vue-form-wizard'
 
 	export default {
 		data() {

@@ -16,10 +16,13 @@ window.Vue = require('vue');
  */
 
 Vue.component(
-	'pacientes', 
-	require('./components/Pacientes.vue')
+	'Crearpacientes', 
+	require('./components/crearPacientes.vue')
 );
-
+Vue.component(
+	'Listarpacientes', 
+	require('./components/listarPacientes.vue')
+);
 const app = new Vue({
     el: '#app'
 });
