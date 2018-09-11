@@ -4,6 +4,12 @@
 FMV | Crear Registro
 @endsection
 
+@section('css')
+
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/lykmapipo/themify-icons/master/css/themify-icons.css">
+
+@endsection
+
 @section('menu')
     @include('menu')
 @endsection
