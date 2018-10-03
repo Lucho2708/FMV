@@ -110,17 +110,6 @@ Route::group([],function(){
 /*
 End | Resource Acudiente 
 */
-
-/*
-Star | Update Profile
-*/
-Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
-
-Route::post('perfil', 'UserController@update_avatar')->name('perfil')->middleware('auth');
-/*
-End | Update Profile
-*/
-
 /*
 Star | Authentication Routes...
 */
@@ -162,4 +151,21 @@ Route::get('/pruebavuejs', function(){
 })->middleware('auth');
 /*
 End | Pagina Web registros
+*/
+/*
+Star | Obtener datos
+*/
+Route::get('/data/ubicacion' , 'RegistroPacienteController@getUbicacion')->name('ubicacion')->middleware('auth');
+
+/*
+End | Obtener datos
+*/
+/*
+Star | Update Profile
+*/
+Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
+
+Route::post('perfil', 'UserController@update_avatar')->name('perfil')->middleware('auth');
+/*
+End | Update Profile
 */

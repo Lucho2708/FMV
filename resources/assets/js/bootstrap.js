@@ -11,7 +11,6 @@ window._ = require('lodash');
 try {
     window.$ = window.jQuery = require('jquery');
     require('bootstrap-sass');
-    window.Select = require('adminbsb-materialdesign/plugins/bootstrap-select/js/bootstrap-select');
     require('adminbsb-materialdesign/plugins/jquery-slimscroll/jquery.slimscroll');
     window.Waves = require('adminbsb-materialdesign/plugins/node-waves/waves');  
     require('adminbsb-materialdesign/js/admin');

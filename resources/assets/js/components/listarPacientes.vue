@@ -44,7 +44,7 @@
     import VueFormWizard from 'vue-form-wizard'
 
 	export default {
-		data() {
+		data: function() {
 			return{
 				registros: [],
 				newRegistros: '',

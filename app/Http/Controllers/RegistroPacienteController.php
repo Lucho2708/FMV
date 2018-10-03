@@ -154,4 +154,13 @@ class RegistroPacienteController extends Controller
         $paciente = Paciente::findOrFail($id);
         $paciente->delete();
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getUbicacion()
+    {
+        return Ubicacion::all();
+    }
 }
