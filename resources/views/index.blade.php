@@ -22,29 +22,19 @@
 		<!-- CSS
 		================================================== -->
 
+		<link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet" type="text/css">
 		<link href="{{asset("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700")}}" rel="stylesheet" type="text/css">
 
-		<!-- Fontawesome Icon font -->
-		<link rel="stylesheet" href="{{asset("../../css/font-awesome.min.css")}}" >
-		<!-- bootstrap.min -->
-		<link rel="stylesheet" href="{{asset("../../css/jquery.fancybox.css")}}" >
-		<!-- bootstrap.min -->
-		<link rel="stylesheet" href="{{asset("../../css/bootstrap.min.css")}}" >
-		<!-- bootstrap.min -->
-		<link rel="stylesheet" href="{{asset("../../css/owl.carousel.css")}}" >
-		<!-- bootstrap.min -->
-		<link rel="stylesheet" href="{{asset("../../css/slit-slider.css")}}" >
-		<!-- bootstrap.min -->
-		<link rel="stylesheet" href="{{asset("../../css/animate.css")}}" >
-		<!-- Main Stylesheet -->
-		<link rel="stylesheet" href="{{asset("../../css/main.css")}}" >
+		<!-- Bootstrap Core Css -->
+		<link href="{{ asset('css/all.css') }}" rel="stylesheet">
 
 
     </head>
 	
     <body id="body">
 
-		<!-- preloader -->
+		<!-- preloader
 		<div id="preloader">
             <div class="loder-box">
             	<div class="battery"></div>
@@ -817,26 +807,7 @@
 		================================================== -->
         <!-- Google Map API -->
         <script src="{{asset("http://maps.google.com/maps/api/js?sensor=false")}}"></script>
-		<!-- Main jQuery -->
-		<script src="{{asset("../../js/jquery-1.11.1.min.js")}}"></script>
-		<!-- Twitter Bootstrap -->
-		<script src="{{asset("../../js/bootstrap.min.js")}}"></script>
-        <!-- Modernizer Script for old Browsers -->
-        <script src="{{asset("../../js/modernizr-2.6.2.min.js")}}"></script>
-		<!-- Single Page Nav -->
-		<script src="{{asset("../../js/jquery.singlePageNav.min.js")}}"></script>
-		<!-- jquery.fancybox.pack -->
-		<script src="{{asset("../../js/jquery.fancybox.pack.js")}}"></script>
-		<!-- Owl Carousel -->
-		<script src="{{asset("../../js/owl.carousel.min.js")}}"></script>
-        <!-- jquery easing -->
-		<script src="{{asset("../../js/jquery.easing.min.js")}}"></script>
-        <!-- Fullscreen slider -->
-		<script src="{{asset("../../js/jquery.slitslider.js")}}"></script>
-		<script src="{{asset("../../js/jquery.ba-cond.min.js")}}"></script>
-		<!-- onscroll animation -->
-		<script src="{{asset("../../js/wow.min.js")}}"></script>
-		<!-- Custom Functions -->
-		<script src="{{asset("../../js/main.js")}}"></script>
+        <!-- Jquery Core Js -->
+        <script src="{{ asset('js/all.js') }}"></script>
     </body>
 </html>

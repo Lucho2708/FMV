@@ -13,16 +13,8 @@
     <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- Waves Effect Css -->
-    <link href="{{ asset('plugins/node-waves/waves.css') }}" rel="stylesheet" />
-
-    <!-- Animation Css -->
-    <link href="{{ asset('plugins/animate-css/animate.css') }}" rel="stylesheet" />
-
-    <!-- Custom Css -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body class="login-page">
@@ -81,16 +73,7 @@
     </div>
 
     <!-- Jquery Core Js -->
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-
-    <!-- Bootstrap Core Js -->
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
-
-    <!-- Waves Effect Plugin Js -->
-    <script src="{{ asset('plugins/node-waves/waves.js') }}"></script>
-
-    <!-- Custom Js -->
-    <script src="{{asset('/js/admin.js')}}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 
